@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF0658DB1CB2D05200D7AEC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0658DA1CB2D05200D7AEC7 /* main.m */; };
+		EF0658DE1CB2D05200D7AEC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0658DD1CB2D05200D7AEC7 /* AppDelegate.m */; };
+		EF0658E11CB2D05200D7AEC7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0658E01CB2D05200D7AEC7 /* ViewController.m */; };
+		EF0658E41CB2D05200D7AEC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0658E21CB2D05200D7AEC7 /* Main.storyboard */; };
+		EF0658E61CB2D05200D7AEC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF0658E51CB2D05200D7AEC7 /* Assets.xcassets */; };
+		EF0658E91CB2D05200D7AEC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0658E71CB2D05200D7AEC7 /* LaunchScreen.storyboard */; };
+		EF0658F41CB2D05200D7AEC7 /* BuchRechMCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0658F31CB2D05200D7AEC7 /* BuchRechMCTests.m */; };
+		EF0658FF1CB2D05200D7AEC7 /* BuchRechMCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0658FE1CB2D05200D7AEC7 /* BuchRechMCUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF0658F01CB2D05200D7AEC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF0658CE1CB2D05200D7AEC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF0658D51CB2D05200D7AEC7;
+			remoteInfo = BuchRechMC;
+		};
+		EF0658FB1CB2D05200D7AEC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF0658CE1CB2D05200D7AEC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF0658D51CB2D05200D7AEC7;
+			remoteInfo = BuchRechMC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF0658D61CB2D05200D7AEC7 /* BuchRechMC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuchRechMC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF0658DA1CB2D05200D7AEC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF0658DC1CB2D05200D7AEC7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF0658DD1CB2D05200D7AEC7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF0658DF1CB2D05200D7AEC7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EF0658E01CB2D05200D7AEC7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EF0658E31CB2D05200D7AEC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF0658E51CB2D05200D7AEC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF0658E81CB2D05200D7AEC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF0658EA1CB2D05200D7AEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF0658EF1CB2D05200D7AEC7 /* BuchRechMCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuchRechMCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF0658F31CB2D05200D7AEC7 /* BuchRechMCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuchRechMCTests.m; sourceTree = "<group>"; };
+		EF0658F51CB2D05200D7AEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF0658FA1CB2D05200D7AEC7 /* BuchRechMCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuchRechMCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF0658FE1CB2D05200D7AEC7 /* BuchRechMCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuchRechMCUITests.m; sourceTree = "<group>"; };
+		EF0659001CB2D05200D7AEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF0658D31CB2D05200D7AEC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF0658EC1CB2D05200D7AEC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF0658F71CB2D05200D7AEC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF0658CD1CB2D05200D7AEC7 = {
+			isa = PBXGroup;
+			children = (
+				EF0658D81CB2D05200D7AEC7 /* BuchRechMC */,
+				EF0658F21CB2D05200D7AEC7 /* BuchRechMCTests */,
+				EF0658FD1CB2D05200D7AEC7 /* BuchRechMCUITests */,
+				EF0658D71CB2D05200D7AEC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF0658D71CB2D05200D7AEC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF0658D61CB2D05200D7AEC7 /* BuchRechMC.app */,
+				EF0658EF1CB2D05200D7AEC7 /* BuchRechMCTests.xctest */,
+				EF0658FA1CB2D05200D7AEC7 /* BuchRechMCUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF0658D81CB2D05200D7AEC7 /* BuchRechMC */ = {
+			isa = PBXGroup;
+			children = (
+				EF0658DC1CB2D05200D7AEC7 /* AppDelegate.h */,
+				EF0658DD1CB2D05200D7AEC7 /* AppDelegate.m */,
+				EF0658DF1CB2D05200D7AEC7 /* ViewController.h */,
+				EF0658E01CB2D05200D7AEC7 /* ViewController.m */,
+				EF0658E21CB2D05200D7AEC7 /* Main.storyboard */,
+				EF0658E51CB2D05200D7AEC7 /* Assets.xcassets */,
+				EF0658E71CB2D05200D7AEC7 /* LaunchScreen.storyboard */,
+				EF0658EA1CB2D05200D7AEC7 /* Info.plist */,
+				EF0658D91CB2D05200D7AEC7 /* Supporting Files */,
+			);
+			path = BuchRechMC;
+			sourceTree = "<group>";
+		};
+		EF0658D91CB2D05200D7AEC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF0658DA1CB2D05200D7AEC7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF0658F21CB2D05200D7AEC7 /* BuchRechMCTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF0658F31CB2D05200D7AEC7 /* BuchRechMCTests.m */,
+				EF0658F51CB2D05200D7AEC7 /* Info.plist */,
+			);
+			path = BuchRechMCTests;
+			sourceTree = "<group>";
+		};
+		EF0658FD1CB2D05200D7AEC7 /* BuchRechMCUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF0658FE1CB2D05200D7AEC7 /* BuchRechMCUITests.m */,
+				EF0659001CB2D05200D7AEC7 /* Info.plist */,
+			);
+			path = BuchRechMCUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF0658D51CB2D05200D7AEC7 /* BuchRechMC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF0659031CB2D05200D7AEC7 /* Build configuration list for PBXNativeTarget "BuchRechMC" */;
+			buildPhases = (
+				EF0658D21CB2D05200D7AEC7 /* Sources */,
+				EF0658D31CB2D05200D7AEC7 /* Frameworks */,
+				EF0658D41CB2D05200D7AEC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BuchRechMC;
+			productName = BuchRechMC;
+			productReference = EF0658D61CB2D05200D7AEC7 /* BuchRechMC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF0658EE1CB2D05200D7AEC7 /* BuchRechMCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF0659061CB2D05200D7AEC7 /* Build configuration list for PBXNativeTarget "BuchRechMCTests" */;
+			buildPhases = (
+				EF0658EB1CB2D05200D7AEC7 /* Sources */,
+				EF0658EC1CB2D05200D7AEC7 /* Frameworks */,
+				EF0658ED1CB2D05200D7AEC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF0658F11CB2D05200D7AEC7 /* PBXTargetDependency */,
+			);
+			name = BuchRechMCTests;
+			productName = BuchRechMCTests;
+			productReference = EF0658EF1CB2D05200D7AEC7 /* BuchRechMCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF0658F91CB2D05200D7AEC7 /* BuchRechMCUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF0659091CB2D05200D7AEC7 /* Build configuration list for PBXNativeTarget "BuchRechMCUITests" */;
+			buildPhases = (
+				EF0658F61CB2D05200D7AEC7 /* Sources */,
+				EF0658F71CB2D05200D7AEC7 /* Frameworks */,
+				EF0658F81CB2D05200D7AEC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF0658FC1CB2D05200D7AEC7 /* PBXTargetDependency */,
+			);
+			name = BuchRechMCUITests;
+			productName = BuchRechMCUITests;
+			productReference = EF0658FA1CB2D05200D7AEC7 /* BuchRechMCUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF0658CE1CB2D05200D7AEC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Vitaliy Yarkun";
+				TargetAttributes = {
+					EF0658D51CB2D05200D7AEC7 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = Q9XY29X7Y2;
+					};
+					EF0658EE1CB2D05200D7AEC7 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = Q9XY29X7Y2;
+						TestTargetID = EF0658D51CB2D05200D7AEC7;
+					};
+					EF0658F91CB2D05200D7AEC7 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = Q9XY29X7Y2;
+						TestTargetID = EF0658D51CB2D05200D7AEC7;
+					};
+				};
+			};
+			buildConfigurationList = EF0658D11CB2D05200D7AEC7 /* Build configuration list for PBXProject "BuchRechMC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF0658CD1CB2D05200D7AEC7;
+			productRefGroup = EF0658D71CB2D05200D7AEC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF0658D51CB2D05200D7AEC7 /* BuchRechMC */,
+				EF0658EE1CB2D05200D7AEC7 /* BuchRechMCTests */,
+				EF0658F91CB2D05200D7AEC7 /* BuchRechMCUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF0658D41CB2D05200D7AEC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF0658E91CB2D05200D7AEC7 /* LaunchScreen.storyboard in Resources */,
+				EF0658E61CB2D05200D7AEC7 /* Assets.xcassets in Resources */,
+				EF0658E41CB2D05200D7AEC7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF0658ED1CB2D05200D7AEC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF0658F81CB2D05200D7AEC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF0658D21CB2D05200D7AEC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF0658E11CB2D05200D7AEC7 /* ViewController.m in Sources */,
+				EF0658DE1CB2D05200D7AEC7 /* AppDelegate.m in Sources */,
+				EF0658DB1CB2D05200D7AEC7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF0658EB1CB2D05200D7AEC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF0658F41CB2D05200D7AEC7 /* BuchRechMCTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF0658F61CB2D05200D7AEC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF0658FF1CB2D05200D7AEC7 /* BuchRechMCUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF0658F11CB2D05200D7AEC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF0658D51CB2D05200D7AEC7 /* BuchRechMC */;
+			targetProxy = EF0658F01CB2D05200D7AEC7 /* PBXContainerItemProxy */;
+		};
+		EF0658FC1CB2D05200D7AEC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF0658D51CB2D05200D7AEC7 /* BuchRechMC */;
+			targetProxy = EF0658FB1CB2D05200D7AEC7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF0658E21CB2D05200D7AEC7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF0658E31CB2D05200D7AEC7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF0658E71CB2D05200D7AEC7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF0658E81CB2D05200D7AEC7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF0659011CB2D05200D7AEC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF0659021CB2D05200D7AEC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF0659041CB2D05200D7AEC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BuchRechMC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vitaliyyarkun.BuchRechMC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF0659051CB2D05200D7AEC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BuchRechMC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vitaliyyarkun.BuchRechMC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EF0659071CB2D05200D7AEC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BuchRechMCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vitaliyyarkun.BuchRechMCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BuchRechMC.app/BuchRechMC";
+			};
+			name = Debug;
+		};
+		EF0659081CB2D05200D7AEC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BuchRechMCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vitaliyyarkun.BuchRechMCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BuchRechMC.app/BuchRechMC";
+			};
+			name = Release;
+		};
+		EF06590A1CB2D05200D7AEC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BuchRechMCUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vitaliyyarkun.BuchRechMCUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BuchRechMC;
+			};
+			name = Debug;
+		};
+		EF06590B1CB2D05200D7AEC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BuchRechMCUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vitaliyyarkun.BuchRechMCUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BuchRechMC;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF0658D11CB2D05200D7AEC7 /* Build configuration list for PBXProject "BuchRechMC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF0659011CB2D05200D7AEC7 /* Debug */,
+				EF0659021CB2D05200D7AEC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF0659031CB2D05200D7AEC7 /* Build configuration list for PBXNativeTarget "BuchRechMC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF0659041CB2D05200D7AEC7 /* Debug */,
+				EF0659051CB2D05200D7AEC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF0659061CB2D05200D7AEC7 /* Build configuration list for PBXNativeTarget "BuchRechMCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF0659071CB2D05200D7AEC7 /* Debug */,
+				EF0659081CB2D05200D7AEC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF0659091CB2D05200D7AEC7 /* Build configuration list for PBXNativeTarget "BuchRechMCUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF06590A1CB2D05200D7AEC7 /* Debug */,
+				EF06590B1CB2D05200D7AEC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF0658CE1CB2D05200D7AEC7 /* Project object */;
+}
