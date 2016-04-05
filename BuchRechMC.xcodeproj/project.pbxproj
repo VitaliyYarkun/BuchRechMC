@@ -19,6 +19,18 @@
 		EF0659141CB2D68800D7AEC7 /* QuestionCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0659121CB2D68800D7AEC7 /* QuestionCustomCell.xib */; };
 		EF266F821CB3BD8800ADD7C8 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF266F811CB3BD8800ADD7C8 /* SWRevealViewController.m */; };
 		EF266F851CB3F87700ADD7C8 /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF266F841CB3F87700ADD7C8 /* MenuController.m */; };
+		EF266F891CB418A000ADD7C8 /* default0 in Resources */ = {isa = PBXBuildFile; fileRef = EF266F871CB418A000ADD7C8 /* default0 */; };
+		EF266F8A1CB418A000ADD7C8 /* test.md in Sources */ = {isa = PBXBuildFile; fileRef = EF266F881CB418A000ADD7C8 /* test.md */; };
+		EF266F951CB42B6C00ADD7C8 /* 02_TUM WS 2016_17_GL_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F8C1CB42B6C00ADD7C8 /* 02_TUM WS 2016_17_GL_final_V1_Lsg.pdf */; };
+		EF266F961CB42B6C00ADD7C8 /* 03_TUM WS 2016_17_BF_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F8D1CB42B6C00ADD7C8 /* 03_TUM WS 2016_17_BF_final_V1_Lsg.pdf */; };
+		EF266F971CB42B6C00ADD7C8 /* 05_TUM WS 2016_17_Ü_BF_2_Fallbeispiel 1_Aufgaben_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F8E1CB42B6C00ADD7C8 /* 05_TUM WS 2016_17_Ü_BF_2_Fallbeispiel 1_Aufgaben_final_V1_Lsg.pdf */; };
+		EF266F981CB42B6C00ADD7C8 /* 06_TUM WS 2016_17_Ü_BF_3_Fallbeispiel 2_Aufgaben_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F8F1CB42B6C00ADD7C8 /* 06_TUM WS 2016_17_Ü_BF_3_Fallbeispiel 2_Aufgaben_final_V1_Lsg.pdf */; };
+		EF266F991CB42B6C00ADD7C8 /* 07_TUM WS 2016_17_JA_[1-3]_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F901CB42B6C00ADD7C8 /* 07_TUM WS 2016_17_JA_[1-3]_final_V1_Lsg.pdf */; };
+		EF266F9A1CB42B6C00ADD7C8 /* 08_TUM WS 2016_17_JA_[4]_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F911CB42B6C00ADD7C8 /* 08_TUM WS 2016_17_JA_[4]_final_V1_Lsg.pdf */; };
+		EF266F9B1CB42B6C00ADD7C8 /* 09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F921CB42B6C00ADD7C8 /* 09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf */; };
+		EF266F9C1CB42B6C00ADD7C8 /* 10_TUM WS 2016_17_BB_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F931CB42B6C00ADD7C8 /* 10_TUM WS 2016_17_BB_final_V1_Lsg.pdf */; };
+		EF266F9D1CB42B6C00ADD7C8 /* test.md in Sources */ = {isa = PBXBuildFile; fileRef = EF266F941CB42B6C00ADD7C8 /* test.md */; };
+		EF266FA01CB434D200ADD7C8 /* GLController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF266F9F1CB434D200ADD7C8 /* GLController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +74,19 @@
 		EF266F811CB3BD8800ADD7C8 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		EF266F831CB3F87700ADD7C8 /* MenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
 		EF266F841CB3F87700ADD7C8 /* MenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuController.m; sourceTree = "<group>"; };
+		EF266F871CB418A000ADD7C8 /* default0 */ = {isa = PBXFileReference; lastKnownFileType = file; path = default0; sourceTree = "<group>"; };
+		EF266F881CB418A000ADD7C8 /* test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = test.md; sourceTree = "<group>"; };
+		EF266F8C1CB42B6C00ADD7C8 /* 02_TUM WS 2016_17_GL_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "02_TUM WS 2016_17_GL_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
+		EF266F8D1CB42B6C00ADD7C8 /* 03_TUM WS 2016_17_BF_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "03_TUM WS 2016_17_BF_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
+		EF266F8E1CB42B6C00ADD7C8 /* 05_TUM WS 2016_17_Ü_BF_2_Fallbeispiel 1_Aufgaben_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "05_TUM WS 2016_17_Ü_BF_2_Fallbeispiel 1_Aufgaben_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
+		EF266F8F1CB42B6C00ADD7C8 /* 06_TUM WS 2016_17_Ü_BF_3_Fallbeispiel 2_Aufgaben_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "06_TUM WS 2016_17_Ü_BF_3_Fallbeispiel 2_Aufgaben_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
+		EF266F901CB42B6C00ADD7C8 /* 07_TUM WS 2016_17_JA_[1-3]_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "07_TUM WS 2016_17_JA_[1-3]_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
+		EF266F911CB42B6C00ADD7C8 /* 08_TUM WS 2016_17_JA_[4]_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "08_TUM WS 2016_17_JA_[4]_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
+		EF266F921CB42B6C00ADD7C8 /* 09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
+		EF266F931CB42B6C00ADD7C8 /* 10_TUM WS 2016_17_BB_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "10_TUM WS 2016_17_BB_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
+		EF266F941CB42B6C00ADD7C8 /* test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = test.md; sourceTree = "<group>"; };
+		EF266F9E1CB434D200ADD7C8 /* GLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLController.h; sourceTree = "<group>"; };
+		EF266F9F1CB434D200ADD7C8 /* GLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +146,8 @@
 		EF0658D91CB2D05200D7AEC7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EF266F8B1CB42B6C00ADD7C8 /* Books */,
+				EF266F861CB418A000ADD7C8 /* RealmDB */,
 				EF266F7F1CB3BD8800ADD7C8 /* SlideOutMenuFiles */,
 				EF0658DC1CB2D05200D7AEC7 /* AppDelegate.h */,
 				EF0658DD1CB2D05200D7AEC7 /* AppDelegate.m */,
@@ -161,6 +188,8 @@
 				EF0659121CB2D68800D7AEC7 /* QuestionCustomCell.xib */,
 				EF266F831CB3F87700ADD7C8 /* MenuController.h */,
 				EF266F841CB3F87700ADD7C8 /* MenuController.m */,
+				EF266F9E1CB434D200ADD7C8 /* GLController.h */,
+				EF266F9F1CB434D200ADD7C8 /* GLController.m */,
 			);
 			name = UIDesign;
 			sourceTree = "<group>";
@@ -172,6 +201,32 @@
 				EF266F811CB3BD8800ADD7C8 /* SWRevealViewController.m */,
 			);
 			path = SlideOutMenuFiles;
+			sourceTree = "<group>";
+		};
+		EF266F861CB418A000ADD7C8 /* RealmDB */ = {
+			isa = PBXGroup;
+			children = (
+				EF266F871CB418A000ADD7C8 /* default0 */,
+				EF266F881CB418A000ADD7C8 /* test.md */,
+			);
+			path = RealmDB;
+			sourceTree = "<group>";
+		};
+		EF266F8B1CB42B6C00ADD7C8 /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				EF266F8C1CB42B6C00ADD7C8 /* 02_TUM WS 2016_17_GL_final_V1_Lsg.pdf */,
+				EF266F8D1CB42B6C00ADD7C8 /* 03_TUM WS 2016_17_BF_final_V1_Lsg.pdf */,
+				EF266F8E1CB42B6C00ADD7C8 /* 05_TUM WS 2016_17_Ü_BF_2_Fallbeispiel 1_Aufgaben_final_V1_Lsg.pdf */,
+				EF266F8F1CB42B6C00ADD7C8 /* 06_TUM WS 2016_17_Ü_BF_3_Fallbeispiel 2_Aufgaben_final_V1_Lsg.pdf */,
+				EF266F901CB42B6C00ADD7C8 /* 07_TUM WS 2016_17_JA_[1-3]_final_V1_Lsg.pdf */,
+				EF266F911CB42B6C00ADD7C8 /* 08_TUM WS 2016_17_JA_[4]_final_V1_Lsg.pdf */,
+				EF266F921CB42B6C00ADD7C8 /* 09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf */,
+				EF266F931CB42B6C00ADD7C8 /* 10_TUM WS 2016_17_BB_final_V1_Lsg.pdf */,
+				EF266F941CB42B6C00ADD7C8 /* test.md */,
+			);
+			name = Books;
+			path = ../Books;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,10 +335,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF266F9C1CB42B6C00ADD7C8 /* 10_TUM WS 2016_17_BB_final_V1_Lsg.pdf in Resources */,
+				EF266F951CB42B6C00ADD7C8 /* 02_TUM WS 2016_17_GL_final_V1_Lsg.pdf in Resources */,
 				EF0658E91CB2D05200D7AEC7 /* LaunchScreen.storyboard in Resources */,
+				EF266F971CB42B6C00ADD7C8 /* 05_TUM WS 2016_17_Ü_BF_2_Fallbeispiel 1_Aufgaben_final_V1_Lsg.pdf in Resources */,
 				EF0658E61CB2D05200D7AEC7 /* Assets.xcassets in Resources */,
+				EF266F961CB42B6C00ADD7C8 /* 03_TUM WS 2016_17_BF_final_V1_Lsg.pdf in Resources */,
 				EF0659141CB2D68800D7AEC7 /* QuestionCustomCell.xib in Resources */,
+				EF266F981CB42B6C00ADD7C8 /* 06_TUM WS 2016_17_Ü_BF_3_Fallbeispiel 2_Aufgaben_final_V1_Lsg.pdf in Resources */,
+				EF266F991CB42B6C00ADD7C8 /* 07_TUM WS 2016_17_JA_[1-3]_final_V1_Lsg.pdf in Resources */,
+				EF266F9A1CB42B6C00ADD7C8 /* 08_TUM WS 2016_17_JA_[4]_final_V1_Lsg.pdf in Resources */,
+				EF266F9B1CB42B6C00ADD7C8 /* 09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf in Resources */,
 				EF0658E41CB2D05200D7AEC7 /* Main.storyboard in Resources */,
+				EF266F891CB418A000ADD7C8 /* default0 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,8 +375,11 @@
 				EF06590F1CB2D2E800D7AEC7 /* QuestionsController.m in Sources */,
 				EF0658DE1CB2D05200D7AEC7 /* AppDelegate.m in Sources */,
 				EF266F851CB3F87700ADD7C8 /* MenuController.m in Sources */,
+				EF266FA01CB434D200ADD7C8 /* GLController.m in Sources */,
 				EF266F821CB3BD8800ADD7C8 /* SWRevealViewController.m in Sources */,
 				EF0659131CB2D68800D7AEC7 /* QuestionCustomCell.m in Sources */,
+				EF266F8A1CB418A000ADD7C8 /* test.md in Sources */,
+				EF266F9D1CB42B6C00ADD7C8 /* test.md in Sources */,
 				EF0658DB1CB2D05200D7AEC7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

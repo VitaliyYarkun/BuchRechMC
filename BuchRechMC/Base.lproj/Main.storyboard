@@ -74,7 +74,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="First" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TVA-U2-qxR">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="GL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TVA-U2-qxR">
                                             <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -84,7 +84,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="lot-c4-zpW" kind="custom" customClass="SWRevealViewControllerSegue" id="AAp-fy-mLC"/>
+                                    <segue destination="XjW-hq-uqD" kind="show" id="QmB-lz-jqp"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="second" textLabel="Bif-eP-MjW" style="IBUITableViewCellStyleDefault" id="p2W-YE-8l3">
@@ -115,6 +115,54 @@
             </objects>
             <point key="canvasLocation" x="87" y="-419"/>
         </scene>
+        <!--Controller-->
+        <scene sceneID="EXs-Qu-dJl">
+            <objects>
+                <viewController id="XjW-hq-uqD" customClass="GLController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uDN-Qu-Fo3"/>
+                        <viewControllerLayoutGuide type="bottom" id="5AI-sa-A0W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ict-gr-1qf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGD-ow-3aT">
+                                <rect key="frame" x="0.0" y="61" width="600" height="538"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Akp-tm-jcO">
+                                <rect key="frame" x="0.0" y="16" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Einführung in das Rechnungswesen" id="piE-d4-sDm">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="uKI-BG-bsT">
+                                            <connections>
+                                                <action selector="backAction:" destination="XjW-hq-uqD" id="UMo-Kx-jzC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UGD-ow-3aT" firstAttribute="top" secondItem="Akp-tm-jcO" secondAttribute="bottom" constant="1" id="7DK-zO-FoA"/>
+                            <constraint firstAttribute="trailing" secondItem="Akp-tm-jcO" secondAttribute="trailing" id="Vx0-dV-5Aa"/>
+                            <constraint firstAttribute="trailing" secondItem="UGD-ow-3aT" secondAttribute="trailing" id="Y3h-X2-XJh"/>
+                            <constraint firstItem="5AI-sa-A0W" firstAttribute="top" secondItem="UGD-ow-3aT" secondAttribute="bottom" constant="1" id="ZHY-Bb-fE2"/>
+                            <constraint firstItem="Akp-tm-jcO" firstAttribute="leading" secondItem="ict-gr-1qf" secondAttribute="leading" id="dcm-wV-dN0"/>
+                            <constraint firstItem="UGD-ow-3aT" firstAttribute="leading" secondItem="ict-gr-1qf" secondAttribute="leading" id="te6-WD-9C5"/>
+                            <constraint firstItem="Akp-tm-jcO" firstAttribute="top" secondItem="ict-gr-1qf" secondAttribute="top" constant="16" id="wCS-7m-pbG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="glWebView" destination="UGD-ow-3aT" id="9q3-hF-Cb3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EG9-2H-KtL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845" y="-419"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="y8X-kU-WFk">
             <objects>
@@ -132,7 +180,4 @@
             <point key="canvasLocation" x="87" y="432"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="AAp-fy-mLC"/>
-    </inferredMetricsTieBreakers>
 </document>
