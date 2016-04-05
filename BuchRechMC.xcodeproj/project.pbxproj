@@ -31,6 +31,11 @@
 		EF266F9C1CB42B6C00ADD7C8 /* 10_TUM WS 2016_17_BB_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F931CB42B6C00ADD7C8 /* 10_TUM WS 2016_17_BB_final_V1_Lsg.pdf */; };
 		EF266F9D1CB42B6C00ADD7C8 /* test.md in Sources */ = {isa = PBXBuildFile; fileRef = EF266F941CB42B6C00ADD7C8 /* test.md */; };
 		EF266FA01CB434D200ADD7C8 /* GLController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF266F9F1CB434D200ADD7C8 /* GLController.m */; };
+		EFD63D941CB451A500DAE821 /* BFController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD63D931CB451A500DAE821 /* BFController.m */; };
+		EFD63D971CB4546100DAE821 /* JAController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD63D961CB4546100DAE821 /* JAController.m */; };
+		EFD63D9A1CB4562C00DAE821 /* BLController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD63D991CB4562C00DAE821 /* BLController.m */; };
+		EFD63D9D1CB457F600DAE821 /* GVController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD63D9C1CB457F600DAE821 /* GVController.m */; };
+		EFD63DA01CB4597600DAE821 /* BBController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD63D9F1CB4597600DAE821 /* BBController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +92,16 @@
 		EF266F941CB42B6C00ADD7C8 /* test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = test.md; sourceTree = "<group>"; };
 		EF266F9E1CB434D200ADD7C8 /* GLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLController.h; sourceTree = "<group>"; };
 		EF266F9F1CB434D200ADD7C8 /* GLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLController.m; sourceTree = "<group>"; };
+		EFD63D921CB451A500DAE821 /* BFController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFController.h; sourceTree = "<group>"; };
+		EFD63D931CB451A500DAE821 /* BFController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFController.m; sourceTree = "<group>"; };
+		EFD63D951CB4546100DAE821 /* JAController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAController.h; sourceTree = "<group>"; };
+		EFD63D961CB4546100DAE821 /* JAController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAController.m; sourceTree = "<group>"; };
+		EFD63D981CB4562C00DAE821 /* BLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLController.h; sourceTree = "<group>"; };
+		EFD63D991CB4562C00DAE821 /* BLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLController.m; sourceTree = "<group>"; };
+		EFD63D9B1CB457F600DAE821 /* GVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVController.h; sourceTree = "<group>"; };
+		EFD63D9C1CB457F600DAE821 /* GVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVController.m; sourceTree = "<group>"; };
+		EFD63D9E1CB4597600DAE821 /* BBController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBController.h; sourceTree = "<group>"; };
+		EFD63D9F1CB4597600DAE821 /* BBController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +205,16 @@
 				EF266F841CB3F87700ADD7C8 /* MenuController.m */,
 				EF266F9E1CB434D200ADD7C8 /* GLController.h */,
 				EF266F9F1CB434D200ADD7C8 /* GLController.m */,
+				EFD63D921CB451A500DAE821 /* BFController.h */,
+				EFD63D931CB451A500DAE821 /* BFController.m */,
+				EFD63D951CB4546100DAE821 /* JAController.h */,
+				EFD63D961CB4546100DAE821 /* JAController.m */,
+				EFD63D981CB4562C00DAE821 /* BLController.h */,
+				EFD63D991CB4562C00DAE821 /* BLController.m */,
+				EFD63D9B1CB457F600DAE821 /* GVController.h */,
+				EFD63D9C1CB457F600DAE821 /* GVController.m */,
+				EFD63D9E1CB4597600DAE821 /* BBController.h */,
+				EFD63D9F1CB4597600DAE821 /* BBController.m */,
 			);
 			name = UIDesign;
 			sourceTree = "<group>";
@@ -377,10 +402,15 @@
 				EF266F851CB3F87700ADD7C8 /* MenuController.m in Sources */,
 				EF266FA01CB434D200ADD7C8 /* GLController.m in Sources */,
 				EF266F821CB3BD8800ADD7C8 /* SWRevealViewController.m in Sources */,
+				EFD63D9D1CB457F600DAE821 /* GVController.m in Sources */,
+				EFD63D971CB4546100DAE821 /* JAController.m in Sources */,
 				EF0659131CB2D68800D7AEC7 /* QuestionCustomCell.m in Sources */,
 				EF266F8A1CB418A000ADD7C8 /* test.md in Sources */,
+				EFD63D941CB451A500DAE821 /* BFController.m in Sources */,
 				EF266F9D1CB42B6C00ADD7C8 /* test.md in Sources */,
+				EFD63DA01CB4597600DAE821 /* BBController.m in Sources */,
 				EF0658DB1CB2D05200D7AEC7 /* main.m in Sources */,
+				EFD63D9A1CB4562C00DAE821 /* BLController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    menu = @[@"first",@"second"];
+    menu = @[@"GL",@"BF",@"JA",@"BL",@"GV",@"BB"];
 }
 
 #pragma mark - Table view data source

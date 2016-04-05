@@ -1,33 +1,34 @@
 //
-//  GLController.m
+//  JAController.m
 //  BuchRechMC
 //
 //  Created by Vitaliy Yarkun on 4/5/16.
 //  Copyright © 2016 Vitaliy Yarkun. All rights reserved.
 //
 
-#import "GLController.h"
+#import "JAController.h"
 
-@interface GLController ()
+@interface JAController ()
 
 @end
 
-@implementation GLController
+@implementation JAController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"02_TUM WS 2016_17_GL_final_V1_Lsg" ofType:@"pdf"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"07_TUM WS 2016_17_JA_[1-3]_final_V1_Lsg" ofType:@"pdf"];
     NSURL *url = [NSURL fileURLWithPath:path];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [self.glWebView loadRequest:request];
-    [self.glWebView setScalesPageToFit:YES];
+    [self.jaWebView loadRequest:request];
+    [self.jaWebView setScalesPageToFit:YES];
 }
+
 
 - (IBAction)backAction:(UIBarButtonItem *)sender
 {
     [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
 }
+
 
 
 @end
