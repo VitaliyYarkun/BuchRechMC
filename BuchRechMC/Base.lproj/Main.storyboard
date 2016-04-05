@@ -84,7 +84,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="lot-c4-zpW" kind="custom" customClass="SWRevealViewControllerSegue" id="HgL-oD-ZbP"/>
+                                    <segue destination="lot-c4-zpW" kind="custom" customClass="SWRevealViewControllerSegue" id="AAp-fy-mLC"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="second" textLabel="Bif-eP-MjW" style="IBUITableViewCellStyleDefault" id="p2W-YE-8l3">
@@ -103,9 +103,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="ZlH-qu-PKV" kind="custom" customClass="SWRevealViewControllerSegue" id="rrj-eE-BA3"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -117,24 +114,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thQ-Ld-Nw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="87" y="-419"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="R6u-ML-wYm">
-            <objects>
-                <viewController id="ZlH-qu-PKV" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uuQ-hJ-vUQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="Vwn-HS-mh5"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="GsA-T5-4jG">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UCX-Gq-8t7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="831" y="-419"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y8X-kU-WFk">
@@ -154,6 +133,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HgL-oD-ZbP"/>
+        <segue reference="AAp-fy-mLC"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,17 +11,15 @@
 
 @interface MenuController ()
 
-@property (strong, nonatomic) NSArray* menu;
-
 @end
 
-@implementation MenuController
+@implementation MenuController{
+    NSArray *menu;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.menu = [[NSArray alloc] init];
-    self.menu = @[@"first",@"second"];
+    menu = @[@"first",@"second"];
 }
 
 #pragma mark - Table view data source
@@ -31,13 +29,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.menu count];
+    return [menu count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSString* identifier = [self.menu objectAtIndex:indexPath.row];
+    NSString* identifier = [menu objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     
     
@@ -45,8 +43,6 @@
 }
 
 
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ( [segue isKindOfClass: [SWRevealViewControllerSegue class]] ) {
         SWRevealViewControllerSegue *swSegue = (SWRevealViewControllerSegue*) segue;
