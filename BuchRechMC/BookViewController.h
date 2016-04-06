@@ -7,9 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+typedef enum{
+    kGL = 1000,
+    kBF,
+    kJA,
+    kBL,
+    kGV,
+    kBB
+} bookSelection;
 
 @interface BookViewController : UIViewController
 
 @property (assign, nonatomic) NSInteger cellTag;
+@property (strong, nonatomic) NSString *bookName;
 
 @end

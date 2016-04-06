@@ -203,7 +203,11 @@
                                 <rect key="frame" x="0.0" y="16" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Titel" id="piE-d4-sDm">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="uKI-BG-bsT"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="uKI-BG-bsT">
+                                            <connections>
+                                                <action selector="backAction:" destination="XjW-hq-uqD" id="Xzw-ga-f3W"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -219,6 +223,10 @@
                             <constraint firstItem="Akp-tm-jcO" firstAttribute="top" secondItem="ict-gr-1qf" secondAttribute="top" constant="16" id="wCS-7m-pbG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bookWebView" destination="UGD-ow-3aT" id="Kj5-cf-nmc"/>
+                        <outlet property="titleNavigationItem" destination="piE-d4-sDm" id="lsb-xT-NgD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EG9-2H-KtL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
