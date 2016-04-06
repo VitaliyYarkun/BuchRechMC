@@ -17,9 +17,12 @@
 		EF06590F1CB2D2E800D7AEC7 /* QuestionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF06590E1CB2D2E800D7AEC7 /* QuestionsController.m */; };
 		EF0659131CB2D68800D7AEC7 /* QuestionCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0659111CB2D68800D7AEC7 /* QuestionCustomCell.m */; };
 		EF0659141CB2D68800D7AEC7 /* QuestionCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0659121CB2D68800D7AEC7 /* QuestionCustomCell.xib */; };
+		EF0B4BF81CB587DA0012E030 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0B4BF71CB587DA0012E030 /* Realm.framework */; };
+		EF0B4BF91CB587DA0012E030 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF0B4BF71CB587DA0012E030 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF0B4BFD1CB59BE60012E030 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0B4BFC1CB59BE60012E030 /* BookViewController.m */; };
 		EF266F821CB3BD8800ADD7C8 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF266F811CB3BD8800ADD7C8 /* SWRevealViewController.m */; };
 		EF266F851CB3F87700ADD7C8 /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF266F841CB3F87700ADD7C8 /* MenuController.m */; };
-		EF266F891CB418A000ADD7C8 /* default0 in Resources */ = {isa = PBXBuildFile; fileRef = EF266F871CB418A000ADD7C8 /* default0 */; };
+		EF266F891CB418A000ADD7C8 /* default0.realm in Resources */ = {isa = PBXBuildFile; fileRef = EF266F871CB418A000ADD7C8 /* default0.realm */; };
 		EF266F8A1CB418A000ADD7C8 /* test.md in Sources */ = {isa = PBXBuildFile; fileRef = EF266F881CB418A000ADD7C8 /* test.md */; };
 		EF266F951CB42B6C00ADD7C8 /* 02_TUM WS 2016_17_GL_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F8C1CB42B6C00ADD7C8 /* 02_TUM WS 2016_17_GL_final_V1_Lsg.pdf */; };
 		EF266F961CB42B6C00ADD7C8 /* 03_TUM WS 2016_17_BF_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F8D1CB42B6C00ADD7C8 /* 03_TUM WS 2016_17_BF_final_V1_Lsg.pdf */; };
@@ -30,12 +33,6 @@
 		EF266F9B1CB42B6C00ADD7C8 /* 09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F921CB42B6C00ADD7C8 /* 09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf */; };
 		EF266F9C1CB42B6C00ADD7C8 /* 10_TUM WS 2016_17_BB_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F931CB42B6C00ADD7C8 /* 10_TUM WS 2016_17_BB_final_V1_Lsg.pdf */; };
 		EF266F9D1CB42B6C00ADD7C8 /* test.md in Sources */ = {isa = PBXBuildFile; fileRef = EF266F941CB42B6C00ADD7C8 /* test.md */; };
-		EF266FA01CB434D200ADD7C8 /* GLController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF266F9F1CB434D200ADD7C8 /* GLController.m */; };
-		EFD63D941CB451A500DAE821 /* BFController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD63D931CB451A500DAE821 /* BFController.m */; };
-		EFD63D971CB4546100DAE821 /* JAController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD63D961CB4546100DAE821 /* JAController.m */; };
-		EFD63D9A1CB4562C00DAE821 /* BLController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD63D991CB4562C00DAE821 /* BLController.m */; };
-		EFD63D9D1CB457F600DAE821 /* GVController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD63D9C1CB457F600DAE821 /* GVController.m */; };
-		EFD63DA01CB4597600DAE821 /* BBController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD63D9F1CB4597600DAE821 /* BBController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +51,20 @@
 			remoteInfo = BuchRechMC;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EF4213931CB526BE00025797 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EF0B4BF91CB587DA0012E030 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EF0658D61CB2D05200D7AEC7 /* BuchRechMC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuchRechMC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,11 +86,14 @@
 		EF0659101CB2D68800D7AEC7 /* QuestionCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionCustomCell.h; sourceTree = "<group>"; };
 		EF0659111CB2D68800D7AEC7 /* QuestionCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionCustomCell.m; sourceTree = "<group>"; };
 		EF0659121CB2D68800D7AEC7 /* QuestionCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionCustomCell.xib; sourceTree = "<group>"; };
+		EF0B4BF71CB587DA0012E030 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		EF0B4BFB1CB59BE60012E030 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
+		EF0B4BFC1CB59BE60012E030 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
 		EF266F801CB3BD8800ADD7C8 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		EF266F811CB3BD8800ADD7C8 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		EF266F831CB3F87700ADD7C8 /* MenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
 		EF266F841CB3F87700ADD7C8 /* MenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuController.m; sourceTree = "<group>"; };
-		EF266F871CB418A000ADD7C8 /* default0 */ = {isa = PBXFileReference; lastKnownFileType = file; path = default0; sourceTree = "<group>"; };
+		EF266F871CB418A000ADD7C8 /* default0.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = default0.realm; sourceTree = "<group>"; };
 		EF266F881CB418A000ADD7C8 /* test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = test.md; sourceTree = "<group>"; };
 		EF266F8C1CB42B6C00ADD7C8 /* 02_TUM WS 2016_17_GL_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "02_TUM WS 2016_17_GL_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
 		EF266F8D1CB42B6C00ADD7C8 /* 03_TUM WS 2016_17_BF_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "03_TUM WS 2016_17_BF_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
@@ -90,18 +104,6 @@
 		EF266F921CB42B6C00ADD7C8 /* 09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
 		EF266F931CB42B6C00ADD7C8 /* 10_TUM WS 2016_17_BB_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "10_TUM WS 2016_17_BB_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
 		EF266F941CB42B6C00ADD7C8 /* test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = test.md; sourceTree = "<group>"; };
-		EF266F9E1CB434D200ADD7C8 /* GLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLController.h; sourceTree = "<group>"; };
-		EF266F9F1CB434D200ADD7C8 /* GLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLController.m; sourceTree = "<group>"; };
-		EFD63D921CB451A500DAE821 /* BFController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFController.h; sourceTree = "<group>"; };
-		EFD63D931CB451A500DAE821 /* BFController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFController.m; sourceTree = "<group>"; };
-		EFD63D951CB4546100DAE821 /* JAController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAController.h; sourceTree = "<group>"; };
-		EFD63D961CB4546100DAE821 /* JAController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAController.m; sourceTree = "<group>"; };
-		EFD63D981CB4562C00DAE821 /* BLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLController.h; sourceTree = "<group>"; };
-		EFD63D991CB4562C00DAE821 /* BLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLController.m; sourceTree = "<group>"; };
-		EFD63D9B1CB457F600DAE821 /* GVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVController.h; sourceTree = "<group>"; };
-		EFD63D9C1CB457F600DAE821 /* GVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVController.m; sourceTree = "<group>"; };
-		EFD63D9E1CB4597600DAE821 /* BBController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBController.h; sourceTree = "<group>"; };
-		EFD63D9F1CB4597600DAE821 /* BBController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF0B4BF81CB587DA0012E030 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +135,7 @@
 		EF0658CD1CB2D05200D7AEC7 = {
 			isa = PBXGroup;
 			children = (
+				EF0B4BF71CB587DA0012E030 /* Realm.framework */,
 				EF0658D81CB2D05200D7AEC7 /* BuchRechMC */,
 				EF0658F21CB2D05200D7AEC7 /* BuchRechMCTests */,
 				EF0658FD1CB2D05200D7AEC7 /* BuchRechMCUITests */,
@@ -203,18 +207,8 @@
 				EF0659121CB2D68800D7AEC7 /* QuestionCustomCell.xib */,
 				EF266F831CB3F87700ADD7C8 /* MenuController.h */,
 				EF266F841CB3F87700ADD7C8 /* MenuController.m */,
-				EF266F9E1CB434D200ADD7C8 /* GLController.h */,
-				EF266F9F1CB434D200ADD7C8 /* GLController.m */,
-				EFD63D921CB451A500DAE821 /* BFController.h */,
-				EFD63D931CB451A500DAE821 /* BFController.m */,
-				EFD63D951CB4546100DAE821 /* JAController.h */,
-				EFD63D961CB4546100DAE821 /* JAController.m */,
-				EFD63D981CB4562C00DAE821 /* BLController.h */,
-				EFD63D991CB4562C00DAE821 /* BLController.m */,
-				EFD63D9B1CB457F600DAE821 /* GVController.h */,
-				EFD63D9C1CB457F600DAE821 /* GVController.m */,
-				EFD63D9E1CB4597600DAE821 /* BBController.h */,
-				EFD63D9F1CB4597600DAE821 /* BBController.m */,
+				EF0B4BFB1CB59BE60012E030 /* BookViewController.h */,
+				EF0B4BFC1CB59BE60012E030 /* BookViewController.m */,
 			);
 			name = UIDesign;
 			sourceTree = "<group>";
@@ -231,7 +225,7 @@
 		EF266F861CB418A000ADD7C8 /* RealmDB */ = {
 			isa = PBXGroup;
 			children = (
-				EF266F871CB418A000ADD7C8 /* default0 */,
+				EF266F871CB418A000ADD7C8 /* default0.realm */,
 				EF266F881CB418A000ADD7C8 /* test.md */,
 			);
 			path = RealmDB;
@@ -264,6 +258,8 @@
 				EF0658D21CB2D05200D7AEC7 /* Sources */,
 				EF0658D31CB2D05200D7AEC7 /* Frameworks */,
 				EF0658D41CB2D05200D7AEC7 /* Resources */,
+				EF4213931CB526BE00025797 /* Embed Frameworks */,
+				EF0B4BFA1CB5881E0012E030 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -372,7 +368,7 @@
 				EF266F9A1CB42B6C00ADD7C8 /* 08_TUM WS 2016_17_JA_[4]_final_V1_Lsg.pdf in Resources */,
 				EF266F9B1CB42B6C00ADD7C8 /* 09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf in Resources */,
 				EF0658E41CB2D05200D7AEC7 /* Main.storyboard in Resources */,
-				EF266F891CB418A000ADD7C8 /* default0 in Resources */,
+				EF266F891CB418A000ADD7C8 /* default0.realm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +388,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EF0B4BFA1CB5881E0012E030 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF0658D21CB2D05200D7AEC7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -400,17 +412,12 @@
 				EF06590F1CB2D2E800D7AEC7 /* QuestionsController.m in Sources */,
 				EF0658DE1CB2D05200D7AEC7 /* AppDelegate.m in Sources */,
 				EF266F851CB3F87700ADD7C8 /* MenuController.m in Sources */,
-				EF266FA01CB434D200ADD7C8 /* GLController.m in Sources */,
 				EF266F821CB3BD8800ADD7C8 /* SWRevealViewController.m in Sources */,
-				EFD63D9D1CB457F600DAE821 /* GVController.m in Sources */,
-				EFD63D971CB4546100DAE821 /* JAController.m in Sources */,
+				EF0B4BFD1CB59BE60012E030 /* BookViewController.m in Sources */,
 				EF0659131CB2D68800D7AEC7 /* QuestionCustomCell.m in Sources */,
 				EF266F8A1CB418A000ADD7C8 /* test.md in Sources */,
-				EFD63D941CB451A500DAE821 /* BFController.m in Sources */,
 				EF266F9D1CB42B6C00ADD7C8 /* test.md in Sources */,
-				EFD63DA01CB4597600DAE821 /* BBController.m in Sources */,
 				EF0658DB1CB2D05200D7AEC7 /* main.m in Sources */,
-				EFD63D9A1CB4562C00DAE821 /* BLController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +560,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BuchRechMC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vitaliyyarkun.BuchRechMC;
@@ -564,6 +575,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BuchRechMC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vitaliyyarkun.BuchRechMC;
@@ -598,6 +613,7 @@
 		EF06590A1CB2D05200D7AEC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = BuchRechMCUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vitaliyyarkun.BuchRechMCUITests;
@@ -609,6 +625,7 @@
 		EF06590B1CB2D05200D7AEC7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = BuchRechMCUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vitaliyyarkun.BuchRechMCUITests;

@@ -10,4 +10,6 @@
 
 @interface MenuController : UITableViewController
 
+@property (assign, nonatomic) NSInteger cellTag;
+
 @end
