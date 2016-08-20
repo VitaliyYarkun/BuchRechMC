@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ServerManager.h"
 
 @interface AppDelegate ()
 
@@ -15,8 +16,11 @@
 @implementation AppDelegate
 
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.serverManager = [ServerManager sharedManager];
+    
     return YES;
 }
 

@@ -22,8 +22,6 @@
 		EF0B4BFD1CB59BE60012E030 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0B4BFC1CB59BE60012E030 /* BookViewController.m */; };
 		EF266F821CB3BD8800ADD7C8 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF266F811CB3BD8800ADD7C8 /* SWRevealViewController.m */; };
 		EF266F851CB3F87700ADD7C8 /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF266F841CB3F87700ADD7C8 /* MenuController.m */; };
-		EF266F891CB418A000ADD7C8 /* default0.realm in Resources */ = {isa = PBXBuildFile; fileRef = EF266F871CB418A000ADD7C8 /* default0.realm */; };
-		EF266F8A1CB418A000ADD7C8 /* test.md in Sources */ = {isa = PBXBuildFile; fileRef = EF266F881CB418A000ADD7C8 /* test.md */; };
 		EF266F951CB42B6C00ADD7C8 /* 02_TUM WS 2016_17_GL_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F8C1CB42B6C00ADD7C8 /* 02_TUM WS 2016_17_GL_final_V1_Lsg.pdf */; };
 		EF266F961CB42B6C00ADD7C8 /* 03_TUM WS 2016_17_BF_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F8D1CB42B6C00ADD7C8 /* 03_TUM WS 2016_17_BF_final_V1_Lsg.pdf */; };
 		EF266F971CB42B6C00ADD7C8 /* 05_TUM WS 2016_17_Ü_BF_2_Fallbeispiel 1_Aufgaben_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F8E1CB42B6C00ADD7C8 /* 05_TUM WS 2016_17_Ü_BF_2_Fallbeispiel 1_Aufgaben_final_V1_Lsg.pdf */; };
@@ -33,6 +31,10 @@
 		EF266F9B1CB42B6C00ADD7C8 /* 09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F921CB42B6C00ADD7C8 /* 09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf */; };
 		EF266F9C1CB42B6C00ADD7C8 /* 10_TUM WS 2016_17_BB_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F931CB42B6C00ADD7C8 /* 10_TUM WS 2016_17_BB_final_V1_Lsg.pdf */; };
 		EF266F9D1CB42B6C00ADD7C8 /* test.md in Sources */ = {isa = PBXBuildFile; fileRef = EF266F941CB42B6C00ADD7C8 /* test.md */; };
+		EF411D311D688A05008F068F /* RealmString.m in Sources */ = {isa = PBXBuildFile; fileRef = EF411D301D688A05008F068F /* RealmString.m */; };
+		EF411D341D688C29008F068F /* ServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF411D331D688C29008F068F /* ServerManager.m */; };
+		EF9935C61D6311F600167079 /* RESTAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9935C51D6311F600167079 /* RESTAPI.m */; };
+		EFD042D81CCF75AA0073BED6 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD042D71CCF75AA0073BED6 /* Question.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +95,6 @@
 		EF266F811CB3BD8800ADD7C8 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		EF266F831CB3F87700ADD7C8 /* MenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
 		EF266F841CB3F87700ADD7C8 /* MenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuController.m; sourceTree = "<group>"; };
-		EF266F871CB418A000ADD7C8 /* default0.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = default0.realm; sourceTree = "<group>"; };
-		EF266F881CB418A000ADD7C8 /* test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = test.md; sourceTree = "<group>"; };
 		EF266F8C1CB42B6C00ADD7C8 /* 02_TUM WS 2016_17_GL_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "02_TUM WS 2016_17_GL_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
 		EF266F8D1CB42B6C00ADD7C8 /* 03_TUM WS 2016_17_BF_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "03_TUM WS 2016_17_BF_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
 		EF266F8E1CB42B6C00ADD7C8 /* 05_TUM WS 2016_17_Ü_BF_2_Fallbeispiel 1_Aufgaben_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "05_TUM WS 2016_17_Ü_BF_2_Fallbeispiel 1_Aufgaben_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
@@ -104,6 +104,14 @@
 		EF266F921CB42B6C00ADD7C8 /* 09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
 		EF266F931CB42B6C00ADD7C8 /* 10_TUM WS 2016_17_BB_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "10_TUM WS 2016_17_BB_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
 		EF266F941CB42B6C00ADD7C8 /* test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = test.md; sourceTree = "<group>"; };
+		EF411D2F1D688A05008F068F /* RealmString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmString.h; sourceTree = "<group>"; };
+		EF411D301D688A05008F068F /* RealmString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmString.m; sourceTree = "<group>"; };
+		EF411D321D688C29008F068F /* ServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerManager.h; sourceTree = "<group>"; };
+		EF411D331D688C29008F068F /* ServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerManager.m; sourceTree = "<group>"; };
+		EF9935C41D6311F600167079 /* RESTAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESTAPI.h; sourceTree = "<group>"; };
+		EF9935C51D6311F600167079 /* RESTAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESTAPI.m; sourceTree = "<group>"; };
+		EFD042D61CCF75AA0073BED6 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		EFD042D71CCF75AA0073BED6 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +164,8 @@
 		EF0658D81CB2D05200D7AEC7 /* BuchRechMC */ = {
 			isa = PBXGroup;
 			children = (
+				EF9935C31D63118B00167079 /* API */,
+				EF9935C21D63117400167079 /* RealmModels */,
 				EF06590C1CB2D25B00D7AEC7 /* UIDesign */,
 				EF0658D91CB2D05200D7AEC7 /* Supporting Files */,
 			);
@@ -165,8 +175,8 @@
 		EF0658D91CB2D05200D7AEC7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EF7E8D7E1CBBE5D100C05CFE /* RealmDB */,
 				EF266F8B1CB42B6C00ADD7C8 /* Books */,
-				EF266F861CB418A000ADD7C8 /* RealmDB */,
 				EF266F7F1CB3BD8800ADD7C8 /* SlideOutMenuFiles */,
 				EF0658DC1CB2D05200D7AEC7 /* AppDelegate.h */,
 				EF0658DD1CB2D05200D7AEC7 /* AppDelegate.m */,
@@ -222,15 +232,6 @@
 			path = SlideOutMenuFiles;
 			sourceTree = "<group>";
 		};
-		EF266F861CB418A000ADD7C8 /* RealmDB */ = {
-			isa = PBXGroup;
-			children = (
-				EF266F871CB418A000ADD7C8 /* default0.realm */,
-				EF266F881CB418A000ADD7C8 /* test.md */,
-			);
-			path = RealmDB;
-			sourceTree = "<group>";
-		};
 		EF266F8B1CB42B6C00ADD7C8 /* Books */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +247,35 @@
 			);
 			name = Books;
 			path = ../Books;
+			sourceTree = "<group>";
+		};
+		EF7E8D7E1CBBE5D100C05CFE /* RealmDB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RealmDB;
+			sourceTree = "<group>";
+		};
+		EF9935C21D63117400167079 /* RealmModels */ = {
+			isa = PBXGroup;
+			children = (
+				EFD042D61CCF75AA0073BED6 /* Question.h */,
+				EFD042D71CCF75AA0073BED6 /* Question.m */,
+				EF411D2F1D688A05008F068F /* RealmString.h */,
+				EF411D301D688A05008F068F /* RealmString.m */,
+			);
+			name = RealmModels;
+			sourceTree = "<group>";
+		};
+		EF9935C31D63118B00167079 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EF9935C41D6311F600167079 /* RESTAPI.h */,
+				EF9935C51D6311F600167079 /* RESTAPI.m */,
+				EF411D321D688C29008F068F /* ServerManager.h */,
+				EF411D331D688C29008F068F /* ServerManager.m */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,7 +398,6 @@
 				EF266F9A1CB42B6C00ADD7C8 /* 08_TUM WS 2016_17_JA_[4]_final_V1_Lsg.pdf in Resources */,
 				EF266F9B1CB42B6C00ADD7C8 /* 09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf in Resources */,
 				EF0658E41CB2D05200D7AEC7 /* Main.storyboard in Resources */,
-				EF266F891CB418A000ADD7C8 /* default0.realm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,13 +438,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF411D341D688C29008F068F /* ServerManager.m in Sources */,
 				EF06590F1CB2D2E800D7AEC7 /* QuestionsController.m in Sources */,
 				EF0658DE1CB2D05200D7AEC7 /* AppDelegate.m in Sources */,
 				EF266F851CB3F87700ADD7C8 /* MenuController.m in Sources */,
 				EF266F821CB3BD8800ADD7C8 /* SWRevealViewController.m in Sources */,
 				EF0B4BFD1CB59BE60012E030 /* BookViewController.m in Sources */,
+				EF9935C61D6311F600167079 /* RESTAPI.m in Sources */,
 				EF0659131CB2D68800D7AEC7 /* QuestionCustomCell.m in Sources */,
-				EF266F8A1CB418A000ADD7C8 /* test.md in Sources */,
+				EFD042D81CCF75AA0073BED6 /* Question.m in Sources */,
+				EF411D311D688A05008F068F /* RealmString.m in Sources */,
 				EF266F9D1CB42B6C00ADD7C8 /* test.md in Sources */,
 				EF0658DB1CB2D05200D7AEC7 /* main.m in Sources */,
 			);
