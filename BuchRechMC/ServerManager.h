@@ -11,7 +11,6 @@
 @interface ServerManager : NSObject
 
 -(void) httpRequestWithUrl:(NSURL *) requestUrl
-  withAllowedCharactersSet:(NSSet *) requestSet
             withHTTPMethod:(NSString *) requestMethod;
 
 -(void) getAllQuestions;

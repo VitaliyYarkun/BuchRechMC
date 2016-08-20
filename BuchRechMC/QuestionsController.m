@@ -10,15 +10,9 @@
 #import "SWRevealViewController.h"
 #import <Realm/Realm.h>
 #import "Question.h"
-#import "RESTAPI.h"
+#import "ServerManager.h"
 
-@interface QuestionsController() <RESTAPIDelegate>
-
-@property (strong, nonatomic) NSURL *fileURL;
-@property (strong, nonatomic) RESTAPI *restApi;
-@property (strong, nonatomic) NSDictionary *receivedData;
-@property (strong, nonatomic) NSCharacterSet *set;
-
+@interface QuestionsController()
 
 @end
 
@@ -31,7 +25,6 @@
     self.menuItem.action = @selector(revealToggle:);
     
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-    self.set = [NSCharacterSet URLQueryAllowedCharacterSet];
     /*RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
     NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *customRealmPath = [documentsDirectory stringByAppendingPathComponent:@"default1.realm"];
@@ -40,50 +33,9 @@
     config.readOnly = YES;
     RLMRealm *realm = [RLMRealm realmWithConfiguration:config error:nil];
     RLMResults<Question *> *questions = [Question allObjects];*/
-    [self questionsRequest];
-    
+    ServerManager *manager = [ServerManager sharedManager];
+    [manager getAllQuestions];
 }
-
-- (void)questionsRequest
-{
-    NSString* urlString;
-    urlString = @"http://85.214.195.89:8080/api/questions/getAll";
-    
-    urlString = [urlString stringByAddingPercentEncodingWithAllowedCharacters:self.set];
-    NSURL *url = [NSURL URLWithString:urlString];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    [request setHTTPMethod:@"GET"];
-    self.restApi.delegate = self;
-    [self.restApi httpRequest:request];    
-}
-
-
--(RESTAPI *)restApi
-{
-    if (!_restApi)
-    {
-        _restApi = [[RESTAPI alloc] init];
-    }
-    return _restApi;
-}
-
-
-
-- (void)getReceivedData:(NSMutableData *)data sender:(RESTAPI *)sender
-{
-    NSError *error = nil;
-    self.receivedData =[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-    
-}
-
-
-
-
-
-
-
-
-
 
 
 
