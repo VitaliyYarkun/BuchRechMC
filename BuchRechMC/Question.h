@@ -8,18 +8,19 @@
 
 #import <Realm/Realm.h>
 #import "RealmString.h"
+#import "Answer.h"
 
 @interface Question : RLMObject
 
 @property NSInteger bookingEntry;
 @property NSInteger chapter;
-@property NSString *questionContent;
+@property NSString *content;
 @property NSInteger correctAnswerId;
-@property NSInteger questionFromPage;
-@property NSInteger questionToPage;
+@property NSInteger fromPage;
+@property NSInteger toPage;
 @property NSString *hint;
-@property NSInteger questionID;
-@property RLMArray <RealmString *><RealmString> *possibleAnswers;
+@property NSInteger generalId;
+@property RLMArray <Answer *><Answer> *possibleAnswers;
 
 @property BOOL isRightAnswered;
 

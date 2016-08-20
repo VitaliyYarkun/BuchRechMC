@@ -15,6 +15,8 @@
 
 -(void) getAllQuestions;
 
+-(void) saveQuestionsToRealm;
+
 
 +(instancetype) sharedManager;
 

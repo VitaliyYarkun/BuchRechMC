@@ -17,6 +17,7 @@
 		EF06590F1CB2D2E800D7AEC7 /* QuestionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF06590E1CB2D2E800D7AEC7 /* QuestionsController.m */; };
 		EF0659131CB2D68800D7AEC7 /* QuestionCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0659111CB2D68800D7AEC7 /* QuestionCustomCell.m */; };
 		EF0659141CB2D68800D7AEC7 /* QuestionCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0659121CB2D68800D7AEC7 /* QuestionCustomCell.xib */; };
+		EF06C6F01D690595000ED520 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = EF06C6EF1D690595000ED520 /* Answer.m */; };
 		EF0B4BF81CB587DA0012E030 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0B4BF71CB587DA0012E030 /* Realm.framework */; };
 		EF0B4BF91CB587DA0012E030 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF0B4BF71CB587DA0012E030 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF0B4BFD1CB59BE60012E030 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0B4BFC1CB59BE60012E030 /* BookViewController.m */; };
@@ -88,6 +89,8 @@
 		EF0659101CB2D68800D7AEC7 /* QuestionCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionCustomCell.h; sourceTree = "<group>"; };
 		EF0659111CB2D68800D7AEC7 /* QuestionCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionCustomCell.m; sourceTree = "<group>"; };
 		EF0659121CB2D68800D7AEC7 /* QuestionCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionCustomCell.xib; sourceTree = "<group>"; };
+		EF06C6EE1D690595000ED520 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answer.h; sourceTree = "<group>"; };
+		EF06C6EF1D690595000ED520 /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answer.m; sourceTree = "<group>"; };
 		EF0B4BF71CB587DA0012E030 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		EF0B4BFB1CB59BE60012E030 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
 		EF0B4BFC1CB59BE60012E030 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
@@ -261,6 +264,8 @@
 			children = (
 				EFD042D61CCF75AA0073BED6 /* Question.h */,
 				EFD042D71CCF75AA0073BED6 /* Question.m */,
+				EF06C6EE1D690595000ED520 /* Answer.h */,
+				EF06C6EF1D690595000ED520 /* Answer.m */,
 				EF411D2F1D688A05008F068F /* RealmString.h */,
 				EF411D301D688A05008F068F /* RealmString.m */,
 			);
@@ -443,6 +448,7 @@
 				EF0658DE1CB2D05200D7AEC7 /* AppDelegate.m in Sources */,
 				EF266F851CB3F87700ADD7C8 /* MenuController.m in Sources */,
 				EF266F821CB3BD8800ADD7C8 /* SWRevealViewController.m in Sources */,
+				EF06C6F01D690595000ED520 /* Answer.m in Sources */,
 				EF0B4BFD1CB59BE60012E030 /* BookViewController.m in Sources */,
 				EF9935C61D6311F600167079 /* RESTAPI.m in Sources */,
 				EF0659131CB2D68800D7AEC7 /* QuestionCustomCell.m in Sources */,
