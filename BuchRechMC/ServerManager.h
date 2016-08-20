@@ -14,6 +14,8 @@
   withAllowedCharactersSet:(NSSet *) requestSet
             withHTTPMethod:(NSString *) requestMethod;
 
+-(void) getAllQuestions;
+
 
 +(instancetype) sharedManager;
 
