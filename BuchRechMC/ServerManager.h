@@ -8,12 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum
+typedef NS_ENUM(NSInteger, RealmDataSaveOption)
 {
     kSaveAllQuestionsOption = 1000,
     kSaveAllTopicsOption
-}
-RealmDataSaveOption;
+};
 
 @interface ServerManager : NSObject
 

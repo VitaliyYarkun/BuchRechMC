@@ -17,7 +17,7 @@
 @property (strong, nonatomic) RESTAPI *restApi;
 @property (strong, nonatomic) NSArray *receivedData;
 @property (strong, nonatomic) NSCharacterSet *set;
-@property (assign, nonatomic) NSInteger saveOption;
+@property (assign, nonatomic) RealmDataSaveOption saveOption;
 
 @end
 
