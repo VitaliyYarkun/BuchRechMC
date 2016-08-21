@@ -17,6 +17,7 @@
 @property (strong, nonatomic) RESTAPI *restApi;
 @property (strong, nonatomic) NSArray *receivedData;
 @property (strong, nonatomic) NSCharacterSet *set;
+@property (assign, nonatomic) NSInteger saveOption;
 
 @end
 
@@ -45,6 +46,7 @@
 
 -(void) getAllQuestions
 {
+    self.saveOption = kSaveAllQuestionsOption;
     self.set = [NSCharacterSet URLQueryAllowedCharacterSet];
     self.stringURL = @"http://85.214.195.89:8080/api/questions/getAll";
     self.stringURL = [self.stringURL stringByAddingPercentEncodingWithAllowedCharacters:self.set];
@@ -53,9 +55,28 @@
 
 }
 
-#pragma mark - PARSE methods
+-(void) getAllLectures
+{
+    self.set = [NSCharacterSet URLQueryAllowedCharacterSet];
+    self.stringURL = @"http://85.214.195.89:8080/api/lectures/getAll";
+    self.stringURL = [self.stringURL stringByAddingPercentEncodingWithAllowedCharacters:self.set];
+    NSURL *url = [NSURL URLWithString:self.stringURL];
+    [self httpRequestWithUrl:url withHTTPMethod:@"GET"];
+}
 
--(void) saveQuestionsToRealm
+-(void) getAllTopics
+{
+    self.saveOption = kSaveAllTopicsOption;
+    self.set = [NSCharacterSet URLQueryAllowedCharacterSet];
+    self.stringURL = @"http://85.214.195.89:8080/api/topics/getAllTopics";
+    self.stringURL = [self.stringURL stringByAddingPercentEncodingWithAllowedCharacters:self.set];
+    NSURL *url = [NSURL URLWithString:self.stringURL];
+    [self httpRequestWithUrl:url withHTTPMethod:@"GET"];
+}
+
+#pragma mark - PARSE and SAVE to Realm
+
+-(void) saveAllQuestionsToRealm
 {
     RLMRealm *realm = [RLMRealm defaultRealm];
     
@@ -110,7 +131,8 @@
 {
     NSError *error = nil;
     self.receivedData =[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-    [self saveQuestionsToRealm];
+    if (self.saveOption == kSaveAllQuestionsOption)
+        [self saveAllQuestionsToRealm];        
 }
 
 
