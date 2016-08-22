@@ -34,6 +34,7 @@
 		EF411D311D688A05008F068F /* RealmString.m in Sources */ = {isa = PBXBuildFile; fileRef = EF411D301D688A05008F068F /* RealmString.m */; };
 		EF411D341D688C29008F068F /* ServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF411D331D688C29008F068F /* ServerManager.m */; };
 		EFD042D81CCF75AA0073BED6 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD042D71CCF75AA0073BED6 /* Question.m */; };
+		EFE66A981D6B6D2D00EA8E8E /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE66A971D6B6D2D00EA8E8E /* QuestionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,8 @@
 		EF411D331D688C29008F068F /* ServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerManager.m; sourceTree = "<group>"; };
 		EFD042D61CCF75AA0073BED6 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
 		EFD042D71CCF75AA0073BED6 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		EFE66A961D6B6D2D00EA8E8E /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		EFE66A971D6B6D2D00EA8E8E /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +220,8 @@
 				EF266F841CB3F87700ADD7C8 /* MenuController.m */,
 				EF0B4BFB1CB59BE60012E030 /* BookViewController.h */,
 				EF0B4BFC1CB59BE60012E030 /* BookViewController.m */,
+				EFE66A961D6B6D2D00EA8E8E /* QuestionViewController.h */,
+				EFE66A971D6B6D2D00EA8E8E /* QuestionViewController.m */,
 			);
 			name = UIDesign;
 			sourceTree = "<group>";
@@ -431,6 +436,7 @@
 			files = (
 				EF411D341D688C29008F068F /* ServerManager.m in Sources */,
 				EF06590F1CB2D2E800D7AEC7 /* QuestionsController.m in Sources */,
+				EFE66A981D6B6D2D00EA8E8E /* QuestionViewController.m in Sources */,
 				EF0658DE1CB2D05200D7AEC7 /* AppDelegate.m in Sources */,
 				EF266F851CB3F87700ADD7C8 /* MenuController.m in Sources */,
 				EF266F821CB3BD8800ADD7C8 /* SWRevealViewController.m in Sources */,

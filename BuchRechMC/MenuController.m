@@ -13,10 +13,11 @@
 @interface MenuController ()
 
 @property (strong, nonatomic) BookViewController *bookController;
+@property (assign, nonatomic) NSInteger cellTag;
 
 @end
 
-@implementation MenuController{
+@implementation MenuController {
     NSArray *menu;
 }
 
@@ -41,7 +42,7 @@
     
     NSString* identifier = [menu objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-    
+
     
     return cell;
 }

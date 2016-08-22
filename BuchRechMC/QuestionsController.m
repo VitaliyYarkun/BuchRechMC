@@ -9,12 +9,14 @@
 #import "SWRevealViewController.h"
 #import "Question.h"
 #import "QuestionCustomCell.h"
+#import "QuestionViewController.h"
 
 @interface QuestionsController()
 
+@property (strong, nonatomic) QuestionViewController *questionController;
+@property (strong, nonatomic) Question *selectedQuestion;
 @property (strong, nonatomic) RLMResults<Question *> *allQuestions;
-@property (assign, nonatomic) NSInteger questionsCount;
-
+@property (assign, nonatomic) NSInteger selectedCell;
 
 @end
 
@@ -30,7 +32,6 @@
     [self.tableView reloadData];
     
     self.allQuestions = [Question allObjects];
-    self.questionsCount = [self.allQuestions count];
     
 }
 #pragma mark - Table view data source
@@ -40,7 +41,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.questionsCount;
+    return [self.allQuestions count];
 }
 
 
@@ -51,27 +52,28 @@
     
     Question *question = [self.allQuestions objectAtIndex:indexPath.row];
     
+    cell.tag = indexPath.row;
     cell.content.text = question.content;
-    
     
     return cell;
 }
 
-/*- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    self.cellTag = cell.tag;
-    [self performSegueWithIdentifier:@"BookControllerSegue" sender:self];
+    self.selectedCell = cell.tag;
+    self.selectedQuestion = [self.allQuestions objectAtIndex:self.selectedCell];
+    [self performSegueWithIdentifier:@"QuestionControllerSegue" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"BookControllerSegue"])
+    if ([segue.identifier isEqualToString:@"QuestionControllerSegue"])
     {
-        self.bookController = (BookViewController*)segue.destinationViewController;
-        self.bookController.cellTag = self.cellTag;
+        self.questionController = (QuestionViewController *)segue.destinationViewController;
+        self.questionController.question = self.selectedQuestion;
     }
-}*/
+}
 
 
 
