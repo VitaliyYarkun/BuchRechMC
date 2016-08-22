@@ -11,6 +11,8 @@
 
 @interface AppDelegate ()
 
+@property (strong, nonatomic) ServerManager *serverManager;
+
 @end
 
 @implementation AppDelegate
@@ -20,6 +22,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.serverManager = [ServerManager sharedManager];
+    [self.serverManager getAllQuestions];
     
     return YES;
 }

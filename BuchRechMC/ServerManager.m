@@ -138,7 +138,8 @@
     dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
     NSError *error = nil;
     self.receivedData =[NSJSONSerialization JSONObjectWithData:self.data options:NSJSONReadingAllowFragments error:&error];
-    
+    if (self.saveOption == kSaveAllQuestionsOption)
+        [self saveAllQuestionsToRealm];
 }
 
 
