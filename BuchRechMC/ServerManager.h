@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Realm/Realm.h>
 
 typedef NS_ENUM(NSInteger, RealmDataSaveOption)
 {
@@ -15,6 +16,8 @@ typedef NS_ENUM(NSInteger, RealmDataSaveOption)
 };
 
 @interface ServerManager : NSObject
+
+@property (strong, nonatomic) RLMRealm *realm;
 
 -(void) httpRequestWithUrl:(NSURL *) requestUrl
             withHTTPMethod:(NSString *) requestMethod;

@@ -10,4 +10,6 @@
 
 @interface QuestionCustomCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *content;
+
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "ServerManager.h"
-#import <Realm/Realm.h>
 #import "Question.h"
 
 @interface ServerManager()
@@ -77,11 +76,11 @@
 
 -(void) saveAllQuestionsToRealm
 {
-    RLMRealm *realm = [RLMRealm defaultRealm];
+    self.realm = [RLMRealm defaultRealm];
     
-    [realm beginWriteTransaction];
-    [realm deleteAllObjects];
-    [realm commitWriteTransaction];
+    [self.realm beginWriteTransaction];
+    [self.realm deleteAllObjects];
+    [self.realm commitWriteTransaction];
     
     for(NSDictionary *questionDict in self.receivedData)
     {
@@ -103,9 +102,9 @@
             answer.generalId = [[possibleAnswersDict objectForKey:@"id"] integerValue];
             [question.possibleAnswers addObject:answer];
         }
-        [realm beginWriteTransaction];
-        [realm addObject:question];
-        [realm commitWriteTransaction];
+        [self.realm beginWriteTransaction];
+        [self.realm addObject:question];
+        [self.realm commitWriteTransaction];
         
     }
     
