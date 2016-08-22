@@ -34,7 +34,7 @@
     RLMRealm *realm = [RLMRealm realmWithConfiguration:config error:nil];
     RLMResults<Question *> *questions = [Question allObjects];*/
     ServerManager *manager = [ServerManager sharedManager];
-    [manager getAllTopics];
+    [manager getAllQuestions];
 }
 
 

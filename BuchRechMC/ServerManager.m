@@ -7,17 +7,17 @@
 //
 
 #import "ServerManager.h"
-#import "RESTAPI.h"
 #import <Realm/Realm.h>
 #import "Question.h"
 
-@interface ServerManager()<RESTAPIDelegate>
+@interface ServerManager()
 
 @property (strong, nonatomic) NSString *stringURL;
-@property (strong, nonatomic) RESTAPI *restApi;
 @property (strong, nonatomic) NSArray *receivedData;
 @property (strong, nonatomic) NSCharacterSet *set;
 @property (assign, nonatomic) RealmDataSaveOption saveOption;
+@property (nonatomic, strong) __block NSData *data;
+
 
 @end
 
@@ -33,15 +33,14 @@
     return manager;
 }
 
-#pragma mark - HTTP requests
+#pragma mark - HTTP requests methods
 
 -(void) httpRequestWithUrl:(NSURL *) requestUrl
             withHTTPMethod:(NSString *) requestMethod
 {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestUrl];
     [request setHTTPMethod:requestMethod];
-    self.restApi.delegate = self;
-    [self.restApi httpRequest:request];
+    [self sendSynchronousRequest:request returningResponse:nil error:nil];
 }
 
 -(void) getAllQuestions
@@ -114,26 +113,36 @@
 
 
 
-#pragma mark - RESTAPI response
+#pragma mark - RESTAPI request
 
--(RESTAPI *)restApi
-{
-    if (!_restApi)
-    {
-        _restApi = [[RESTAPI alloc] init];
-    }
-    return _restApi;
-}
-
-
-
-- (void)getReceivedData:(NSMutableData *)data sender:(RESTAPI *)sender
-{
+-(void)sendSynchronousRequest:(NSURLRequest *)request
+            returningResponse:(__autoreleasing NSURLResponse **)responsePtr
+                        error:(__autoreleasing NSError **)errorPtr {
+    dispatch_semaphore_t    sem;
+    sem = dispatch_semaphore_create(0);
+    
+    [[[NSURLSession sharedSession] dataTaskWithRequest:request
+                                     completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                         if (errorPtr != NULL) {
+                                             *errorPtr = error;
+                                         }
+                                         if (responsePtr != NULL) {
+                                             *responsePtr = response;
+                                         }
+                                         if (error == nil) {
+                                             self.data = data;
+                                         }
+                                         dispatch_semaphore_signal(sem);
+                                     }] resume];
+    
+    dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
     NSError *error = nil;
-    self.receivedData =[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-    if (self.saveOption == kSaveAllQuestionsOption)
-        [self saveAllQuestionsToRealm];        
+    self.receivedData =[NSJSONSerialization JSONObjectWithData:self.data options:NSJSONReadingAllowFragments error:&error];
+    
 }
+
+
+
 
 
 @end
