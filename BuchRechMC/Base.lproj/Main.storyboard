@@ -73,6 +73,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="questionTextView" destination="QXB-4T-g54" id="kMC-Kc-J4Z"/>
                         <outlet property="tableView" destination="9Vt-zF-yXK" id="mTE-4I-yd6"/>
                     </connections>
                 </viewController>
