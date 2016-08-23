@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Question.h"
 
-@interface QuestionViewController : UIViewController
+@interface QuestionViewController : UIViewController <UITableViewDataSource>
 
 @property (strong, nonatomic) Question *question;
 
