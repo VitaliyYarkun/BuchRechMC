@@ -47,6 +47,7 @@
     
     Answer *answer = [self.answers objectAtIndex:indexPath.row];
     cell.textLabel.text = answer.content;
+    cell.tag = answer.answerId;
     
     UIView *separatorView = [[UIView alloc] initWithFrame:CGRectMake(0, cell.frame.size.height-1, cell.frame.size.width, 1)];
     [separatorView setBackgroundColor:[UIColor lightGrayColor]];
@@ -55,6 +56,17 @@
     
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if (cell.tag == self.question.correctAnswerId)
+        [cell setBackgroundColor:[UIColor greenColor]];
+    else {
+        [cell setBackgroundColor:[UIColor redColor]];
+    }
+
 }
 
 

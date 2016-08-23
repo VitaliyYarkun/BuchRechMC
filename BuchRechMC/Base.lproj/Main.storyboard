@@ -58,6 +58,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="5qM-ha-fRc" id="CLN-Fm-9F6"/>
+                                    <outlet property="delegate" destination="5qM-ha-fRc" id="lfi-W1-5Sa"/>
                                 </connections>
                             </tableView>
                         </subviews>
