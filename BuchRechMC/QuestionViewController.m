@@ -61,8 +61,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    if (cell.tag == self.question.correctAnswerId)
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    if (cell.tag == self.question.correctAnswerId){
         [cell setBackgroundColor:[UIColor greenColor]];
+        tableView.allowsSelection = NO;
+    }
     else {
         [cell setBackgroundColor:[UIColor redColor]];
     }
