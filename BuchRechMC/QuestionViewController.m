@@ -92,6 +92,27 @@
         [self.tableView reloadRowsAtIndexPaths:rowsToReload withRowAnimation:UITableViewRowAnimationLeft];
         [self.tableView endUpdates];
     }
+    else
+        self.questionIndex = [self.allQuestions count];
     
+}
+- (IBAction)previousQuestionAction:(UIBarButtonItem *)sender
+{
+    self.questionIndex--;
+    if ((self.questionIndex < [self.allQuestions count]) && (self.questionIndex >= 0)) {
+        self.tableView.allowsSelection = YES;
+        self.question = [self.allQuestions objectAtIndex:self.questionIndex];
+        self.questionTextView.text = self.question.content;
+        self.answers = self.question.possibleAnswers;
+        NSArray *rowsToReload = [NSArray arrayWithObjects:[NSIndexPath indexPathForRow:0 inSection:0],
+                                 [NSIndexPath indexPathForRow:1 inSection:0],
+                                 [NSIndexPath indexPathForRow:2 inSection:0],
+                                 [NSIndexPath indexPathForRow:3 inSection:0], nil];
+        [self.tableView beginUpdates];
+        [self.tableView reloadRowsAtIndexPaths:rowsToReload withRowAnimation:UITableViewRowAnimationRight];
+        [self.tableView endUpdates];
+    }
+    else
+        self.questionIndex = 0;
 }
 @end
