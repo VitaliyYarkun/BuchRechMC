@@ -13,6 +13,8 @@
 @property RLMArray <Answer *><Answer> *answers;
 @property (weak, nonatomic) IBOutlet UITextView *questionTextView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (assign, nonatomic) NSInteger questionIndex;
+@property (strong, nonatomic) Question *question;
 
 @end
 
@@ -20,6 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.questionIndex = self.selectedCell;
+    self.question = [self.allQuestions objectAtIndex:self.questionIndex];
     self.questionTextView.text = self.question.content;
     self.answers = self.question.possibleAnswers;
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
@@ -44,7 +48,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    
+    [cell setBackgroundColor:[UIColor whiteColor]];
     Answer *answer = [self.answers objectAtIndex:indexPath.row];
     cell.textLabel.text = answer.content;
     cell.tag = answer.answerId;
@@ -72,5 +76,22 @@
 
 }
 
-
+- (IBAction)nextQuestionAction:(UIBarButtonItem *)sender
+{
+    self.questionIndex++;
+    if (self.questionIndex < [self.allQuestions count]) {
+        self.tableView.allowsSelection = YES;
+        self.question = [self.allQuestions objectAtIndex:self.questionIndex];
+        self.questionTextView.text = self.question.content;
+        self.answers = self.question.possibleAnswers;
+        NSArray *rowsToReload = [NSArray arrayWithObjects:[NSIndexPath indexPathForRow:0 inSection:0],
+                                 [NSIndexPath indexPathForRow:1 inSection:0],
+                                 [NSIndexPath indexPathForRow:2 inSection:0],
+                                 [NSIndexPath indexPathForRow:3 inSection:0], nil];
+        [self.tableView beginUpdates];
+        [self.tableView reloadRowsAtIndexPaths:rowsToReload withRowAnimation:UITableViewRowAnimationLeft];
+        [self.tableView endUpdates];
+    }
+    
+}
 @end

@@ -31,7 +31,7 @@
             </objects>
             <point key="canvasLocation" x="846" y="432"/>
         </scene>
-        <!--Question View Controller-->
+        <!--Question-->
         <scene sceneID="5lb-nh-UFM">
             <objects>
                 <viewController id="5qM-ha-fRc" customClass="QuestionViewController" sceneMemberID="viewController">
@@ -73,6 +73,13 @@
                             <constraint firstItem="QXB-4T-g54" firstAttribute="top" secondItem="EUR-ap-enV" secondAttribute="bottom" constant="8" symbolic="YES" id="jZn-uM-5Jp"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Question" id="A3k-G9-1uh">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="ouT-hh-izP">
+                            <connections>
+                                <action selector="nextQuestionAction:" destination="5qM-ha-fRc" id="saW-Ww-Wzs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="questionTextView" destination="QXB-4T-g54" id="kMC-Kc-J4Z"/>
                         <outlet property="tableView" destination="9Vt-zF-yXK" id="mTE-4I-yd6"/>

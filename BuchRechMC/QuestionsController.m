@@ -14,8 +14,8 @@
 @interface QuestionsController()
 
 @property (strong, nonatomic) QuestionViewController *questionController;
-@property (strong, nonatomic) Question *selectedQuestion;
 @property (strong, nonatomic) RLMResults<Question *> *allQuestions;
+
 @property (assign, nonatomic) NSInteger selectedCell;
 
 @end
@@ -30,8 +30,8 @@
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     [self.tableView registerNib:[ UINib nibWithNibName:NSStringFromClass([QuestionCustomCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([QuestionCustomCell class ])];
     [self.tableView reloadData];
-    
     self.allQuestions = [Question allObjects];
+    
     
 }
 #pragma mark - Table view data source
@@ -62,7 +62,6 @@
 {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     self.selectedCell = cell.tag;
-    self.selectedQuestion = [self.allQuestions objectAtIndex:self.selectedCell];
     [self performSegueWithIdentifier:@"QuestionControllerSegue" sender:self];
 }
 
@@ -71,7 +70,8 @@
     if ([segue.identifier isEqualToString:@"QuestionControllerSegue"])
     {
         self.questionController = (QuestionViewController *)segue.destinationViewController;
-        self.questionController.question = self.selectedQuestion;
+        self.questionController.selectedCell = self.selectedCell;
+        self.questionController.allQuestions = self.allQuestions;
     }
 }
 
