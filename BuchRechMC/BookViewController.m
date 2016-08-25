@@ -8,10 +8,13 @@
 
 #import "BookViewController.h"
 
-@interface BookViewController ()
+@interface BookViewController () <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *bookWebView;
 @property (weak, nonatomic) IBOutlet UINavigationItem *titleNavigationItem;
+@property (assign, nonatomic) NSInteger pdfPageCount;
+@property (assign, nonatomic) NSInteger pdfPageHeight;
+@property (assign, nonatomic) NSInteger halfScreenHeight;
 
 @end
 
@@ -21,9 +24,16 @@
     [super viewDidLoad];
     [self selectBook];
     [self selectTitle];
+    
     NSString *path = [[NSBundle mainBundle] pathForResource:self.bookName ofType:@"pdf"];
     NSURL *url = [NSURL fileURLWithPath:path];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    CGPDFDocumentRef pdf = CGPDFDocumentCreateWithURL((CFURLRef)url);
+    self.pdfPageCount = (int)CGPDFDocumentGetNumberOfPages(pdf);
+    self.pdfPageHeight = -1;
+    self.bookWebView.scrollView.delegate = self;
+    
     [self.bookWebView loadRequest:request];
     [self.bookWebView setScalesPageToFit:YES];
 }
@@ -83,6 +93,29 @@
             break;
     }
 }
+
+#pragma mark - UIScrollViewDelegate
+
+-(void) scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if(self.pdfPageHeight == -1)
+    {
+        CGFloat contentHeight = self.bookWebView.scrollView.contentSize.height;
+        self.pdfPageHeight = contentHeight / self.pdfPageCount;
+        
+        self.halfScreenHeight = (self.bookWebView.frame.size.height / 2);
+    }
+    float verticalContentOffset = self.bookWebView.scrollView.contentOffset.y;
+    
+    int pageNumber = ceilf((verticalContentOffset + self.halfScreenHeight) / self.pdfPageHeight);
+    
+    
+}
+
+
+
+
+
 
 
 @end
