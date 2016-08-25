@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (assign, nonatomic) NSInteger questionIndex;
 @property (strong, nonatomic) Question *question;
+@property (strong, nonatomic) NSMutableArray *cellsArray;
 
 @end
 
@@ -26,6 +27,7 @@
     self.question = [self.allQuestions objectAtIndex:self.questionIndex];
     self.questionTextView.text = self.question.content;
     self.answers = self.question.possibleAnswers;
+    self.cellsArray = [[NSMutableArray alloc] init];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 
@@ -53,31 +55,35 @@
     cell.textLabel.text = answer.content;
     cell.tag = answer.answerId;
     
-    UIView *separatorView = [[UIView alloc] initWithFrame:CGRectMake(0, cell.frame.size.height-1, cell.frame.size.width, 1)];
+    /*UIView *separatorView = [[UIView alloc] initWithFrame:CGRectMake(0, cell.frame.size.height-1, cell.frame.size.width, 1)];
     [separatorView setBackgroundColor:[UIColor lightGrayColor]];
     [separatorView setAlpha:0.8f];
-    [cell addSubview:separatorView];
+    [cell addSubview:separatorView];*/
     
+    [self.cellsArray addObject:cell];
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    if (cell.tag == self.question.correctAnswerId){
-        [cell setBackgroundColor:[UIColor greenColor]];
-        tableView.allowsSelection = NO;
-    }
-    else {
-        [cell setBackgroundColor:[UIColor redColor]];
+    tableView.allowsSelection = NO;
+    UITableViewCell *chosenCell = [tableView cellForRowAtIndexPath:indexPath];
+    [chosenCell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    if (chosenCell.tag == self.question.correctAnswerId)
+        [chosenCell setBackgroundColor:[UIColor greenColor]];
+    else
+    {
+        [chosenCell setBackgroundColor:[UIColor redColor]];
+        UITableView *correctCell = [self.cellsArray objectAtIndex:self.question.correctAnswerId];
+        [correctCell setBackgroundColor:[UIColor greenColor]];
     }
 
 }
 
 - (IBAction)nextQuestionAction:(UIBarButtonItem *)sender
 {
+    [self.cellsArray removeAllObjects];
     self.questionIndex++;
     if (self.questionIndex < [self.allQuestions count]) {
         self.tableView.allowsSelection = YES;
@@ -95,9 +101,12 @@
     else
         self.questionIndex = [self.allQuestions count];
     
+    
 }
 - (IBAction)previousQuestionAction:(UIBarButtonItem *)sender
 {
+    [self.cellsArray removeAllObjects];
+
     self.questionIndex--;
     if ((self.questionIndex < [self.allQuestions count]) && (self.questionIndex >= 0)) {
         self.tableView.allowsSelection = YES;
@@ -114,5 +123,6 @@
     }
     else
         self.questionIndex = 0;
+    
 }
 @end

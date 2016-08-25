@@ -31,6 +31,7 @@
     [self.tableView registerNib:[ UINib nibWithNibName:NSStringFromClass([QuestionCustomCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([QuestionCustomCell class ])];
     [self.tableView reloadData];
     self.allQuestions = [Question allObjects];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     
     
 }

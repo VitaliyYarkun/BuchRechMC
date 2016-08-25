@@ -24,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     menu = @[@"GL",@"BF",@"JA",@"BL",@"GV",@"BB"];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+
 }
 
 #pragma mark - Table view data source
