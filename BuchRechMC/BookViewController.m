@@ -19,7 +19,6 @@
 @property (assign, nonatomic) NSInteger pdfPageHeight;
 @property (assign, nonatomic) NSInteger halfScreenHeight;
 @property (assign, nonatomic) BOOL shouldRecalculate;
-@property (assign, nonatomic) BOOL isZoomed;
 
 @end
 
@@ -41,7 +40,6 @@
     
     self.pdfPageHeight = -1;
     self.bookWebView.scrollView.delegate = self;
-    self.isZoomed = NO;
     self.shouldRecalculate = NO;
     
     [self.bookWebView loadRequest:request];
