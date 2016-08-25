@@ -18,9 +18,8 @@
 @property (assign, nonatomic) NSInteger pdfPageCount;
 @property (assign, nonatomic) NSInteger pdfPageHeight;
 @property (assign, nonatomic) NSInteger halfScreenHeight;
-@property (assign, nonatomic) CGFloat zoomScale;
-@property (assign ,nonatomic) BOOL isZoomed;
 @property (assign, nonatomic) BOOL shouldRecalculate;
+@property (assign, nonatomic) BOOL isZoomed;
 
 @end
 
@@ -136,21 +135,13 @@
         self.shouldRecalculate = NO;
     }
     float verticalContentOffset = self.bookWebView.scrollView.contentOffset.y;
-    NSInteger pageNumber;
-    if (self.isZoomed)
-        pageNumber = ceilf(((verticalContentOffset + self.halfScreenHeight) / self.pdfPageHeight)/self.zoomScale);
-    else
+    NSInteger pageNumber = 0;
+    if (scrollView.zoomScale == scrollView.minimumZoomScale)
         pageNumber = ceilf((verticalContentOffset + self.halfScreenHeight) / self.pdfPageHeight);
     
     NSLog(@"Page number = %ld", (long)pageNumber);
 }
 
--(void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale {
-    
-    self.isZoomed = YES;
-    self.zoomScale = scale;
-    [self scrollViewDidScroll:scrollView];
-}
 
 
 
