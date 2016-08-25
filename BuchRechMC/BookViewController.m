@@ -12,9 +12,15 @@
 
 @property (weak, nonatomic) IBOutlet UIWebView *bookWebView;
 @property (weak, nonatomic) IBOutlet UINavigationItem *titleNavigationItem;
+
+@property (strong, nonatomic) NSURL *url;
+
 @property (assign, nonatomic) NSInteger pdfPageCount;
 @property (assign, nonatomic) NSInteger pdfPageHeight;
 @property (assign, nonatomic) NSInteger halfScreenHeight;
+@property (assign, nonatomic) CGFloat zoomScale;
+@property (assign ,nonatomic) BOOL isZoomed;
+@property (assign, nonatomic) BOOL shouldRecalculate;
 
 @end
 
@@ -25,18 +31,41 @@
     [self selectBook];
     [self selectTitle];
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:self.bookName ofType:@"pdf"];
-    NSURL *url = [NSURL fileURLWithPath:path];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self selector:@selector(orientationChanged:)
+     name:UIDeviceOrientationDidChangeNotification
+     object:[UIDevice currentDevice]];
     
-    CGPDFDocumentRef pdf = CGPDFDocumentCreateWithURL((CFURLRef)url);
-    self.pdfPageCount = (int)CGPDFDocumentGetNumberOfPages(pdf);
+    [self pageCalculation];
+    NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
+    
     self.pdfPageHeight = -1;
     self.bookWebView.scrollView.delegate = self;
+    self.isZoomed = NO;
+    self.shouldRecalculate = NO;
     
     [self.bookWebView loadRequest:request];
     [self.bookWebView setScalesPageToFit:YES];
 }
+
+-(void) pageCalculation
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:self.bookName ofType:@"pdf"];
+    self.url =[NSURL fileURLWithPath:path];
+  
+    CGPDFDocumentRef pdf = CGPDFDocumentCreateWithURL((CFURLRef)self.url);
+    self.pdfPageCount = (int)CGPDFDocumentGetNumberOfPages(pdf);
+
+}
+- (void) orientationChanged:(NSNotification *)note
+{
+    UIDevice * device = note.object;
+    self.shouldRecalculate = YES;
+    if ((device.orientation == UIDeviceOrientationLandscapeLeft) || (device.orientation == UIDeviceOrientationLandscapeRight))
+        [self pageCalculation];
+}
+
 - (IBAction)backAction:(UIBarButtonItem *)sender
 {
     [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
@@ -98,20 +127,30 @@
 
 -(void) scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    if(self.pdfPageHeight == -1)
+    if((self.pdfPageHeight == -1) || self.shouldRecalculate)
     {
         CGFloat contentHeight = self.bookWebView.scrollView.contentSize.height;
         self.pdfPageHeight = contentHeight / self.pdfPageCount;
         
         self.halfScreenHeight = (self.bookWebView.frame.size.height / 2);
+        self.shouldRecalculate = NO;
     }
     float verticalContentOffset = self.bookWebView.scrollView.contentOffset.y;
+    NSInteger pageNumber;
+    if (self.isZoomed)
+        pageNumber = ceilf(((verticalContentOffset + self.halfScreenHeight) / self.pdfPageHeight)/self.zoomScale);
+    else
+        pageNumber = ceilf((verticalContentOffset + self.halfScreenHeight) / self.pdfPageHeight);
     
-    int pageNumber = ceilf((verticalContentOffset + self.halfScreenHeight) / self.pdfPageHeight);
-    
-    
+    NSLog(@"Page number = %ld", (long)pageNumber);
 }
 
+-(void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale {
+    
+    self.isZoomed = YES;
+    self.zoomScale = scale;
+    [self scrollViewDidScroll:scrollView];
+}
 
 
 

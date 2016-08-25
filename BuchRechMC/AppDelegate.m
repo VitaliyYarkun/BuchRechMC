@@ -24,6 +24,7 @@
     self.serverManager = [ServerManager sharedManager];
     [self.serverManager getAllQuestions];
     
+    
     return YES;
 }
 
