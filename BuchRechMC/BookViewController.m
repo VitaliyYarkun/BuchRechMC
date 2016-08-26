@@ -7,6 +7,8 @@
 //
 
 #import "BookViewController.h"
+#import "Lecture.h"
+#import "Question.h"
 
 @interface BookViewController () <UIScrollViewDelegate>
 
@@ -24,10 +26,24 @@
 
 @implementation BookViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     [self selectBook];
     [self selectTitle];
+    
+    /*Lecture *lecture = [[Lecture alloc] init];
+    //NSPredicate *lecturePred = [NSPredicate predicateWithFormat:@"name == %@",self.bookName];
+    //self.lectureResult = [Lecture objectsWithPredicate:lecturePred];
+
+    RLMResults *lectureResult = [Lecture objectsWhere:@"name BEGINSWITH '05'"];
+    lecture = [lectureResult firstObject];
+    [self testMethod];
+    
+    RLMResults *questions = [Question objectsWhere:@"chapter BETWEEN {%@,%@}", 4, 5];*/
+
+    
+    //NSPredicate *questionPred = [NSPredicate predicateWithFormat:@"chapter BETWEEN {%@,%@}", lecture.startChapter, lecture.endChapter];
     
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter]
@@ -48,7 +64,7 @@
 
 -(void) pageCalculation
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:self.bookName ofType:@"pdf"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:self.bookName ofType:NULL];
     self.url =[NSURL fileURLWithPath:path];
   
     CGPDFDocumentRef pdf = CGPDFDocumentCreateWithURL((CFURLRef)self.url);
@@ -104,28 +120,28 @@
 {
     switch (self.cellTag) {
         case kGL:
-            self.bookName = @"02_TUM WS 2016_17_GL_final_V1_Lsg";
+            self.bookName = @"02_TUM WS 2016_17_GL_final_V1_Lsg.pdf";
             break;
         case kBF:
-            self.bookName = @"03_TUM WS 2016_17_BF_final_V1_Lsg";
+            self.bookName = @"03_TUM WS 2016_17_BF_final_V1_Lsg.pdf";
             break;
         case kBF1:
-            self.bookName = @"05_TUM WS 2016_17_Ü_BF_2_Fallbeispiel 1_Aufgaben_final_V1_Lsg";
+            self.bookName = @"05_TUM WS 2016_17_Ü_BF_2_Fallbeispiel 1_Aufgaben_final_V1_Lsg.pdf";
             break;
         case kBF2:
-            self.bookName = @"06_TUM WS 2016_17_Ü_BF_3_Fallbeispiel 2_Aufgaben_final_V1_Lsg";
+            self.bookName = @"06_TUM WS 2016_17_Ü_BF_3_Fallbeispiel 2_Aufgaben_final_V1_Lsg.pdf";
             break;
         case kJA:
-            self.bookName = @"07_TUM WS 2016_17_JA_[1-3]_final_V1_Lsg";
+            self.bookName = @"07_TUM WS 2016_17_JA_[1-3]_final_V1_Lsg.pdf";
             break;
         case kBL:
-            self.bookName = @"08_TUM WS 2016_17_JA_[4]_final_V1_Lsg";
+            self.bookName = @"08_TUM WS 2016_17_JA_[4]_final_V1_Lsg.pdf";
             break;
         case kGV:
-            self.bookName = @"09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg";
+            self.bookName = @"09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf";
             break;
         case kBB:
-            self.bookName = @"10_TUM WS 2016_17_BB_final_V1_Lsg";
+            self.bookName = @"10_TUM WS 2016_17_BB_final_V1_Lsg.pdf";
             break;
         default:
             break;
@@ -147,7 +163,17 @@
     float verticalContentOffset = self.bookWebView.scrollView.contentOffset.y;
     NSInteger pageNumber = 0;
     if (scrollView.zoomScale == scrollView.minimumZoomScale)
+    {
         pageNumber = ceilf((verticalContentOffset + self.halfScreenHeight) / self.pdfPageHeight);
+       /* NSPredicate *currentPageQuestionPred = [NSPredicate predicateWithFormat:@"fromPage <= %@ && toPage <= %@",pageNumber];
+        self.question = [self.questions objectsWithPredicate:currentPageQuestionPred];
+        
+        if (self.question)
+            NSLog(@"There is a question");
+        else
+            NSLog(@"There isn't any question");*/
+    }
+    
     
     NSLog(@"Page number = %ld", (long)pageNumber);
 }
