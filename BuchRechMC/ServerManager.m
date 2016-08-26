@@ -18,21 +18,9 @@
 @property (assign, nonatomic) RealmDataSaveOption saveOption;
 @property (nonatomic, strong) __block NSData *data;
 
-
 @end
 
 @implementation ServerManager
-
-@synthesize realm = _realm;
-
--(RLMRealm *) realm
-{
-    if (!_realm) {
-        _realm = [RLMRealm defaultRealm];
-    }
-    
-    return _realm;
-}
 
 +(instancetype) sharedManager
 {
@@ -44,7 +32,7 @@
     return manager;
 }
 
-#pragma mark - HTTP requests methods
+#pragma mark - HTTP request methods
 
 -(void) httpRequestWithUrl:(NSURL *) requestUrl
             withHTTPMethod:(NSString *) requestMethod
@@ -67,6 +55,7 @@
 
 -(void) getAllLectures
 {
+    self.saveOption = kSaveAllLecturesOption;
     self.set = [NSCharacterSet URLQueryAllowedCharacterSet];
     self.stringURL = @"http://85.214.195.89:8080/api/lectures/getAll";
     self.stringURL = [self.stringURL stringByAddingPercentEncodingWithAllowedCharacters:self.set];
@@ -88,15 +77,13 @@
 
 -(void) saveAllQuestionsToRealm
 {
-    
-    
     [self.realm beginWriteTransaction];
     [self.realm deleteAllObjects];
     [self.realm commitWriteTransaction];
     
     for(NSDictionary *questionDict in self.receivedData)
     {
-        Question* question = [[Question alloc] init];
+        Question *question = [[Question alloc] init];
         question.bookingEntry = [[questionDict objectForKey:@"bookingEntry"] integerValue];
         question.chapter = [[questionDict objectForKey:@"chapter"] integerValue];
         question.content = [questionDict objectForKey:@"content"];
@@ -123,6 +110,19 @@
 }
 -(void) saveAllLecturesToRealm
 {
+    for(NSDictionary *lectureDict in self.receivedData)
+    {
+        Lecture *lecture = [[Lecture alloc] init];
+        lecture.lectureId = [[lectureDict objectForKey:@"id"] integerValue];
+        lecture.name = [lectureDict objectForKey:@"name"];
+        lecture.startChapter = [[lectureDict objectForKey:@"startChapter"] integerValue];
+        lecture.endChapter = [[lectureDict objectForKey:@"endChapter"] integerValue];
+        
+        [self.realm beginWriteTransaction];
+        [self.realm addObject:lecture];
+        [self.realm commitWriteTransaction];
+        
+    }
 }
 
 
@@ -154,6 +154,8 @@
     self.receivedData =[NSJSONSerialization JSONObjectWithData:self.data options:NSJSONReadingAllowFragments error:&error];
     if (self.saveOption == kSaveAllQuestionsOption)
         [self saveAllQuestionsToRealm];
+    else if (self.saveOption == kSaveAllLecturesOption)
+        [self saveAllLecturesToRealm];
 }
 
 

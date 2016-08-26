@@ -77,6 +77,12 @@
         case kBF:
             self.titleNavigationItem.title = @"Buchführung";
             break;
+        case kBF1:
+            self.titleNavigationItem.title = @"Buchführung (Fallbeispiel 1)";
+            break;
+        case kBF2:
+            self.titleNavigationItem.title = @"Modul Buchführung (BF) Fallbeispiel 2";
+            break;
         case kJA:
             self.titleNavigationItem.title = @"Jahresabschluss";
             break;
@@ -102,6 +108,12 @@
             break;
         case kBF:
             self.bookName = @"03_TUM WS 2016_17_BF_final_V1_Lsg";
+            break;
+        case kBF1:
+            self.bookName = @"05_TUM WS 2016_17_Ü_BF_2_Fallbeispiel 1_Aufgaben_final_V1_Lsg";
+            break;
+        case kBF2:
+            self.bookName = @"06_TUM WS 2016_17_Ü_BF_3_Fallbeispiel 2_Aufgaben_final_V1_Lsg";
             break;
         case kJA:
             self.bookName = @"07_TUM WS 2016_17_JA_[1-3]_final_V1_Lsg";

@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    menu = @[@"GL",@"BF",@"JA",@"BL",@"GV",@"BB"];
+    menu = @[@"GL",@"BF",@"BF1", @"BF2",@"JA",@"BL",@"GV",@"BB"];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 
 }

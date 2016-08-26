@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ServerManager.h"
+#import <Realm/Realm.h>
 
 @interface AppDelegate ()
 
@@ -22,7 +23,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.serverManager = [ServerManager sharedManager];
+    self.serverManager.realm = [RLMRealm defaultRealm];
+
     [self.serverManager getAllQuestions];
+    [self.serverManager getAllLectures];
     
     
     return YES;

@@ -12,18 +12,16 @@
 typedef NS_ENUM(NSInteger, RealmDataSaveOption)
 {
     kSaveAllQuestionsOption = 1000,
-    kSaveAllTopicsOption
+    kSaveAllTopicsOption,
+    kSaveAllLecturesOption
 };
 
-@interface ServerManager : NSObject{
-    RLMRealm *_realm;
-}
+@interface ServerManager : NSObject
 
 @property (strong, nonatomic) RLMRealm *realm;
 
 -(void) httpRequestWithUrl:(NSURL *) requestUrl
             withHTTPMethod:(NSString *) requestMethod;
-
 -(void) getAllQuestions;
 -(void) getAllLectures;
 -(void) getAllTopics;

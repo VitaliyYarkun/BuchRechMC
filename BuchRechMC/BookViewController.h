@@ -10,6 +10,8 @@
 typedef enum{
     kGL = 1000,
     kBF,
+    kBF1,
+    kBF2,
     kJA,
     kBL,
     kGV,
