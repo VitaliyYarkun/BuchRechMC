@@ -8,6 +8,7 @@
 
 #import "ServerManager.h"
 #import "Question.h"
+#import "Lecture.h"
 
 @interface ServerManager()
 
@@ -21,6 +22,17 @@
 @end
 
 @implementation ServerManager
+
+@synthesize realm = _realm;
+
+-(RLMRealm *) realm
+{
+    if (!_realm) {
+        _realm = [RLMRealm defaultRealm];
+    }
+    
+    return _realm;
+}
 
 +(instancetype) sharedManager
 {
@@ -76,7 +88,7 @@
 
 -(void) saveAllQuestionsToRealm
 {
-    self.realm = [RLMRealm defaultRealm];
+    
     
     [self.realm beginWriteTransaction];
     [self.realm deleteAllObjects];
@@ -108,6 +120,9 @@
         
     }
     
+}
+-(void) saveAllLecturesToRealm
+{
 }
 
 

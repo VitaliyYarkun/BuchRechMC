@@ -7,7 +7,6 @@
 //
 
 #import <Realm/Realm.h>
-#import "RealmString.h"
 #import "Answer.h"
 
 @interface Question : RLMObject

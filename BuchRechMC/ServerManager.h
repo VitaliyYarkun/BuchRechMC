@@ -15,7 +15,9 @@ typedef NS_ENUM(NSInteger, RealmDataSaveOption)
     kSaveAllTopicsOption
 };
 
-@interface ServerManager : NSObject
+@interface ServerManager : NSObject{
+    RLMRealm *_realm;
+}
 
 @property (strong, nonatomic) RLMRealm *realm;
 
@@ -25,8 +27,6 @@ typedef NS_ENUM(NSInteger, RealmDataSaveOption)
 -(void) getAllQuestions;
 -(void) getAllLectures;
 -(void) getAllTopics;
-
--(void) saveAllQuestionsToRealm;
 
 +(instancetype) sharedManager;
 

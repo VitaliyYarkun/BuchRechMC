@@ -31,8 +31,8 @@
 		EF266F9A1CB42B6C00ADD7C8 /* 08_TUM WS 2016_17_JA_[4]_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F911CB42B6C00ADD7C8 /* 08_TUM WS 2016_17_JA_[4]_final_V1_Lsg.pdf */; };
 		EF266F9B1CB42B6C00ADD7C8 /* 09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F921CB42B6C00ADD7C8 /* 09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf */; };
 		EF266F9C1CB42B6C00ADD7C8 /* 10_TUM WS 2016_17_BB_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F931CB42B6C00ADD7C8 /* 10_TUM WS 2016_17_BB_final_V1_Lsg.pdf */; };
-		EF411D311D688A05008F068F /* RealmString.m in Sources */ = {isa = PBXBuildFile; fileRef = EF411D301D688A05008F068F /* RealmString.m */; };
 		EF411D341D688C29008F068F /* ServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF411D331D688C29008F068F /* ServerManager.m */; };
+		EF6D800A1D701A2E003C23EC /* Lecture.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6D80091D701A2E003C23EC /* Lecture.m */; };
 		EFD042D81CCF75AA0073BED6 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD042D71CCF75AA0073BED6 /* Question.m */; };
 		EFE66A981D6B6D2D00EA8E8E /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE66A971D6B6D2D00EA8E8E /* QuestionViewController.m */; };
 /* End PBXBuildFile section */
@@ -106,10 +106,10 @@
 		EF266F921CB42B6C00ADD7C8 /* 09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "09_TUM WS 2016_17_JA_[5-11]_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
 		EF266F931CB42B6C00ADD7C8 /* 10_TUM WS 2016_17_BB_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "10_TUM WS 2016_17_BB_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
 		EF266F941CB42B6C00ADD7C8 /* test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = test.md; sourceTree = "<group>"; };
-		EF411D2F1D688A05008F068F /* RealmString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmString.h; sourceTree = "<group>"; };
-		EF411D301D688A05008F068F /* RealmString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmString.m; sourceTree = "<group>"; };
 		EF411D321D688C29008F068F /* ServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerManager.h; sourceTree = "<group>"; };
 		EF411D331D688C29008F068F /* ServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerManager.m; sourceTree = "<group>"; };
+		EF6D80081D701A2E003C23EC /* Lecture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lecture.h; sourceTree = "<group>"; };
+		EF6D80091D701A2E003C23EC /* Lecture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lecture.m; sourceTree = "<group>"; };
 		EFD042D61CCF75AA0073BED6 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
 		EFD042D71CCF75AA0073BED6 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		EFE66A961D6B6D2D00EA8E8E /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
@@ -259,8 +259,8 @@
 				EFD042D71CCF75AA0073BED6 /* Question.m */,
 				EF06C6EE1D690595000ED520 /* Answer.h */,
 				EF06C6EF1D690595000ED520 /* Answer.m */,
-				EF411D2F1D688A05008F068F /* RealmString.h */,
-				EF411D301D688A05008F068F /* RealmString.m */,
+				EF6D80081D701A2E003C23EC /* Lecture.h */,
+				EF6D80091D701A2E003C23EC /* Lecture.m */,
 			);
 			name = RealmModels;
 			sourceTree = "<group>";
@@ -443,8 +443,8 @@
 				EF06C6F01D690595000ED520 /* Answer.m in Sources */,
 				EF0B4BFD1CB59BE60012E030 /* BookViewController.m in Sources */,
 				EF0659131CB2D68800D7AEC7 /* QuestionCustomCell.m in Sources */,
+				EF6D800A1D701A2E003C23EC /* Lecture.m in Sources */,
 				EFD042D81CCF75AA0073BED6 /* Question.m in Sources */,
-				EF411D311D688A05008F068F /* RealmString.m in Sources */,
 				EF0658DB1CB2D05200D7AEC7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

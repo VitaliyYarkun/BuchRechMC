@@ -1,14 +1,14 @@
 //
-//  RealmString.m
+//  Lecture.m
 //  BuchRechMC
 //
-//  Created by Vitaliy Yarkun on 8/20/16.
+//  Created by Vitaliy Yarkun on 8/26/16.
 //  Copyright © 2016 Vitaliy Yarkun. All rights reserved.
 //
 
-#import "RealmString.h"
+#import "Lecture.h"
 
-@implementation RealmString
+@implementation Lecture
 
 // Specify default values for properties
 
