@@ -10,11 +10,12 @@
 
 @interface QuestionViewController ()
 
+@property Question *question;
 @property RLMArray <Answer *><Answer> *answers;
+
 @property (weak, nonatomic) IBOutlet UITextView *questionTextView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (assign, nonatomic) NSInteger questionIndex;
-@property (strong, nonatomic) Question *question;
 @property (strong, nonatomic) NSMutableArray *cellsArray;
 
 @end

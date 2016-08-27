@@ -14,7 +14,8 @@
 @interface QuestionsController()
 
 @property (strong, nonatomic) QuestionViewController *questionController;
-@property (strong, nonatomic) RLMResults<Question *> *allQuestions;
+
+@property RLMResults<Question *> *allQuestions;
 
 @property (assign, nonatomic) NSInteger selectedCell;
 

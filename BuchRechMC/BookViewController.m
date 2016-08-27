@@ -22,6 +22,10 @@
 @property (assign, nonatomic) NSInteger halfScreenHeight;
 @property (assign, nonatomic) BOOL shouldRecalculate;
 
+@property RLMResults<Question *> *questions;
+@property RLMResults <Lecture *> *lectureResult;
+@property Question *question;
+
 @end
 
 @implementation BookViewController
@@ -32,18 +36,19 @@
     [self selectBook];
     [self selectTitle];
     
-    /*Lecture *lecture = [[Lecture alloc] init];
+    Lecture *lecture = [[Lecture alloc] init];
     //NSPredicate *lecturePred = [NSPredicate predicateWithFormat:@"name == %@",self.bookName];
     //self.lectureResult = [Lecture objectsWithPredicate:lecturePred];
 
     RLMResults *lectureResult = [Lecture objectsWhere:@"name BEGINSWITH '05'"];
     lecture = [lectureResult firstObject];
-    [self testMethod];
     
-    RLMResults *questions = [Question objectsWhere:@"chapter BETWEEN {%@,%@}", 4, 5];*/
-
+    //self.questions = [Question allObjects];
+    //self.lectureResult = [Lecture allObjects];
     
-    //NSPredicate *questionPred = [NSPredicate predicateWithFormat:@"chapter BETWEEN {%@,%@}", lecture.startChapter, lecture.endChapter];
+    NSPredicate *questionPred = [NSPredicate predicateWithFormat:@"chapter BETWEEN {%d,%d}", 0, 1];
+    self.questions = [Question objectsWithPredicate:questionPred];
+    //self.questions = [Question allObjects];
     
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter]
@@ -165,17 +170,20 @@
     if (scrollView.zoomScale == scrollView.minimumZoomScale)
     {
         pageNumber = ceilf((verticalContentOffset + self.halfScreenHeight) / self.pdfPageHeight);
-       /* NSPredicate *currentPageQuestionPred = [NSPredicate predicateWithFormat:@"fromPage <= %@ && toPage <= %@",pageNumber];
-        self.question = [self.questions objectsWithPredicate:currentPageQuestionPred];
+        NSPredicate *currentPageQuestionPred = [NSPredicate predicateWithFormat:@"fromPage <= %d AND toPage <= %d",pageNumber, pageNumber];
+        
+        RLMResults<Question *> *result = [self.questions objectsWithPredicate:currentPageQuestionPred];
+        self.question = [result firstObject];
         
         if (self.question)
             NSLog(@"There is a question");
         else
-            NSLog(@"There isn't any question");*/
+            NSLog(@"There isn't any question");
+        
     }
     
     
-    NSLog(@"Page number = %ld", (long)pageNumber);
+    //NSLog(@"Page number = %ld", (long)pageNumber);
 }
 
 

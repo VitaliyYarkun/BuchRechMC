@@ -12,6 +12,6 @@
 @interface QuestionViewController : UIViewController <UITableViewDataSource>
 
 @property (assign, nonatomic) NSInteger selectedCell;
-@property (strong, nonatomic) RLMResults<Question *> *allQuestions;
+@property RLMResults<Question *> *allQuestions;
 
 @end
