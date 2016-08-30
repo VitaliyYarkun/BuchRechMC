@@ -46,7 +46,7 @@
     //self.questions = [Question allObjects];
     //self.lectureResult = [Lecture allObjects];
     
-    NSPredicate *questionPred = [NSPredicate predicateWithFormat:@"chapter BETWEEN {%d,%d}", 0, 1];
+    NSPredicate *questionPred = [NSPredicate predicateWithFormat:@"chapter BETWEEN {%d,%d}", lecture.startChapter, lecture.endChapter];
     self.questions = [Question objectsWithPredicate:questionPred];
     //self.questions = [Question allObjects];
     
@@ -170,7 +170,7 @@
     if (scrollView.zoomScale == scrollView.minimumZoomScale)
     {
         pageNumber = ceilf((verticalContentOffset + self.halfScreenHeight) / self.pdfPageHeight);
-        NSPredicate *currentPageQuestionPred = [NSPredicate predicateWithFormat:@"fromPage <= %d AND toPage <= %d",pageNumber, pageNumber];
+        NSPredicate *currentPageQuestionPred = [NSPredicate predicateWithFormat:@"fromPage <= %d AND toPage >= %d",pageNumber, pageNumber];
         
         RLMResults<Question *> *result = [self.questions objectsWithPredicate:currentPageQuestionPred];
         self.question = [result firstObject];
