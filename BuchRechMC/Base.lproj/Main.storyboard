@@ -302,7 +302,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGD-ow-3aT">
-                                <rect key="frame" x="0.0" y="61" width="600" height="538"/>
+                                <rect key="frame" x="0.0" y="61" width="600" height="539"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Akp-tm-jcO">
@@ -317,17 +317,55 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01J-Ys-UQn">
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cr1-To-dfz">
+                                        <rect key="frame" x="16" y="15" width="568" height="30"/>
+                                        <state key="normal" title="Go to the question for the current material">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cr1-To-dfz" secondAttribute="trailing" constant="16" id="5qq-jW-8aM"/>
+                                    <constraint firstAttribute="height" constant="60" id="A3Y-BX-OKP"/>
+                                    <constraint firstItem="cr1-To-dfz" firstAttribute="top" secondItem="01J-Ys-UQn" secondAttribute="top" constant="15" id="LSP-Ra-yxe"/>
+                                    <constraint firstAttribute="bottom" secondItem="cr1-To-dfz" secondAttribute="bottom" constant="15" id="Noi-Mt-CSq"/>
+                                    <constraint firstAttribute="height" constant="60" id="qK0-lY-2pa"/>
+                                    <constraint firstItem="cr1-To-dfz" firstAttribute="leading" secondItem="01J-Ys-UQn" secondAttribute="leading" constant="16" id="zi4-EN-xSy"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="qK0-lY-2pa"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UGD-ow-3aT" firstAttribute="top" secondItem="Akp-tm-jcO" secondAttribute="bottom" constant="1" id="7DK-zO-FoA"/>
-                            <constraint firstAttribute="trailing" secondItem="Akp-tm-jcO" secondAttribute="trailing" id="Vx0-dV-5Aa"/>
-                            <constraint firstAttribute="trailing" secondItem="UGD-ow-3aT" secondAttribute="trailing" id="Y3h-X2-XJh"/>
-                            <constraint firstItem="5AI-sa-A0W" firstAttribute="top" secondItem="UGD-ow-3aT" secondAttribute="bottom" constant="1" id="ZHY-Bb-fE2"/>
-                            <constraint firstItem="Akp-tm-jcO" firstAttribute="leading" secondItem="ict-gr-1qf" secondAttribute="leading" id="dcm-wV-dN0"/>
-                            <constraint firstItem="UGD-ow-3aT" firstAttribute="leading" secondItem="ict-gr-1qf" secondAttribute="leading" id="te6-WD-9C5"/>
-                            <constraint firstItem="Akp-tm-jcO" firstAttribute="top" secondItem="ict-gr-1qf" secondAttribute="top" constant="16" id="wCS-7m-pbG"/>
+                            <constraint firstAttribute="trailing" secondItem="UGD-ow-3aT" secondAttribute="trailing" id="07W-5r-VvX"/>
+                            <constraint firstItem="Akp-tm-jcO" firstAttribute="trailing" secondItem="UGD-ow-3aT" secondAttribute="trailing" id="707-pM-d1H"/>
+                            <constraint firstItem="5AI-sa-A0W" firstAttribute="top" secondItem="01J-Ys-UQn" secondAttribute="bottom" id="8qO-xK-NUt"/>
+                            <constraint firstItem="UGD-ow-3aT" firstAttribute="leading" secondItem="ict-gr-1qf" secondAttribute="leading" id="F69-xa-IKJ"/>
+                            <constraint firstItem="5AI-sa-A0W" firstAttribute="top" secondItem="UGD-ow-3aT" secondAttribute="bottom" id="Vki-Ak-KPH"/>
+                            <constraint firstAttribute="trailing" secondItem="01J-Ys-UQn" secondAttribute="trailing" id="cJ8-b3-uwk"/>
+                            <constraint firstAttribute="trailing" secondItem="01J-Ys-UQn" secondAttribute="trailing" id="iVS-7G-zHv"/>
+                            <constraint firstItem="01J-Ys-UQn" firstAttribute="leading" secondItem="ict-gr-1qf" secondAttribute="leading" id="j3N-IH-uGj"/>
+                            <constraint firstItem="Akp-tm-jcO" firstAttribute="top" secondItem="ict-gr-1qf" secondAttribute="topMargin" constant="16" id="pvG-db-1Uk"/>
+                            <constraint firstItem="UGD-ow-3aT" firstAttribute="top" secondItem="Akp-tm-jcO" secondAttribute="bottom" constant="1" id="rLn-xB-KNw"/>
+                            <constraint firstItem="01J-Ys-UQn" firstAttribute="top" secondItem="ict-gr-1qf" secondAttribute="top" constant="540" id="tVS-Db-pvO"/>
+                            <constraint firstItem="01J-Ys-UQn" firstAttribute="leading" secondItem="ict-gr-1qf" secondAttribute="leading" id="u92-YV-hi0"/>
+                            <constraint firstItem="Akp-tm-jcO" firstAttribute="leading" secondItem="UGD-ow-3aT" secondAttribute="leading" id="uzB-7Y-flP"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="iVS-7G-zHv"/>
+                                <exclude reference="tVS-Db-pvO"/>
+                                <exclude reference="u92-YV-hi0"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="bookWebView" destination="UGD-ow-3aT" id="Kj5-cf-nmc"/>
