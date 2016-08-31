@@ -26,6 +26,7 @@
 -(void) viewDidLoad
 {
     [super viewDidLoad];
+    //[[UINavigationBar appearance] setBarTintColor:[UIColor blueColor]];
     self.menuItem.target = self.revealViewController;
     self.menuItem.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];

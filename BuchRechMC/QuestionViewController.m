@@ -55,11 +55,8 @@
     Answer *answer = [self.answers objectAtIndex:indexPath.row];
     cell.textLabel.text = answer.content;
     cell.tag = answer.answerId;
-    
-    /*UIView *separatorView = [[UIView alloc] initWithFrame:CGRectMake(0, cell.frame.size.height-1, cell.frame.size.width, 1)];
-    [separatorView setBackgroundColor:[UIColor lightGrayColor]];
-    [separatorView setAlpha:0.8f];
-    [cell addSubview:separatorView];*/
+    cell.layer.cornerRadius = 10;
+    cell.layer.masksToBounds = YES;
     
     [self.cellsArray addObject:cell];
     

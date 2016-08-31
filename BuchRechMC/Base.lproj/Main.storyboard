@@ -293,7 +293,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Cf9-v0-ebu">
             <objects>
-                <navigationController id="Emx-r1-zgg" sceneMemberID="viewController">
+                <navigationController hidesBarsOnSwipe="YES" id="Emx-r1-zgg" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OLr-Rg-jE1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
