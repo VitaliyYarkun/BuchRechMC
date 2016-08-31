@@ -44,7 +44,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Vt-zF-yXK">
-                                <rect key="frame" x="20" y="192" width="560" height="314"/>
+                                <rect key="frame" x="20" y="148" width="560" height="358"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="5qM-ha-fRc" id="CLN-Fm-9F6"/>
@@ -68,7 +68,7 @@
                                 </items>
                             </toolbar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXB-4T-g54">
-                                <rect key="frame" x="20" y="72" width="560" height="112"/>
+                                <rect key="frame" x="20" y="28" width="560" height="112"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="112" id="oR7-Du-n1G"/>
@@ -318,27 +318,41 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01J-Ys-UQn">
-                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                                <rect key="frame" x="0.0" y="560" width="600" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cr1-To-dfz">
-                                        <rect key="frame" x="16" y="15" width="568" height="30"/>
-                                        <state key="normal" title="Go to the question for the current material">
+                                        <rect key="frame" x="16" y="0.0" width="568" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="Go to the question ">
                                             <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="5qM-ha-fRc" kind="show" identifier="BookQuestionControllerSegue" id="s3U-8A-1kq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="cr1-To-dfz" secondAttribute="trailing" constant="16" id="5qq-jW-8aM"/>
+                                    <constraint firstItem="cr1-To-dfz" firstAttribute="top" secondItem="01J-Ys-UQn" secondAttribute="top" id="6Sg-pf-w95"/>
                                     <constraint firstAttribute="height" constant="60" id="A3Y-BX-OKP"/>
+                                    <constraint firstAttribute="height" constant="40" id="BUy-Wl-nvG"/>
                                     <constraint firstItem="cr1-To-dfz" firstAttribute="top" secondItem="01J-Ys-UQn" secondAttribute="top" constant="15" id="LSP-Ra-yxe"/>
                                     <constraint firstAttribute="bottom" secondItem="cr1-To-dfz" secondAttribute="bottom" constant="15" id="Noi-Mt-CSq"/>
+                                    <constraint firstAttribute="bottom" secondItem="cr1-To-dfz" secondAttribute="bottom" id="VNb-cW-qZS"/>
                                     <constraint firstAttribute="height" constant="60" id="qK0-lY-2pa"/>
+                                    <constraint firstAttribute="trailing" secondItem="cr1-To-dfz" secondAttribute="trailing" constant="16" id="tKJ-Vo-LzI"/>
+                                    <constraint firstItem="cr1-To-dfz" firstAttribute="leading" secondItem="01J-Ys-UQn" secondAttribute="leading" constant="16" id="yig-2y-ghF"/>
                                     <constraint firstItem="cr1-To-dfz" firstAttribute="leading" secondItem="01J-Ys-UQn" secondAttribute="leading" constant="16" id="zi4-EN-xSy"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="A3Y-BX-OKP"/>
                                         <exclude reference="qK0-lY-2pa"/>
+                                        <exclude reference="5qq-jW-8aM"/>
+                                        <exclude reference="LSP-Ra-yxe"/>
+                                        <exclude reference="Noi-Mt-CSq"/>
+                                        <exclude reference="zi4-EN-xSy"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -369,6 +383,7 @@
                     </view>
                     <connections>
                         <outlet property="bookWebView" destination="UGD-ow-3aT" id="Kj5-cf-nmc"/>
+                        <outlet property="popupView" destination="01J-Ys-UQn" id="3B0-kg-3Cw"/>
                         <outlet property="titleNavigationItem" destination="piE-d4-sDm" id="lsb-xT-NgD"/>
                     </connections>
                 </viewController>
@@ -393,4 +408,7 @@
             <point key="canvasLocation" x="87" y="432"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="s3U-8A-1kq"/>
+    </inferredMetricsTieBreakers>
 </document>

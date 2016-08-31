@@ -56,6 +56,7 @@
     
     cell.tag = indexPath.row;
     cell.content.text = question.content;
+    cell.content.textAlignment = NSTextAlignmentCenter;
     
     return cell;
 }

@@ -9,6 +9,7 @@
 #import "BookViewController.h"
 #import "Lecture.h"
 #import "Question.h"
+#import "QuestionViewController.h"
 
 @interface BookViewController () <UIScrollViewDelegate>
 
@@ -16,15 +17,19 @@
 @property (weak, nonatomic) IBOutlet UINavigationItem *titleNavigationItem;
 
 @property (strong, nonatomic) NSURL *url;
+@property (strong, nonatomic) QuestionViewController *questionController;
 
 @property (assign, nonatomic) NSInteger pdfPageCount;
 @property (assign, nonatomic) NSInteger pdfPageHeight;
 @property (assign, nonatomic) NSInteger halfScreenHeight;
+@property (assign, nonatomic) NSInteger questionIndex;
 @property (assign, nonatomic) BOOL shouldRecalculate;
 
 @property RLMResults<Question *> *questions;
-@property RLMResults <Lecture *> *lectureResult;
 @property Question *question;
+
+@property (weak, nonatomic) IBOutlet UIView *popupView;
+
 
 @end
 
@@ -174,19 +179,39 @@
         
         RLMResults<Question *> *result = [self.questions objectsWithPredicate:currentPageQuestionPred];
         self.question = [result firstObject];
+        self.questionIndex = [self.questions indexOfObject:self.question];
         
         if (self.question)
-            NSLog(@"There is a question");
+        {
+            //NSLog(@"There is a question");
+            [UIView animateKeyframesWithDuration:0.5 delay:0.0 options:(UIViewAnimationOptionCurveEaseIn | UIViewAnimationOptionTransitionFlipFromBottom) animations:^{
+                self.popupView.alpha = 1.0;
+            } completion:nil];
+        }
         else
-            NSLog(@"There isn't any question");
+        {
+            //NSLog(@"There isn't any question");
+            [UIView animateKeyframesWithDuration:0.5 delay:0.0 options:(UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCurlDown) animations:^{
+                self.popupView.alpha = 0.0;
+            } completion:nil];
+            
+
+        }
         
     }
     
-    
-    //NSLog(@"Page number = %ld", (long)pageNumber);
 }
 
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"BookQuestionControllerSegue"])
+    {
+        self.questionController = (QuestionViewController *)segue.destinationViewController;
+        self.questionController.selectedCell = self.questionIndex;
+        self.questionController.allQuestions = self.questions;
+    }
+}
 
 
 
