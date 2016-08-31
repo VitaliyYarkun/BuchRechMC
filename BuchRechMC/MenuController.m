@@ -60,7 +60,8 @@
 {
     if ([segue.identifier isEqualToString:@"BookControllerSegue"])
     {
-        self.bookController = (BookViewController*)segue.destinationViewController;
+        UINavigationController* navVC = (UINavigationController*)segue.destinationViewController;
+        self.bookController = (BookViewController*)[navVC topViewController];
         self.bookController.cellTag = self.cellTag;
     }
 }

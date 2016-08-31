@@ -31,22 +31,6 @@
             </objects>
             <point key="canvasLocation" x="846" y="432"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="prb-OL-bv9">
-            <objects>
-                <navigationController id="2Se-Yl-FGz" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TyW-3P-WSE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="5qM-ha-fRc" kind="relationship" relationship="rootViewController" id="YQE-zf-Iep"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kut-FN-cwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1603" y="-419"/>
-        </scene>
         <!--Question View Controller-->
         <scene sceneID="5lb-nh-UFM">
             <objects>
@@ -108,13 +92,7 @@
                             <constraint firstItem="QXB-4T-g54" firstAttribute="top" secondItem="EUR-ap-enV" secondAttribute="bottom" constant="8" symbolic="YES" id="yR2-64-KWP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Yl5-35-A5J">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="ZPq-ab-aHo">
-                            <connections>
-                                <action selector="backToBookControllerAction:" destination="5qM-ha-fRc" id="5Sj-Q5-htR"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Yl5-35-A5J"/>
                     <connections>
                         <outlet property="questionTextView" destination="QXB-4T-g54" id="kMC-Kc-J4Z"/>
                         <outlet property="tableView" destination="9Vt-zF-yXK" id="mTE-4I-yd6"/>
@@ -305,14 +283,30 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="XjW-hq-uqD" kind="show" identifier="BookControllerSegue" id="21M-x5-pcd"/>
+                        <segue destination="Emx-r1-zgg" kind="show" identifier="BookControllerSegue" id="dZD-Do-s5o"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thQ-Ld-Nw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="87" y="-419"/>
         </scene>
-        <!--Book View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="Cf9-v0-ebu">
+            <objects>
+                <navigationController id="Emx-r1-zgg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OLr-Rg-jE1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XjW-hq-uqD" kind="relationship" relationship="rootViewController" id="UxN-1X-Qa0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ong-hw-ncW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="846" y="-419"/>
+        </scene>
+        <!--Title-->
         <scene sceneID="EXs-Qu-dJl">
             <objects>
                 <viewController id="XjW-hq-uqD" customClass="BookViewController" sceneMemberID="viewController">
@@ -325,22 +319,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGD-ow-3aT">
-                                <rect key="frame" x="0.0" y="61" width="600" height="539"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Akp-tm-jcO">
-                                <rect key="frame" x="0.0" y="16" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Titel" id="piE-d4-sDm">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="uKI-BG-bsT">
-                                            <connections>
-                                                <action selector="backAction:" destination="XjW-hq-uqD" id="Xzw-ga-f3W"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01J-Ys-UQn">
+                            <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01J-Ys-UQn">
                                 <rect key="frame" x="0.0" y="560" width="600" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cr1-To-dfz">
@@ -356,64 +338,42 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="cr1-To-dfz" secondAttribute="trailing" constant="16" id="5qq-jW-8aM"/>
-                                    <constraint firstItem="cr1-To-dfz" firstAttribute="top" secondItem="01J-Ys-UQn" secondAttribute="top" id="6Sg-pf-w95"/>
-                                    <constraint firstAttribute="height" constant="60" id="A3Y-BX-OKP"/>
-                                    <constraint firstAttribute="height" constant="40" id="BUy-Wl-nvG"/>
-                                    <constraint firstItem="cr1-To-dfz" firstAttribute="top" secondItem="01J-Ys-UQn" secondAttribute="top" constant="15" id="LSP-Ra-yxe"/>
-                                    <constraint firstAttribute="bottom" secondItem="cr1-To-dfz" secondAttribute="bottom" constant="15" id="Noi-Mt-CSq"/>
-                                    <constraint firstAttribute="bottom" secondItem="cr1-To-dfz" secondAttribute="bottom" id="VNb-cW-qZS"/>
-                                    <constraint firstAttribute="height" constant="60" id="qK0-lY-2pa"/>
-                                    <constraint firstAttribute="trailing" secondItem="cr1-To-dfz" secondAttribute="trailing" constant="16" id="tKJ-Vo-LzI"/>
-                                    <constraint firstItem="cr1-To-dfz" firstAttribute="leading" secondItem="01J-Ys-UQn" secondAttribute="leading" constant="16" id="yig-2y-ghF"/>
-                                    <constraint firstItem="cr1-To-dfz" firstAttribute="leading" secondItem="01J-Ys-UQn" secondAttribute="leading" constant="16" id="zi4-EN-xSy"/>
+                                    <constraint firstAttribute="height" constant="40" id="73k-J3-uo4"/>
+                                    <constraint firstItem="cr1-To-dfz" firstAttribute="top" secondItem="01J-Ys-UQn" secondAttribute="top" id="LSh-Dl-LRB"/>
+                                    <constraint firstAttribute="bottom" secondItem="cr1-To-dfz" secondAttribute="bottom" id="bVW-tt-gAi"/>
+                                    <constraint firstItem="cr1-To-dfz" firstAttribute="leading" secondItem="01J-Ys-UQn" secondAttribute="leading" constant="16" id="rI0-dl-sTI"/>
+                                    <constraint firstAttribute="trailing" secondItem="cr1-To-dfz" secondAttribute="trailing" constant="16" id="umf-l5-VNv"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="A3Y-BX-OKP"/>
-                                        <exclude reference="qK0-lY-2pa"/>
-                                        <exclude reference="5qq-jW-8aM"/>
-                                        <exclude reference="LSP-Ra-yxe"/>
-                                        <exclude reference="Noi-Mt-CSq"/>
-                                        <exclude reference="zi4-EN-xSy"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="UGD-ow-3aT" secondAttribute="trailing" id="07W-5r-VvX"/>
-                            <constraint firstItem="Akp-tm-jcO" firstAttribute="trailing" secondItem="UGD-ow-3aT" secondAttribute="trailing" id="707-pM-d1H"/>
-                            <constraint firstItem="5AI-sa-A0W" firstAttribute="top" secondItem="01J-Ys-UQn" secondAttribute="bottom" id="8qO-xK-NUt"/>
-                            <constraint firstItem="UGD-ow-3aT" firstAttribute="leading" secondItem="ict-gr-1qf" secondAttribute="leading" id="F69-xa-IKJ"/>
-                            <constraint firstItem="5AI-sa-A0W" firstAttribute="top" secondItem="UGD-ow-3aT" secondAttribute="bottom" id="Vki-Ak-KPH"/>
-                            <constraint firstAttribute="trailing" secondItem="01J-Ys-UQn" secondAttribute="trailing" id="cJ8-b3-uwk"/>
-                            <constraint firstAttribute="trailing" secondItem="01J-Ys-UQn" secondAttribute="trailing" id="iVS-7G-zHv"/>
-                            <constraint firstItem="01J-Ys-UQn" firstAttribute="leading" secondItem="ict-gr-1qf" secondAttribute="leading" id="j3N-IH-uGj"/>
-                            <constraint firstItem="Akp-tm-jcO" firstAttribute="top" secondItem="ict-gr-1qf" secondAttribute="topMargin" constant="16" id="pvG-db-1Uk"/>
-                            <constraint firstItem="UGD-ow-3aT" firstAttribute="top" secondItem="Akp-tm-jcO" secondAttribute="bottom" constant="1" id="rLn-xB-KNw"/>
-                            <constraint firstItem="01J-Ys-UQn" firstAttribute="top" secondItem="ict-gr-1qf" secondAttribute="top" constant="540" id="tVS-Db-pvO"/>
-                            <constraint firstItem="01J-Ys-UQn" firstAttribute="leading" secondItem="ict-gr-1qf" secondAttribute="leading" id="u92-YV-hi0"/>
-                            <constraint firstItem="Akp-tm-jcO" firstAttribute="leading" secondItem="UGD-ow-3aT" secondAttribute="leading" id="uzB-7Y-flP"/>
+                            <constraint firstAttribute="trailing" secondItem="01J-Ys-UQn" secondAttribute="trailing" id="ABT-WO-zmN"/>
+                            <constraint firstAttribute="trailing" secondItem="UGD-ow-3aT" secondAttribute="trailing" id="ICy-bu-Ead"/>
+                            <constraint firstItem="5AI-sa-A0W" firstAttribute="top" secondItem="01J-Ys-UQn" secondAttribute="bottom" id="V7D-zd-sR2"/>
+                            <constraint firstItem="UGD-ow-3aT" firstAttribute="top" secondItem="uDN-Qu-Fo3" secondAttribute="bottom" id="fnt-hx-rlC"/>
+                            <constraint firstItem="UGD-ow-3aT" firstAttribute="leading" secondItem="ict-gr-1qf" secondAttribute="leading" id="hHa-Hf-DEM"/>
+                            <constraint firstItem="5AI-sa-A0W" firstAttribute="top" secondItem="UGD-ow-3aT" secondAttribute="bottom" id="kQ4-9b-oBD"/>
+                            <constraint firstItem="01J-Ys-UQn" firstAttribute="leading" secondItem="ict-gr-1qf" secondAttribute="leading" id="nRw-xG-FaE"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="iVS-7G-zHv"/>
-                                <exclude reference="tVS-Db-pvO"/>
-                                <exclude reference="u92-YV-hi0"/>
-                            </mask>
-                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="O9U-a1-nwT">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="ucg-h5-DNq">
+                            <connections>
+                                <action selector="backAction:" destination="XjW-hq-uqD" id="MCJ-hn-PpD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bookWebView" destination="UGD-ow-3aT" id="Kj5-cf-nmc"/>
                         <outlet property="popupView" destination="01J-Ys-UQn" id="3B0-kg-3Cw"/>
-                        <outlet property="titleNavigationItem" destination="piE-d4-sDm" id="lsb-xT-NgD"/>
-                        <segue destination="2Se-Yl-FGz" kind="show" identifier="BookQuestionControllerSegue" id="tOC-UG-E3j"/>
+                        <outlet property="titleNavigationItem" destination="O9U-a1-nwT" id="aJa-u2-do4"/>
+                        <segue destination="5qM-ha-fRc" kind="show" identifier="BookQuestionControllerSegue" id="HJL-zB-fPj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EG9-2H-KtL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="846" y="-419"/>
+            <point key="canvasLocation" x="1603" y="-419"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y8X-kU-WFk">
@@ -433,6 +393,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YQE-zf-Iep"/>
+        <segue reference="HJL-zB-fPj"/>
     </inferredMetricsTieBreakers>
 </document>

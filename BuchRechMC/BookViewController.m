@@ -40,6 +40,7 @@
     [super viewDidLoad];
     [self selectBook];
     [self selectTitle];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     Lecture *lecture = [[Lecture alloc] init];
     //NSPredicate *lecturePred = [NSPredicate predicateWithFormat:@"name == %@",self.bookName];
@@ -53,7 +54,6 @@
     
     NSPredicate *questionPred = [NSPredicate predicateWithFormat:@"chapter BETWEEN {%d,%d}", lecture.startChapter, lecture.endChapter];
     self.questions = [Question objectsWithPredicate:questionPred];
-    //self.questions = [Question allObjects];
     
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter]
@@ -190,14 +190,10 @@
         }
         else
         {
-            //NSLog(@"There isn't any question");
             [UIView animateKeyframesWithDuration:0.5 delay:0.0 options:(UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCurlDown) animations:^{
                 self.popupView.alpha = 0.0;
             } completion:nil];
-            
-
         }
-        
     }
     
 }
@@ -207,8 +203,7 @@
 {
     if ([segue.identifier isEqualToString:@"BookQuestionControllerSegue"])
     {
-        UINavigationController* navVC = (UINavigationController*)segue.destinationViewController;
-        self.questionController = (QuestionViewController *)[navVC topViewController];
+        self.questionController = (QuestionViewController *)segue.destinationViewController;
         self.questionController.selectedCell = self.questionIndex;
         self.questionController.allQuestions = self.questions;
     }
