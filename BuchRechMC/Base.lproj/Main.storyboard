@@ -43,8 +43,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Vt-zF-yXK">
-                                <rect key="frame" x="20" y="148" width="560" height="358"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Vt-zF-yXK">
+                                <rect key="frame" x="20" y="192" width="560" height="314"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="5qM-ha-fRc" id="CLN-Fm-9F6"/>
@@ -67,8 +67,8 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXB-4T-g54">
-                                <rect key="frame" x="20" y="28" width="560" height="112"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXB-4T-g54">
+                                <rect key="frame" x="20" y="72" width="560" height="112"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="112" id="oR7-Du-n1G"/>
@@ -92,6 +92,7 @@
                             <constraint firstItem="QXB-4T-g54" firstAttribute="top" secondItem="EUR-ap-enV" secondAttribute="bottom" constant="8" symbolic="YES" id="yR2-64-KWP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Yl5-35-A5J"/>
                     <connections>
                         <outlet property="questionTextView" destination="QXB-4T-g54" id="kMC-Kc-J4Z"/>
                         <outlet property="tableView" destination="9Vt-zF-yXK" id="mTE-4I-yd6"/>
@@ -317,7 +318,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01J-Ys-UQn">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01J-Ys-UQn">
                                 <rect key="frame" x="0.0" y="560" width="600" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cr1-To-dfz">
@@ -327,7 +328,7 @@
                                             <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="5qM-ha-fRc" kind="show" identifier="BookQuestionControllerSegue" id="s3U-8A-1kq"/>
+                                            <action selector="goToQuestionAction:" destination="XjW-hq-uqD" eventType="touchUpInside" id="bEB-dz-RDS"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -385,6 +386,7 @@
                         <outlet property="bookWebView" destination="UGD-ow-3aT" id="Kj5-cf-nmc"/>
                         <outlet property="popupView" destination="01J-Ys-UQn" id="3B0-kg-3Cw"/>
                         <outlet property="titleNavigationItem" destination="piE-d4-sDm" id="lsb-xT-NgD"/>
+                        <segue destination="5qM-ha-fRc" kind="show" identifier="BookQuestionControllerSegue" id="j8k-rh-dZl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EG9-2H-KtL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -409,6 +411,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="s3U-8A-1kq"/>
+        <segue reference="j8k-rh-dZl"/>
     </inferredMetricsTieBreakers>
 </document>

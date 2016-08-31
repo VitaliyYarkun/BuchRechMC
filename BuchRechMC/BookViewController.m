@@ -183,7 +183,7 @@
         
         if (self.question)
         {
-            //NSLog(@"There is a question");
+            self.popupView.hidden = NO;
             [UIView animateKeyframesWithDuration:0.5 delay:0.0 options:(UIViewAnimationOptionCurveEaseIn | UIViewAnimationOptionTransitionFlipFromBottom) animations:^{
                 self.popupView.alpha = 1.0;
             } completion:nil];
@@ -213,6 +213,10 @@
     }
 }
 
+- (IBAction)goToQuestionAction:(UIButton *)sender
+{
+    [self performSegueWithIdentifier:@"BookQuestionControllerSegue" sender:self];
+}
 
 
 
