@@ -126,4 +126,8 @@
         self.questionIndex = 0;
     
 }
+- (IBAction)backToBookControllerAction:(UIBarButtonItem *)sender
+{
+    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+}
 @end

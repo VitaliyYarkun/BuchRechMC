@@ -207,7 +207,8 @@
 {
     if ([segue.identifier isEqualToString:@"BookQuestionControllerSegue"])
     {
-        self.questionController = (QuestionViewController *)segue.destinationViewController;
+        UINavigationController* navVC = (UINavigationController*)segue.destinationViewController;
+        self.questionController = (QuestionViewController *)[navVC topViewController];
         self.questionController.selectedCell = self.questionIndex;
         self.questionController.allQuestions = self.questions;
     }
