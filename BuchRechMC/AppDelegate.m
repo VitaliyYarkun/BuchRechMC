@@ -28,6 +28,9 @@
     [self.serverManager getAllQuestions];
     [self.serverManager getAllLectures];
     
+    [[UINavigationBar appearance] setBarTintColor:[UIColor blueColor]];
+  
+
     
     return YES;
 }
