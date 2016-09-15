@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
     self.questionIndex = self.selectedCell;
     self.question = [self.allQuestions objectAtIndex:self.questionIndex];
     self.questionTextView.text = self.question.content;

@@ -38,9 +38,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:YES];
     [self selectBook];
     [self selectTitle];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTaps)];
+    tapGesture.numberOfTapsRequired = 1;
+    tapGesture.numberOfTouchesRequired = 1;
+    [self.view addGestureRecognizer:tapGesture];
+    
+    
     
     Lecture *lecture = [[Lecture alloc] init];
     //NSPredicate *lecturePred = [NSPredicate predicateWithFormat:@"name == %@",self.bookName];
@@ -70,6 +77,14 @@
     
     [self.bookWebView loadRequest:request];
     [self.bookWebView setScalesPageToFit:YES];
+}
+
+-(void) handleTaps
+{
+    if (self.navigationController.navigationBar.isHidden)
+        [self.navigationController setNavigationBarHidden:NO animated:YES] ;
+    else
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 -(void) pageCalculation
