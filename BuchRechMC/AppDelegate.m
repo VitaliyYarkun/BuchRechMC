@@ -28,8 +28,16 @@
     [self.serverManager getAllQuestions];
     [self.serverManager getAllLectures];
     
-    [[UINavigationBar appearance] setBarTintColor:[UIColor blueColor]];
-  
+    UIColor *blueColor = [UIColor colorWithRed:0.f/255 green:31.f/255 blue:233.f/255 alpha:1.f];
+    UIColor *whiteColor = [UIColor whiteColor];
+    
+    [[UINavigationBar appearance] setBarTintColor:blueColor];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:whiteColor}];
+    [[UINavigationBar appearance] setTintColor:whiteColor];
+    
+    [[UIToolbar appearance] setBarTintColor:blueColor];
+    [[UIToolbar appearance] setTintColor:whiteColor];
+
 
     
     return YES;

@@ -39,6 +39,8 @@
 {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES];
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     [self selectBook];
     [self selectTitle];
     self.automaticallyAdjustsScrollViewInsets = NO;
