@@ -9,6 +9,7 @@
 #import "ServerManager.h"
 #import "Question.h"
 #import "Lecture.h"
+#import "NSURLSession+SynchronousTask.h"
 
 @interface ServerManager()
 
@@ -128,7 +129,7 @@
 
 
 #pragma mark - RESTAPI request
-
+/*
 -(void)sendSynchronousRequest:(NSURLRequest *)request
             returningResponse:(__autoreleasing NSURLResponse **)responsePtr
                         error:(__autoreleasing NSError **)errorPtr {
@@ -156,6 +157,20 @@
         [self saveAllQuestionsToRealm];
     else if (self.saveOption == kSaveAllLecturesOption)
         [self saveAllLecturesToRealm];
+}*/
+
+-(void) sendSynchronousRequest:(NSURLRequest *)request
+             returningResponse:(__autoreleasing NSURLResponse **)responsePtr
+                         error:(__autoreleasing NSError **)errorPtr
+{
+    NSData *data =[[NSURLSession sharedSession] sendSynchronousDataTaskWithRequest:request returningResponse:responsePtr error:errorPtr];
+    NSError *error = nil;
+    self.receivedData =[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+    if (self.saveOption == kSaveAllQuestionsOption)
+        [self saveAllQuestionsToRealm];
+    else if (self.saveOption == kSaveAllLecturesOption)
+        [self saveAllLecturesToRealm];
+
 }
 
 

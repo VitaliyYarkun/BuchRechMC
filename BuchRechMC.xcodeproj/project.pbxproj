@@ -21,6 +21,7 @@
 		EF0B4BF81CB587DA0012E030 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0B4BF71CB587DA0012E030 /* Realm.framework */; };
 		EF0B4BF91CB587DA0012E030 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF0B4BF71CB587DA0012E030 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF0B4BFD1CB59BE60012E030 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0B4BFC1CB59BE60012E030 /* BookViewController.m */; };
+		EF12EEAB1D8BCA0000519EB9 /* NSURLSession+SynchronousTask.m in Sources */ = {isa = PBXBuildFile; fileRef = EF12EEAA1D8BCA0000519EB9 /* NSURLSession+SynchronousTask.m */; };
 		EF266F821CB3BD8800ADD7C8 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF266F811CB3BD8800ADD7C8 /* SWRevealViewController.m */; };
 		EF266F851CB3F87700ADD7C8 /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF266F841CB3F87700ADD7C8 /* MenuController.m */; };
 		EF266F951CB42B6C00ADD7C8 /* 02_TUM WS 2016_17_GL_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F8C1CB42B6C00ADD7C8 /* 02_TUM WS 2016_17_GL_final_V1_Lsg.pdf */; };
@@ -93,6 +94,8 @@
 		EF0B4BF71CB587DA0012E030 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		EF0B4BFB1CB59BE60012E030 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
 		EF0B4BFC1CB59BE60012E030 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
+		EF12EEA91D8BCA0000519EB9 /* NSURLSession+SynchronousTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+SynchronousTask.h"; sourceTree = "<group>"; };
+		EF12EEAA1D8BCA0000519EB9 /* NSURLSession+SynchronousTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+SynchronousTask.m"; sourceTree = "<group>"; };
 		EF266F801CB3BD8800ADD7C8 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		EF266F811CB3BD8800ADD7C8 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		EF266F831CB3F87700ADD7C8 /* MenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
@@ -270,6 +273,8 @@
 			children = (
 				EF411D321D688C29008F068F /* ServerManager.h */,
 				EF411D331D688C29008F068F /* ServerManager.m */,
+				EF12EEA91D8BCA0000519EB9 /* NSURLSession+SynchronousTask.h */,
+				EF12EEAA1D8BCA0000519EB9 /* NSURLSession+SynchronousTask.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -435,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF411D341D688C29008F068F /* ServerManager.m in Sources */,
+				EF12EEAB1D8BCA0000519EB9 /* NSURLSession+SynchronousTask.m in Sources */,
 				EF06590F1CB2D2E800D7AEC7 /* QuestionsController.m in Sources */,
 				EFE66A981D6B6D2D00EA8E8E /* QuestionViewController.m in Sources */,
 				EF0658DE1CB2D05200D7AEC7 /* AppDelegate.m in Sources */,
