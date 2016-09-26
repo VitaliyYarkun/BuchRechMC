@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2SR-q4-BOy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2SR-q4-BOy">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -43,55 +43,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXB-4T-g54">
+                                <rect key="frame" x="20" y="72" width="560" height="91"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="YrE-NX-2gn"/>
+                                    <constraint firstAttribute="height" constant="112" id="oR7-Du-n1G"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="oR7-Du-n1G"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hint &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oq7-yN-KJS">
+                                <rect key="frame" x="20" y="171" width="560" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OXc-IC-VSZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Vt-zF-yXK">
-                                <rect key="frame" x="20" y="192" width="560" height="314"/>
+                                <rect key="frame" x="20" y="229" width="560" height="314"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="5qM-ha-fRc" id="CLN-Fm-9F6"/>
                                     <outlet property="delegate" destination="5qM-ha-fRc" id="lfi-W1-5Sa"/>
                                 </connections>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csu-f3-kOO">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem title="Previous" id="aF7-AY-vFo">
-                                        <connections>
-                                            <action selector="previousQuestionAction:" destination="5qM-ha-fRc" id="yRk-sQ-B55"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bvT-Es-sD1"/>
-                                    <barButtonItem title="Next" id="2T8-wm-9uS">
-                                        <connections>
-                                            <action selector="nextQuestionAction:" destination="5qM-ha-fRc" id="5vv-Gu-hyq"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXB-4T-g54">
-                                <rect key="frame" x="20" y="72" width="560" height="112"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="112" id="oR7-Du-n1G"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="csu-f3-kOO" firstAttribute="leading" secondItem="VjP-Cv-2ts" secondAttribute="leading" id="Eul-J0-tB7"/>
-                            <constraint firstItem="csu-f3-kOO" firstAttribute="bottom" secondItem="Ziq-c4-pzx" secondAttribute="top" id="O3E-v8-RHb"/>
+                            <constraint firstItem="Oq7-yN-KJS" firstAttribute="top" secondItem="QXB-4T-g54" secondAttribute="bottom" constant="8" id="63d-Vo-DWa"/>
+                            <constraint firstItem="QXB-4T-g54" firstAttribute="top" secondItem="EUR-ap-enV" secondAttribute="bottom" constant="8" id="RpE-5e-4gI"/>
+                            <constraint firstItem="Oq7-yN-KJS" firstAttribute="leading" secondItem="VjP-Cv-2ts" secondAttribute="leading" constant="20" id="UDP-aW-cbB"/>
+                            <constraint firstAttribute="trailing" secondItem="9Vt-zF-yXK" secondAttribute="trailing" constant="20" id="VY2-Yc-DSk"/>
+                            <constraint firstItem="9Vt-zF-yXK" firstAttribute="top" secondItem="Oq7-yN-KJS" secondAttribute="bottom" constant="8" id="Wbp-jo-XjR"/>
                             <constraint firstItem="QXB-4T-g54" firstAttribute="leading" secondItem="VjP-Cv-2ts" secondAttribute="leadingMargin" id="fRB-dq-XWA"/>
-                            <constraint firstItem="9Vt-zF-yXK" firstAttribute="centerX" secondItem="csu-f3-kOO" secondAttribute="centerX" id="fxK-1a-Wbg"/>
+                            <constraint firstItem="Ziq-c4-pzx" firstAttribute="top" secondItem="9Vt-zF-yXK" secondAttribute="bottom" constant="13" id="frH-6f-zMX"/>
+                            <constraint firstItem="Ziq-c4-pzx" firstAttribute="top" secondItem="9Vt-zF-yXK" secondAttribute="bottom" constant="50" id="jiR-ev-jpf"/>
                             <constraint firstItem="9Vt-zF-yXK" firstAttribute="top" secondItem="QXB-4T-g54" secondAttribute="bottom" constant="8" symbolic="YES" id="kUw-pe-akp"/>
-                            <constraint firstItem="csu-f3-kOO" firstAttribute="top" secondItem="9Vt-zF-yXK" secondAttribute="bottom" constant="50" id="p1V-Pu-qmF"/>
-                            <constraint firstAttribute="trailing" secondItem="csu-f3-kOO" secondAttribute="trailing" id="pXu-Pm-YRb"/>
                             <constraint firstItem="QXB-4T-g54" firstAttribute="leading" secondItem="9Vt-zF-yXK" secondAttribute="leading" id="py1-pL-qQp"/>
+                            <constraint firstItem="QXB-4T-g54" firstAttribute="leading" secondItem="VjP-Cv-2ts" secondAttribute="leading" constant="20" id="sfr-K7-jWd"/>
                             <constraint firstItem="QXB-4T-g54" firstAttribute="trailing" secondItem="9Vt-zF-yXK" secondAttribute="trailing" id="w8U-Pr-XPq"/>
+                            <constraint firstAttribute="trailing" secondItem="QXB-4T-g54" secondAttribute="trailing" constant="20" id="x7U-lw-nv9"/>
+                            <constraint firstAttribute="trailing" secondItem="Oq7-yN-KJS" secondAttribute="trailing" constant="20" id="xHX-pq-4kf"/>
                             <constraint firstItem="QXB-4T-g54" firstAttribute="top" secondItem="EUR-ap-enV" secondAttribute="bottom" constant="8" symbolic="YES" id="yR2-64-KWP"/>
+                            <constraint firstItem="9Vt-zF-yXK" firstAttribute="leading" secondItem="VjP-Cv-2ts" secondAttribute="leading" constant="20" id="zrF-YN-mAF"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="fRB-dq-XWA"/>
+                                <exclude reference="py1-pL-qQp"/>
+                                <exclude reference="w8U-Pr-XPq"/>
+                                <exclude reference="yR2-64-KWP"/>
+                                <exclude reference="kUw-pe-akp"/>
+                                <exclude reference="jiR-ev-jpf"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Previous" id="oZA-Wj-rOO">
+                            <connections>
+                                <action selector="previousQuestionAction:" destination="5qM-ha-fRc" id="wt8-lz-Eau"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="OFo-iW-PZi"/>
+                        <barButtonItem title="Next" id="QBY-aC-bj1">
+                            <connections>
+                                <action selector="nextQuestionAction:" destination="5qM-ha-fRc" id="Ue9-qs-Ywd"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="Yl5-35-A5J"/>
                     <connections>
                         <outlet property="questionTextView" destination="QXB-4T-g54" id="kMC-Kc-J4Z"/>
@@ -382,11 +410,15 @@
         <!--Navigation Controller-->
         <scene sceneID="y8X-kU-WFk">
             <objects>
-                <navigationController id="qHS-pu-9kL" sceneMemberID="viewController">
+                <navigationController toolbarHidden="NO" id="qHS-pu-9kL" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="J7R-nr-zu9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ljr-wQ-QcJ">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="lot-c4-zpW" kind="relationship" relationship="rootViewController" id="pXN-ur-XXZ"/>
                     </connections>

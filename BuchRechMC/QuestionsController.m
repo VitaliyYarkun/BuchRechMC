@@ -26,8 +26,7 @@
 -(void) viewDidLoad
 {
     [super viewDidLoad];
-    [self.navigationController.navigationBar
-     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.tableView.allowsSelection = YES;
     self.menuItem.target = self.revealViewController;
     self.menuItem.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
@@ -38,6 +37,8 @@
     
     
 }
+
+
 
 
 #pragma mark - Table view data source

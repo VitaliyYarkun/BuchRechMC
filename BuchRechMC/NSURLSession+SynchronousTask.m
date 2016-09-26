@@ -26,6 +26,7 @@
         }
         if (error) {
             *error = taskError;
+            return;
         }
         dispatch_semaphore_signal(semaphore);
     }] resume];

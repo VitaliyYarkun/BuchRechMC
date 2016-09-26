@@ -10,6 +10,7 @@
 #import "Question.h"
 #import "Lecture.h"
 #import "NSURLSession+SynchronousTask.h"
+#import <UIKit/UIKit.h>
 
 @interface ServerManager()
 
@@ -17,7 +18,7 @@
 @property (strong, nonatomic) NSArray *receivedData;
 @property (strong, nonatomic) NSCharacterSet *set;
 @property (assign, nonatomic) RealmDataSaveOption saveOption;
-@property (nonatomic, strong) __block NSData *data;
+
 
 @end
 
@@ -163,15 +164,27 @@
              returningResponse:(__autoreleasing NSURLResponse **)responsePtr
                          error:(__autoreleasing NSError **)errorPtr
 {
-    NSData *data =[[NSURLSession sharedSession] sendSynchronousDataTaskWithRequest:request returningResponse:responsePtr error:errorPtr];
+    NSData *data = [[NSURLSession sharedSession] sendSynchronousDataTaskWithRequest:request returningResponse:responsePtr error:errorPtr];
     NSError *error = nil;
-    self.receivedData =[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-    if (self.saveOption == kSaveAllQuestionsOption)
-        [self saveAllQuestionsToRealm];
-    else if (self.saveOption == kSaveAllLecturesOption)
-        [self saveAllLecturesToRealm];
+    if (data)
+    {
+        self.receivedData =[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+        if (self.saveOption == kSaveAllQuestionsOption)
+            [self saveAllQuestionsToRealm];
+        else if (self.saveOption == kSaveAllLecturesOption)
+            [self saveAllLecturesToRealm];
+    }
+    else
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Can't connect to server" delegate:nil cancelButtonTitle:@"Exit" otherButtonTitles:nil, nil ];
+        [alertView show];
+    }
+    
 
 }
+
+
+
 
 
 
