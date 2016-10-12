@@ -169,9 +169,9 @@
 		EF0658D81CB2D05200D7AEC7 /* BuchRechMC */ = {
 			isa = PBXGroup;
 			children = (
-				EF9935C31D63118B00167079 /* API */,
+				EF9935C31D63118B00167079 /* Server Conection */,
 				EF9935C21D63117400167079 /* RealmModels */,
-				EF06590C1CB2D25B00D7AEC7 /* UIDesign */,
+				EF06590C1CB2D25B00D7AEC7 /* UI */,
 				EF0658D91CB2D05200D7AEC7 /* Supporting Files */,
 			);
 			path = BuchRechMC;
@@ -210,23 +210,14 @@
 			path = BuchRechMCUITests;
 			sourceTree = "<group>";
 		};
-		EF06590C1CB2D25B00D7AEC7 /* UIDesign */ = {
+		EF06590C1CB2D25B00D7AEC7 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				EF6B0E291DAE7E750098E142 /* CustomCells */,
+				EF6B0E281DAE7E420098E142 /* ViewControllers */,
 				EF0658E21CB2D05200D7AEC7 /* Main.storyboard */,
-				EF06590D1CB2D2E800D7AEC7 /* QuestionsController.h */,
-				EF06590E1CB2D2E800D7AEC7 /* QuestionsController.m */,
-				EF0659101CB2D68800D7AEC7 /* QuestionCustomCell.h */,
-				EF0659111CB2D68800D7AEC7 /* QuestionCustomCell.m */,
-				EF0659121CB2D68800D7AEC7 /* QuestionCustomCell.xib */,
-				EF266F831CB3F87700ADD7C8 /* MenuController.h */,
-				EF266F841CB3F87700ADD7C8 /* MenuController.m */,
-				EF0B4BFB1CB59BE60012E030 /* BookViewController.h */,
-				EF0B4BFC1CB59BE60012E030 /* BookViewController.m */,
-				EFE66A961D6B6D2D00EA8E8E /* QuestionViewController.h */,
-				EFE66A971D6B6D2D00EA8E8E /* QuestionViewController.m */,
 			);
-			name = UIDesign;
+			name = UI;
 			sourceTree = "<group>";
 		};
 		EF266F7F1CB3BD8800ADD7C8 /* SlideOutMenuFiles */ = {
@@ -255,28 +246,133 @@
 			path = ../Books;
 			sourceTree = "<group>";
 		};
-		EF9935C21D63117400167079 /* RealmModels */ = {
-			isa = PBXGroup;
-			children = (
-				EFD042D61CCF75AA0073BED6 /* Question.h */,
-				EFD042D71CCF75AA0073BED6 /* Question.m */,
-				EF06C6EE1D690595000ED520 /* Answer.h */,
-				EF06C6EF1D690595000ED520 /* Answer.m */,
-				EF6D80081D701A2E003C23EC /* Lecture.h */,
-				EF6D80091D701A2E003C23EC /* Lecture.m */,
-			);
-			name = RealmModels;
-			sourceTree = "<group>";
-		};
-		EF9935C31D63118B00167079 /* API */ = {
+		EF6B0E1E1DAE7C300098E142 /* ServerManager */ = {
 			isa = PBXGroup;
 			children = (
 				EF411D321D688C29008F068F /* ServerManager.h */,
 				EF411D331D688C29008F068F /* ServerManager.m */,
+			);
+			name = ServerManager;
+			sourceTree = "<group>";
+		};
+		EF6B0E1F1DAE7C6D0098E142 /* SynchronousTask */ = {
+			isa = PBXGroup;
+			children = (
 				EF12EEA91D8BCA0000519EB9 /* NSURLSession+SynchronousTask.h */,
 				EF12EEAA1D8BCA0000519EB9 /* NSURLSession+SynchronousTask.m */,
 			);
-			name = API;
+			name = SynchronousTask;
+			sourceTree = "<group>";
+		};
+		EF6B0E201DAE7CBC0098E142 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				EFD042D61CCF75AA0073BED6 /* Question.h */,
+				EFD042D71CCF75AA0073BED6 /* Question.m */,
+			);
+			name = Question;
+			sourceTree = "<group>";
+		};
+		EF6B0E211DAE7CD50098E142 /* Answer */ = {
+			isa = PBXGroup;
+			children = (
+				EF06C6EE1D690595000ED520 /* Answer.h */,
+				EF06C6EF1D690595000ED520 /* Answer.m */,
+			);
+			name = Answer;
+			sourceTree = "<group>";
+		};
+		EF6B0E221DAE7CED0098E142 /* Lecture */ = {
+			isa = PBXGroup;
+			children = (
+				EF6D80081D701A2E003C23EC /* Lecture.h */,
+				EF6D80091D701A2E003C23EC /* Lecture.m */,
+			);
+			name = Lecture;
+			sourceTree = "<group>";
+		};
+		EF6B0E231DAE7D1F0098E142 /* QuestionsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EF06590D1CB2D2E800D7AEC7 /* QuestionsController.h */,
+				EF06590E1CB2D2E800D7AEC7 /* QuestionsController.m */,
+			);
+			name = QuestionsViewController;
+			sourceTree = "<group>";
+		};
+		EF6B0E241DAE7D3D0098E142 /* QuestionCustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				EF0659101CB2D68800D7AEC7 /* QuestionCustomCell.h */,
+				EF0659111CB2D68800D7AEC7 /* QuestionCustomCell.m */,
+				EF0659121CB2D68800D7AEC7 /* QuestionCustomCell.xib */,
+			);
+			name = QuestionCustomCell;
+			sourceTree = "<group>";
+		};
+		EF6B0E251DAE7D780098E142 /* MenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EF266F831CB3F87700ADD7C8 /* MenuController.h */,
+				EF266F841CB3F87700ADD7C8 /* MenuController.m */,
+			);
+			name = MenuViewController;
+			sourceTree = "<group>";
+		};
+		EF6B0E261DAE7D8E0098E142 /* BookViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EF0B4BFC1CB59BE60012E030 /* BookViewController.m */,
+				EF0B4BFB1CB59BE60012E030 /* BookViewController.h */,
+			);
+			name = BookViewController;
+			sourceTree = "<group>";
+		};
+		EF6B0E271DAE7DAD0098E142 /* QuestionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EFE66A961D6B6D2D00EA8E8E /* QuestionViewController.h */,
+				EFE66A971D6B6D2D00EA8E8E /* QuestionViewController.m */,
+			);
+			name = QuestionViewController;
+			sourceTree = "<group>";
+		};
+		EF6B0E281DAE7E420098E142 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF6B0E261DAE7D8E0098E142 /* BookViewController */,
+				EF6B0E251DAE7D780098E142 /* MenuViewController */,
+				EF6B0E231DAE7D1F0098E142 /* QuestionsViewController */,
+				EF6B0E271DAE7DAD0098E142 /* QuestionViewController */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EF6B0E291DAE7E750098E142 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				EF6B0E241DAE7D3D0098E142 /* QuestionCustomCell */,
+			);
+			name = CustomCells;
+			sourceTree = "<group>";
+		};
+		EF9935C21D63117400167079 /* RealmModels */ = {
+			isa = PBXGroup;
+			children = (
+				EF6B0E211DAE7CD50098E142 /* Answer */,
+				EF6B0E221DAE7CED0098E142 /* Lecture */,
+				EF6B0E201DAE7CBC0098E142 /* Question */,
+			);
+			name = RealmModels;
+			sourceTree = "<group>";
+		};
+		EF9935C31D63118B00167079 /* Server Conection */ = {
+			isa = PBXGroup;
+			children = (
+				EF6B0E1E1DAE7C300098E142 /* ServerManager */,
+				EF6B0E1F1DAE7C6D0098E142 /* SynchronousTask */,
+			);
+			name = "Server Conection";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
