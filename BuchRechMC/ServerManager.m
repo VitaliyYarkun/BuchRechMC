@@ -130,35 +130,7 @@
 
 
 #pragma mark - RESTAPI request
-/*
--(void)sendSynchronousRequest:(NSURLRequest *)request
-            returningResponse:(__autoreleasing NSURLResponse **)responsePtr
-                        error:(__autoreleasing NSError **)errorPtr {
-    dispatch_semaphore_t    sem;
-    sem = dispatch_semaphore_create(0);
-    
-    [[[NSURLSession sharedSession] dataTaskWithRequest:request
-                                     completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                                         if (errorPtr != NULL) {
-                                             *errorPtr = error;
-                                         }
-                                         if (responsePtr != NULL) {
-                                             *responsePtr = response;
-                                         }
-                                         if (error == nil) {
-                                             self.data = data;
-                                         }
-                                         dispatch_semaphore_signal(sem);
-                                     }] resume];
-    
-    dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
-    NSError *error = nil;
-    self.receivedData =[NSJSONSerialization JSONObjectWithData:self.data options:NSJSONReadingAllowFragments error:&error];
-    if (self.saveOption == kSaveAllQuestionsOption)
-        [self saveAllQuestionsToRealm];
-    else if (self.saveOption == kSaveAllLecturesOption)
-        [self saveAllLecturesToRealm];
-}*/
+
 
 -(void) sendSynchronousRequest:(NSURLRequest *)request
              returningResponse:(__autoreleasing NSURLResponse **)responsePtr
