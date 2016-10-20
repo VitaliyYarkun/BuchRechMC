@@ -22,9 +22,12 @@ typedef NS_ENUM(NSInteger, RealmDataSaveOption)
 
 -(void) httpRequestWithUrl:(NSURL *) requestUrl
             withHTTPMethod:(NSString *) requestMethod;
+
+-(void) sendLoginRequest;
 -(void) getAllQuestions;
 -(void) getAllLectures;
 -(void) getAllTopics;
+-(void) getAllUsers;
 
 +(instancetype) sharedManager;
 

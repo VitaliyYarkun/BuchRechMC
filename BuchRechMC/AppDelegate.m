@@ -24,9 +24,9 @@
     
     self.serverManager = [ServerManager sharedManager];
     self.serverManager.realm = [RLMRealm defaultRealm];
-
+    
+    [self.serverManager sendLoginRequest];
     [self.serverManager getAllQuestions];
-    [self.serverManager getAllLectures];
     
     UIColor *blueColor = [UIColor colorWithRed:0.f/255 green:31.f/255 blue:233.f/255 alpha:1.f];
     UIColor *whiteColor = [UIColor whiteColor];

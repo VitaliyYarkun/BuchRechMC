@@ -18,6 +18,7 @@
 @property (strong, nonatomic) NSArray *receivedData;
 @property (strong, nonatomic) NSCharacterSet *set;
 @property (assign, nonatomic) RealmDataSaveOption saveOption;
+@property (strong, nonatomic) NSDictionary *authenticationHeader;
 
 
 @end
@@ -38,9 +39,12 @@
 
 -(void) httpRequestWithUrl:(NSURL *) requestUrl
             withHTTPMethod:(NSString *) requestMethod
+
 {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestUrl];
     [request setHTTPMethod:requestMethod];
+    [request setAllHTTPHeaderFields:self.authenticationHeader];
+    
     [self sendSynchronousRequest:request returningResponse:nil error:nil];
 }
 
@@ -73,6 +77,30 @@
     self.stringURL = [self.stringURL stringByAddingPercentEncodingWithAllowedCharacters:self.set];
     NSURL *url = [NSURL URLWithString:self.stringURL];
     [self httpRequestWithUrl:url withHTTPMethod:@"GET"];
+}
+
+-(void) getAllUsers
+{
+    self.set = [NSCharacterSet URLQueryAllowedCharacterSet];
+    self.stringURL = @"http://85.214.195.89:8080/api/users/getAllUsers";
+    self.stringURL = [self.stringURL stringByAddingPercentEncodingWithAllowedCharacters:self.set];
+    NSURL *url = [NSURL URLWithString:self.stringURL];
+    [self httpRequestWithUrl:url withHTTPMethod:@"GET"];
+}
+
+-(void) sendLoginRequest
+{
+    NSURL *url = [NSURL URLWithString:@"http://85.214.195.89:8080/login"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: url];
+    [request setHTTPMethod:@"POST"];
+    NSString *postString = @"username=mykola.odnoshyvkin@tum.de&password=Kon4ever!";
+    [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
+    NSHTTPURLResponse *response;
+    [NSURLConnection sendSynchronousRequest: request returningResponse: &response error: nil];
+    if ([response respondsToSelector:@selector(allHeaderFields)]) {
+        NSDictionary *dictionary = [response allHeaderFields];
+        self.authenticationHeader = dictionary;
+    }
 }
 
 #pragma mark - PARSE and SAVE to Realm
@@ -148,8 +176,8 @@
     }
     else
     {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Can't connect to server" delegate:nil cancelButtonTitle:@"Exit" otherButtonTitles:nil, nil ];
-        [alertView show];
+        /*UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Can't connect to server" delegate:nil cancelButtonTitle:@"Exit" otherButtonTitles:nil, nil ];
+        [alertView show];*/
     }
     
 
