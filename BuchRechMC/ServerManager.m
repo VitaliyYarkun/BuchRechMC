@@ -18,7 +18,7 @@
 @property (strong, nonatomic) NSArray *receivedData;
 @property (strong, nonatomic) NSCharacterSet *set;
 @property (assign, nonatomic) RealmDataSaveOption saveOption;
-@property (strong, nonatomic) NSDictionary *authenticationHeader;
+
 
 
 @end
@@ -43,7 +43,7 @@
 {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestUrl];
     [request setHTTPMethod:requestMethod];
-    [request setAllHTTPHeaderFields:self.authenticationHeader];
+    
     
     [self sendSynchronousRequest:request returningResponse:nil error:nil];
 }
@@ -90,16 +90,31 @@
 
 -(void) sendLoginRequest
 {
+    [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
     NSURL *url = [NSURL URLWithString:@"http://85.214.195.89:8080/login"];
+    NSString *parameters = @"username=mykola.odnoshyvkin@tum.de&password=Kon4ever";
+    NSData *requestBody = [parameters dataUsingEncoding:NSUTF8StringEncoding];
+    
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: url];
+    [request setHTTPShouldHandleCookies:YES];
     [request setHTTPMethod:@"POST"];
-    NSString *postString = @"username=mykola.odnoshyvkin@tum.de&password=Kon4ever!";
-    [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:requestBody];
+   
     NSHTTPURLResponse *response;
     [NSURLConnection sendSynchronousRequest: request returningResponse: &response error: nil];
     if ([response respondsToSelector:@selector(allHeaderFields)]) {
-        NSDictionary *dictionary = [response allHeaderFields];
-        self.authenticationHeader = dictionary;
+
+         //NSArray<NSHTTPCookie *> *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:url];
+        NSMutableArray *cookies = [[NSMutableArray alloc] init];
+        for (NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies])
+        {
+            NSLog(@"name: '%@'\n",   [cookie name]);
+            NSLog(@"value: '%@'\n",  [cookie value]);
+            NSLog(@"domain: '%@'\n", [cookie domain]);
+            NSLog(@"path: '%@'\n",   [cookie path]);
+            [cookies addObject:cookie];
+        }
     }
 }
 
