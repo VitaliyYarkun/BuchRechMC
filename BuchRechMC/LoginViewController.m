@@ -14,6 +14,7 @@
 @property (strong, nonatomic) ServerManager *serverManager;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (assign, nonatomic) BOOL access;
 
 @end
 
@@ -21,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.access = false;
     self.serverManager = [ServerManager sharedManager];
     self.serverManager.realm = [RLMRealm defaultRealm];
     self.emailTextField.autocorrectionType = UITextAutocorrectionTypeNo;
@@ -30,9 +32,24 @@
 
 - (IBAction)loginButtonAction:(UIButton *)sender
 {
-    [self.serverManager sendLoginRequestWithUserName:self.emailTextField.text withPassword:self.passwordTextField.text];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Incorrect input"
+                                                                             message:@"Email or password is incorrect, please try again"
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"Ok"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:nil]; 
+    [alertController addAction:actionOk];
+    self.access = [self.serverManager sendLoginRequestWithUserName:self.emailTextField.text withPassword:self.passwordTextField.text];
+    
     [self.serverManager getAllQuestions];
     [self.serverManager getAllLectures];
+    
+    //self.access = false;
+    
+    if (self.access == true)
+        [self performSegueWithIdentifier:@"loginSegue" sender:sender];
+    else
+        [self presentViewController:alertController animated:YES completion:nil];
 }
 
 -(UIInterfaceOrientationMask)supportedInterfaceOrientations {

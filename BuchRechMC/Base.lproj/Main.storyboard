@@ -172,7 +172,6 @@
                                         </state>
                                         <connections>
                                             <action selector="loginButtonAction:" destination="awN-iJ-ubd" eventType="touchUpInside" id="mBj-ov-rrU"/>
-                                            <segue destination="2SR-q4-BOy" kind="show" identifier="loginSegue" id="mJU-jK-CHv"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not registered?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7j-yD-Ewa">
@@ -232,6 +231,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="2b8-Yw-oNQ" id="ZNx-5v-JEA"/>
                         <outlet property="passwordTextField" destination="yxL-pP-gpj" id="b0Y-wW-6w9"/>
+                        <segue destination="2SR-q4-BOy" kind="show" identifier="loginSegue" id="DWj-3g-ias"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q8Y-2N-d01" userLabel="First Responder" sceneMemberID="firstResponder"/>

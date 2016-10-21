@@ -79,7 +79,7 @@
     [self httpRequestWithUrl:url withHTTPMethod:@"GET"];
 }
 
--(void) getAllUsers
+-(void) getUserByName
 {
     self.set = [NSCharacterSet URLQueryAllowedCharacterSet];
     self.stringURL = @"http://85.214.195.89:8080/api/users/getAllUsers";
@@ -88,12 +88,13 @@
     [self httpRequestWithUrl:url withHTTPMethod:@"GET"];
 }
 
--(void) sendLoginRequestWithUserName:(NSString *) userName withPassword:(NSString *) password
+
+-(BOOL) sendLoginRequestWithUserName:(NSString *) userName withPassword:(NSString *) password
 {
     [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
     NSURL *url = [NSURL URLWithString:@"http://85.214.195.89:8080/login"];
-    NSString *parameters = @"username=mykola.odnoshyvkin@tum.de&password=Kon4ever";
-    //NSString *parameters = [NSString stringWithFormat:@"username=%@&password=%@", userName, password];
+    //NSString *parameters = @"username=mykola.odnoshyvkin@tum.de&password=Kon4ever";
+    NSString *parameters = [NSString stringWithFormat:@"username=%@&password=%@", userName, password];
     NSData *requestBody = [parameters dataUsingEncoding:NSUTF8StringEncoding];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: url];
@@ -110,6 +111,12 @@
         if ([[cookie name] isEqualToString:@"JSESSIONID"])
             self.cookie = cookie;
     }
+    
+    if (self.cookie)
+        return true;
+    else
+        return false;
+    
     
 }
 
