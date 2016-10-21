@@ -32,6 +32,7 @@
 {
     [self.serverManager sendLoginRequestWithUserName:self.emailTextField.text withPassword:self.passwordTextField.text];
     [self.serverManager getAllQuestions];
+    [self.serverManager getAllLectures];
 }
 
 -(UIInterfaceOrientationMask)supportedInterfaceOrientations {
