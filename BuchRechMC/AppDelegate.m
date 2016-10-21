@@ -24,14 +24,14 @@
     
    
     
-    UIColor *blueColor = [UIColor colorWithRed:0.f/255 green:31.f/255 blue:233.f/255 alpha:1.f];
+    UIColor *greenColor = [UIColor colorWithRed:139.f/255 green:192.f/255 blue:111.f/255 alpha:1.f];
     UIColor *whiteColor = [UIColor whiteColor];
     
-    [[UINavigationBar appearance] setBarTintColor:blueColor];
+    [[UINavigationBar appearance] setBarTintColor:greenColor];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:whiteColor}];
     [[UINavigationBar appearance] setTintColor:whiteColor];
     
-    [[UIToolbar appearance] setBarTintColor:blueColor];
+    [[UIToolbar appearance] setBarTintColor:greenColor];
     [[UIToolbar appearance] setTintColor:whiteColor];
 
 

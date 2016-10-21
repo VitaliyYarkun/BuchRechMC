@@ -34,4 +34,8 @@
     [self.serverManager getAllQuestions];
 }
 
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 @end
