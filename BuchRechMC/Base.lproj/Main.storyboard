@@ -124,6 +124,7 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="Yl5-35-A5J"/>
                     <connections>
+                        <outlet property="hintLabel" destination="Oq7-yN-KJS" id="t5v-7q-gAr"/>
                         <outlet property="questionTextView" destination="QXB-4T-g54" id="kMC-Kc-J4Z"/>
                         <outlet property="tableView" destination="9Vt-zF-yXK" id="mTE-4I-yd6"/>
                     </connections>
@@ -459,7 +460,7 @@
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGD-ow-3aT">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.5450980392" green="0.75294117650000003" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                             <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01J-Ys-UQn">
                                 <rect key="frame" x="0.0" y="560" width="600" height="40"/>
@@ -468,14 +469,14 @@
                                         <rect key="frame" x="16" y="0.0" width="568" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <state key="normal" title="Go to the question ">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="goToQuestionAction:" destination="XjW-hq-uqD" eventType="touchUpInside" id="bEB-dz-RDS"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.5450980392" green="0.75294117650000003" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="73k-J3-uo4"/>
                                     <constraint firstItem="cr1-To-dfz" firstAttribute="top" secondItem="01J-Ys-UQn" secondAttribute="top" id="LSh-Dl-LRB"/>
@@ -536,6 +537,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HJL-zB-fPj"/>
+        <segue reference="OX7-Td-LSk"/>
     </inferredMetricsTieBreakers>
 </document>

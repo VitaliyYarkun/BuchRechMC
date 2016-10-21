@@ -13,6 +13,7 @@
 @property Question *question;
 @property RLMArray <Answer *><Answer> *answers;
 
+@property (weak, nonatomic) IBOutlet UILabel *hintLabel;
 @property (weak, nonatomic) IBOutlet UITextView *questionTextView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (assign, nonatomic) NSInteger questionIndex;
@@ -28,9 +29,10 @@
     self.questionIndex = self.selectedCell;
     self.question = [self.allQuestions objectAtIndex:self.questionIndex];
     self.questionTextView.text = self.question.content;
+    self.hintLabel.text = self.question.hint;
     self.answers = self.question.possibleAnswers;
     self.cellsArray = [[NSMutableArray alloc] init];
-    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    //[self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 
 #pragma mark - Table view data source
@@ -58,7 +60,7 @@
     Answer *answer = [self.answers objectAtIndex:indexPath.row];
     cell.textLabel.text = answer.content;
     cell.tag = answer.answerId;
-    cell.layer.cornerRadius = 10;
+    //cell.layer.cornerRadius = 10;
     cell.layer.masksToBounds = YES;
     
     [self.cellsArray addObject:cell];
