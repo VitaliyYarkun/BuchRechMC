@@ -131,10 +131,10 @@
             </objects>
             <point key="canvasLocation" x="1603" y="432"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="cgg-tc-gP6">
             <objects>
-                <viewController id="awN-iJ-ubd" sceneMemberID="viewController">
+                <viewController id="awN-iJ-ubd" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fni-3N-prR"/>
                         <viewControllerLayoutGuide type="bottom" id="Ykh-lN-UYM"/>
@@ -169,7 +169,8 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="2SR-q4-BOy" kind="show" id="mJU-jK-CHv"/>
+                                            <action selector="loginButtonAction:" destination="awN-iJ-ubd" eventType="touchUpInside" id="mBj-ov-rrU"/>
+                                            <segue destination="2SR-q4-BOy" kind="show" identifier="loginSegue" id="mJU-jK-CHv"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not registered?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7j-yD-Ewa">
@@ -226,6 +227,10 @@
                             <constraint firstItem="TtW-RR-HeD" firstAttribute="top" secondItem="fni-3N-prR" secondAttribute="bottom" constant="99" id="nTA-Lw-dB7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="2b8-Yw-oNQ" id="ZNx-5v-JEA"/>
+                        <outlet property="passwordTextField" destination="yxL-pP-gpj" id="b0Y-wW-6w9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q8Y-2N-d01" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

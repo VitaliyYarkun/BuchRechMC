@@ -34,6 +34,7 @@
 		EF266F9C1CB42B6C00ADD7C8 /* 10_TUM WS 2016_17_BB_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F931CB42B6C00ADD7C8 /* 10_TUM WS 2016_17_BB_final_V1_Lsg.pdf */; };
 		EF411D341D688C29008F068F /* ServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF411D331D688C29008F068F /* ServerManager.m */; };
 		EF6D800A1D701A2E003C23EC /* Lecture.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6D80091D701A2E003C23EC /* Lecture.m */; };
+		EFA9E6841DBA1AA700A5BDBA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA9E6831DBA1AA700A5BDBA /* LoginViewController.m */; };
 		EFD042D81CCF75AA0073BED6 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD042D71CCF75AA0073BED6 /* Question.m */; };
 		EFE66A981D6B6D2D00EA8E8E /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE66A971D6B6D2D00EA8E8E /* QuestionViewController.m */; };
 /* End PBXBuildFile section */
@@ -113,6 +114,8 @@
 		EF411D331D688C29008F068F /* ServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerManager.m; sourceTree = "<group>"; };
 		EF6D80081D701A2E003C23EC /* Lecture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lecture.h; sourceTree = "<group>"; };
 		EF6D80091D701A2E003C23EC /* Lecture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lecture.m; sourceTree = "<group>"; };
+		EFA9E6821DBA1AA700A5BDBA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		EFA9E6831DBA1AA700A5BDBA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		EFD042D61CCF75AA0073BED6 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
 		EFD042D71CCF75AA0073BED6 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		EFE66A961D6B6D2D00EA8E8E /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
@@ -341,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				EF6B0E261DAE7D8E0098E142 /* BookViewController */,
+				EFA9E6851DBA1AB300A5BDBA /* LoginViewController */,
 				EF6B0E251DAE7D780098E142 /* MenuViewController */,
 				EF6B0E231DAE7D1F0098E142 /* QuestionsViewController */,
 				EF6B0E271DAE7DAD0098E142 /* QuestionViewController */,
@@ -373,6 +377,15 @@
 				EF6B0E1F1DAE7C6D0098E142 /* SynchronousTask */,
 			);
 			name = "Server Conection";
+			sourceTree = "<group>";
+		};
+		EFA9E6851DBA1AB300A5BDBA /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EFA9E6821DBA1AA700A5BDBA /* LoginViewController.h */,
+				EFA9E6831DBA1AA700A5BDBA /* LoginViewController.m */,
+			);
+			name = LoginViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -539,6 +552,7 @@
 				EF12EEAB1D8BCA0000519EB9 /* NSURLSession+SynchronousTask.m in Sources */,
 				EF06590F1CB2D2E800D7AEC7 /* QuestionsController.m in Sources */,
 				EFE66A981D6B6D2D00EA8E8E /* QuestionViewController.m in Sources */,
+				EFA9E6841DBA1AA700A5BDBA /* LoginViewController.m in Sources */,
 				EF0658DE1CB2D05200D7AEC7 /* AppDelegate.m in Sources */,
 				EF266F851CB3F87700ADD7C8 /* MenuController.m in Sources */,
 				EF266F821CB3BD8800ADD7C8 /* SWRevealViewController.m in Sources */,

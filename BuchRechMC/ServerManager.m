@@ -18,8 +18,7 @@
 @property (strong, nonatomic) NSArray *receivedData;
 @property (strong, nonatomic) NSCharacterSet *set;
 @property (assign, nonatomic) RealmDataSaveOption saveOption;
-
-
+@property (strong, nonatomic) NSHTTPCookie *cookie;
 
 @end
 
@@ -41,9 +40,10 @@
             withHTTPMethod:(NSString *) requestMethod
 
 {
+    NSString *cookieString = [NSString stringWithFormat:@"JSESSIONID=%@;path=/;HttpOnly", [self.cookie value]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestUrl];
     [request setHTTPMethod:requestMethod];
-    
+    [request setValue:cookieString forHTTPHeaderField:@"Cookie"];
     
     [self sendSynchronousRequest:request returningResponse:nil error:nil];
 }
@@ -88,11 +88,12 @@
     [self httpRequestWithUrl:url withHTTPMethod:@"GET"];
 }
 
--(void) sendLoginRequest
+-(void) sendLoginRequestWithUserName:(NSString *) userName withPassword:(NSString *) password
 {
     [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
     NSURL *url = [NSURL URLWithString:@"http://85.214.195.89:8080/login"];
-    NSString *parameters = @"username=mykola.odnoshyvkin@tum.de&password=Kon4ever";
+    //NSString *parameters = @"username=mykola.odnoshyvkin@tum.de&password=Kon4ever";
+    NSString *parameters = [NSString stringWithFormat:@"username=%@&password=%@", userName, password];
     NSData *requestBody = [parameters dataUsingEncoding:NSUTF8StringEncoding];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: url];
@@ -104,18 +105,11 @@
     NSHTTPURLResponse *response;
     [NSURLConnection sendSynchronousRequest: request returningResponse: &response error: nil];
     
-
-        NSArray *cookies1 = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:url];
-        NSMutableArray *cookies = [[NSMutableArray alloc] init];
-        for (NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies])
-        {
-            NSLog(@"name: '%@'\n",   [cookie name]);
-            NSLog(@"value: '%@'\n",  [cookie value]);
-            NSLog(@"domain: '%@'\n", [cookie domain]);
-            NSLog(@"path: '%@'\n",   [cookie path]);
-            [cookies addObject:cookie];
-        }
-        NSLog(@"%@", [cookies description]);
+    for (NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies])
+    {
+        if ([[cookie name] isEqualToString:@"JSESSIONID"])
+            self.cookie = cookie;
+    }
     
 }
 
