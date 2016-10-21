@@ -54,7 +54,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     QuestionCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([QuestionCustomCell class]) forIndexPath:indexPath];
     
     Question *question = [self.allQuestions objectAtIndex:indexPath.row];
