@@ -24,7 +24,7 @@
 		EF12EEAB1D8BCA0000519EB9 /* NSURLSession+SynchronousTask.m in Sources */ = {isa = PBXBuildFile; fileRef = EF12EEAA1D8BCA0000519EB9 /* NSURLSession+SynchronousTask.m */; };
 		EF266F821CB3BD8800ADD7C8 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF266F811CB3BD8800ADD7C8 /* SWRevealViewController.m */; };
 		EF266F851CB3F87700ADD7C8 /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF266F841CB3F87700ADD7C8 /* MenuController.m */; };
-		EF266F951CB42B6C00ADD7C8 /* 02_TUM WS 2016_17_GL_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F8C1CB42B6C00ADD7C8 /* 02_TUM WS 2016_17_GL_final_V1_Lsg.pdf */; };
+		EF266F951CB42B6C00ADD7C8 /* vorlesung1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F8C1CB42B6C00ADD7C8 /* vorlesung1.pdf */; };
 		EF266F961CB42B6C00ADD7C8 /* 03_TUM WS 2016_17_BF_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F8D1CB42B6C00ADD7C8 /* 03_TUM WS 2016_17_BF_final_V1_Lsg.pdf */; };
 		EF266F971CB42B6C00ADD7C8 /* 05_TUM WS 2016_17_Ü_BF_2_Fallbeispiel 1_Aufgaben_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F8E1CB42B6C00ADD7C8 /* 05_TUM WS 2016_17_Ü_BF_2_Fallbeispiel 1_Aufgaben_final_V1_Lsg.pdf */; };
 		EF266F981CB42B6C00ADD7C8 /* 06_TUM WS 2016_17_Ü_BF_3_Fallbeispiel 2_Aufgaben_final_V1_Lsg.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF266F8F1CB42B6C00ADD7C8 /* 06_TUM WS 2016_17_Ü_BF_3_Fallbeispiel 2_Aufgaben_final_V1_Lsg.pdf */; };
@@ -101,7 +101,7 @@
 		EF266F811CB3BD8800ADD7C8 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		EF266F831CB3F87700ADD7C8 /* MenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
 		EF266F841CB3F87700ADD7C8 /* MenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuController.m; sourceTree = "<group>"; };
-		EF266F8C1CB42B6C00ADD7C8 /* 02_TUM WS 2016_17_GL_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "02_TUM WS 2016_17_GL_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
+		EF266F8C1CB42B6C00ADD7C8 /* vorlesung1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = vorlesung1.pdf; sourceTree = "<group>"; };
 		EF266F8D1CB42B6C00ADD7C8 /* 03_TUM WS 2016_17_BF_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "03_TUM WS 2016_17_BF_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
 		EF266F8E1CB42B6C00ADD7C8 /* 05_TUM WS 2016_17_Ü_BF_2_Fallbeispiel 1_Aufgaben_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "05_TUM WS 2016_17_Ü_BF_2_Fallbeispiel 1_Aufgaben_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
 		EF266F8F1CB42B6C00ADD7C8 /* 06_TUM WS 2016_17_Ü_BF_3_Fallbeispiel 2_Aufgaben_final_V1_Lsg.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "06_TUM WS 2016_17_Ü_BF_3_Fallbeispiel 2_Aufgaben_final_V1_Lsg.pdf"; sourceTree = "<group>"; };
@@ -235,7 +235,7 @@
 		EF266F8B1CB42B6C00ADD7C8 /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				EF266F8C1CB42B6C00ADD7C8 /* 02_TUM WS 2016_17_GL_final_V1_Lsg.pdf */,
+				EF266F8C1CB42B6C00ADD7C8 /* vorlesung1.pdf */,
 				EF266F8D1CB42B6C00ADD7C8 /* 03_TUM WS 2016_17_BF_final_V1_Lsg.pdf */,
 				EF266F8E1CB42B6C00ADD7C8 /* 05_TUM WS 2016_17_Ü_BF_2_Fallbeispiel 1_Aufgaben_final_V1_Lsg.pdf */,
 				EF266F8F1CB42B6C00ADD7C8 /* 06_TUM WS 2016_17_Ü_BF_3_Fallbeispiel 2_Aufgaben_final_V1_Lsg.pdf */,
@@ -497,7 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF266F9C1CB42B6C00ADD7C8 /* 10_TUM WS 2016_17_BB_final_V1_Lsg.pdf in Resources */,
-				EF266F951CB42B6C00ADD7C8 /* 02_TUM WS 2016_17_GL_final_V1_Lsg.pdf in Resources */,
+				EF266F951CB42B6C00ADD7C8 /* vorlesung1.pdf in Resources */,
 				EF0658E91CB2D05200D7AEC7 /* LaunchScreen.storyboard in Resources */,
 				EF266F971CB42B6C00ADD7C8 /* 05_TUM WS 2016_17_Ü_BF_2_Fallbeispiel 1_Aufgaben_final_V1_Lsg.pdf in Resources */,
 				EF0658E61CB2D05200D7AEC7 /* Assets.xcassets in Resources */,

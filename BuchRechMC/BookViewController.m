@@ -54,8 +54,9 @@
     Lecture *lecture = [[Lecture alloc] init];
     //NSPredicate *lecturePred = [NSPredicate predicateWithFormat:@"name == %@",self.bookName];
     //self.lectureResult = [Lecture objectsWithPredicate:lecturePred];
-
-    RLMResults *lectureResult = [Lecture objectsWhere:@"name BEGINSWITH '05'"];
+    //RLMResults *lectureResult = [Lecture objectsWhere:@"name BEGINSWITH '05'"];
+    
+    RLMResults *lectureResult = [Lecture objectsWhere:@"name == %@", self.bookName];
     lecture = [lectureResult firstObject];
     
     //self.questions = [Question allObjects];
@@ -115,7 +116,7 @@
 {
     switch (self.cellTag) {
         case kGL:
-            self.titleNavigationItem.title = @"Einführung in das Rechnungswesen";
+            self.titleNavigationItem.title = @"Vorlesung1";
             break;
         case kBF:
             self.titleNavigationItem.title = @"Buchführung";
@@ -147,7 +148,7 @@
 {
     switch (self.cellTag) {
         case kGL:
-            self.bookName = @"02_TUM WS 2016_17_GL_final_V1_Lsg.pdf";
+            self.bookName = @"vorlesung1.pdf";
             break;
         case kBF:
             self.bookName = @"03_TUM WS 2016_17_BF_final_V1_Lsg.pdf";
