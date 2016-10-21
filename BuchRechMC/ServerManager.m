@@ -103,9 +103,9 @@
    
     NSHTTPURLResponse *response;
     [NSURLConnection sendSynchronousRequest: request returningResponse: &response error: nil];
-    if ([response respondsToSelector:@selector(allHeaderFields)]) {
+    
 
-         //NSArray<NSHTTPCookie *> *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:url];
+        NSArray *cookies1 = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:url];
         NSMutableArray *cookies = [[NSMutableArray alloc] init];
         for (NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies])
         {
@@ -115,7 +115,8 @@
             NSLog(@"path: '%@'\n",   [cookie path]);
             [cookies addObject:cookie];
         }
-    }
+        NSLog(@"%@", [cookies description]);
+    
 }
 
 #pragma mark - PARSE and SAVE to Realm
