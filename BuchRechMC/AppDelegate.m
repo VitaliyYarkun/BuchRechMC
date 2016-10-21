@@ -24,7 +24,8 @@
     
    
     
-    UIColor *greenColor = [UIColor colorWithRed:139.f/255 green:192.f/255 blue:111.f/255 alpha:1.f];
+    //UIColor *greenColor = [UIColor colorWithRed:139.f/255 green:192.f/255 blue:111.f/255 alpha:1.f];
+    UIColor *greenColor = [UIColor colorWithRed:0.329 green:0.710 blue:0.376 alpha:1.f];
     UIColor *whiteColor = [UIColor whiteColor];
     
     [[UINavigationBar appearance] setBarTintColor:greenColor];
