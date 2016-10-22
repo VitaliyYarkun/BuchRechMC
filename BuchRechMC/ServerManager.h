@@ -28,7 +28,7 @@ typedef NS_ENUM(NSInteger, RealmDataSaveOption)
 -(void) getAllQuestions;
 -(void) getAllLectures;
 -(void) getAllTopics;
--(void) getAllUsers;
+-(void) getUserByFirstName:(NSString *) firstName andLastName:(NSString *) lastName;
 
 +(instancetype) sharedManager;
 

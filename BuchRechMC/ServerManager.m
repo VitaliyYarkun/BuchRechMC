@@ -79,10 +79,10 @@
     [self httpRequestWithUrl:url withHTTPMethod:@"GET"];
 }
 
--(void) getUserByName
+-(void) getUserByFirstName:(NSString *) firstName andLastName:(NSString *) lastName
 {
     self.set = [NSCharacterSet URLQueryAllowedCharacterSet];
-    self.stringURL = @"http://85.214.195.89:8080/api/users/getAllUsers";
+    self.stringURL = [NSString stringWithFormat:@"http://85.214.195.89:8080/api/users//getUsersByName?lastName=%@&firstName=%@",lastName, firstName];
     self.stringURL = [self.stringURL stringByAddingPercentEncodingWithAllowedCharacters:self.set];
     NSURL *url = [NSURL URLWithString:self.stringURL];
     [self httpRequestWithUrl:url withHTTPMethod:@"GET"];
@@ -93,8 +93,8 @@
 {
     [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
     NSURL *url = [NSURL URLWithString:@"http://85.214.195.89:8080/login"];
-    //NSString *parameters = @"username=mykola.odnoshyvkin@tum.de&password=Kon4ever";
-    NSString *parameters = [NSString stringWithFormat:@"username=%@&password=%@", userName, password];
+    NSString *parameters = @"username=mykola.odnoshyvkin@tum.de&password=Kon4ever";
+    //NSString *parameters = [NSString stringWithFormat:@"username=%@&password=%@", userName, password];
     NSData *requestBody = [parameters dataUsingEncoding:NSUTF8StringEncoding];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: url];
@@ -111,6 +111,14 @@
         if ([[cookie name] isEqualToString:@"JSESSIONID"])
             self.cookie = cookie;
     }
+    /*userName = @"mykola.odnoshyvkin@tum.de";
+    NSArray *elementsSeparatedByDot = [userName componentsSeparatedByString:@"."];
+    NSString *firstName = [elementsSeparatedByDot firstObject];
+    
+    NSArray *elementsSeparatedByAdSymbol = [[elementsSeparatedByDot objectAtIndex:1] componentsSeparatedByString:@"@"];
+    NSString *lastName = [elementsSeparatedByAdSymbol firstObject];
+    
+    [self getUserByFirstName:firstName andLastName:lastName];*/
     
     if (self.cookie)
         return true;
