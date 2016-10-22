@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "ServerManager.h"
+#import "Question.h"                // Used to check if server connection is successful
 
 @interface LoginViewController ()
 
@@ -39,12 +40,15 @@
                                                        style:UIAlertActionStyleDefault
                                                      handler:nil]; 
     [alertController addAction:actionOk];
-    self.access = [self.serverManager sendLoginRequestWithUserName:self.emailTextField.text withPassword:self.passwordTextField.text];
     
+    [self.serverManager sendLoginRequestWithUserName:self.emailTextField.text withPassword:self.passwordTextField.text];
     [self.serverManager getAllQuestions];
     [self.serverManager getAllLectures];
     
-    //self.access = false;
+    if ([Question allObjects].count > 0)        // Used to check if server connection is successful
+        self.access = true;                     // Used to check if server connection is successful
+    else                                        // Used to check if server connection is successful
+        self.access = false;                    // Used to check if server connection is successful
     
     if (self.access == true)
         [self performSegueWithIdentifier:@"loginSegue" sender:sender];
