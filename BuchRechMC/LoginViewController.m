@@ -28,6 +28,10 @@
     self.serverManager.realm = [RLMRealm defaultRealm];
     self.emailTextField.autocorrectionType = UITextAutocorrectionTypeNo;
     self.passwordTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                          action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
     
 }
 
@@ -58,6 +62,11 @@
 
 -(UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;
+}
+
+-(void)dismissKeyboard {
+    [self.emailTextField resignFirstResponder];
+    [self.passwordTextField resignFirstResponder];
 }
 
 @end
