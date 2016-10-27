@@ -325,8 +325,8 @@
 		EF6B0E261DAE7D8E0098E142 /* BookViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EF0B4BFC1CB59BE60012E030 /* BookViewController.m */,
 				EF0B4BFB1CB59BE60012E030 /* BookViewController.h */,
+				EF0B4BFC1CB59BE60012E030 /* BookViewController.m */,
 			);
 			name = BookViewController;
 			sourceTree = "<group>";
