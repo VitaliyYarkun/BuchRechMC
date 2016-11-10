@@ -52,7 +52,8 @@
 {
     self.saveOption = kSaveAllQuestionsOption;
     self.set = [NSCharacterSet URLQueryAllowedCharacterSet];
-    self.stringURL = @"http://85.214.195.89:8080/api/questions/getAll";
+    //self.stringURL = @"http://85.214.195.89:8080/api/questions/getAll";
+    self.stringURL = [NSString stringWithFormat:@"%@/api/questions/getAll", kBuchRechMCBaseURLAbsoluteString];
     self.stringURL = [self.stringURL stringByAddingPercentEncodingWithAllowedCharacters:self.set];
     NSURL *url = [NSURL URLWithString:self.stringURL];
     [self httpRequestWithUrl:url withHTTPMethod:@"GET"];
@@ -63,7 +64,7 @@
 {
     self.saveOption = kSaveAllLecturesOption;
     self.set = [NSCharacterSet URLQueryAllowedCharacterSet];
-    self.stringURL = @"http://85.214.195.89:8080/api/lectures/getAll";
+    self.stringURL = [NSString stringWithFormat:@"%@/api/lectures/getAll", kBuchRechMCBaseURLAbsoluteString];
     self.stringURL = [self.stringURL stringByAddingPercentEncodingWithAllowedCharacters:self.set];
     NSURL *url = [NSURL URLWithString:self.stringURL];
     [self httpRequestWithUrl:url withHTTPMethod:@"GET"];
@@ -73,7 +74,7 @@
 {
     self.saveOption = kSaveAllTopicsOption;
     self.set = [NSCharacterSet URLQueryAllowedCharacterSet];
-    self.stringURL = @"http://85.214.195.89:8080/api/topics/getAllTopics";
+    self.stringURL = [NSString stringWithFormat:@"%@/api/topics/getAllTopics", kBuchRechMCBaseURLAbsoluteString];
     self.stringURL = [self.stringURL stringByAddingPercentEncodingWithAllowedCharacters:self.set];
     NSURL *url = [NSURL URLWithString:self.stringURL];
     [self httpRequestWithUrl:url withHTTPMethod:@"GET"];
@@ -82,7 +83,7 @@
 -(void) getUserByFirstName:(NSString *) firstName andLastName:(NSString *) lastName
 {
     self.set = [NSCharacterSet URLQueryAllowedCharacterSet];
-    self.stringURL = [NSString stringWithFormat:@"http://85.214.195.89:8080/api/users//getUsersByName?lastName=%@&firstName=%@",lastName, firstName];
+    self.stringURL = [NSString stringWithFormat:@"%@/api/users//getUsersByName?lastName=%@&firstName=%@",kBuchRechMCBaseURLAbsoluteString, lastName, firstName];
     self.stringURL = [self.stringURL stringByAddingPercentEncodingWithAllowedCharacters:self.set];
     NSURL *url = [NSURL URLWithString:self.stringURL];
     [self httpRequestWithUrl:url withHTTPMethod:@"GET"];
@@ -92,7 +93,8 @@
 -(void) sendLoginRequestWithUserName:(NSString *) userName withPassword:(NSString *) password
 {
     [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
-    NSURL *url = [NSURL URLWithString:@"http://85.214.195.89:8080/login"];
+    self.stringURL = [NSString stringWithFormat:@"%@/login", kBuchRechMCBaseURLAbsoluteString];
+    NSURL *url = [NSURL URLWithString:self.stringURL];
     NSString *parameters = @"username=mykola.odnoshyvkin@tum.de&password=Kon4ever";
     //NSString *parameters = [NSString stringWithFormat:@"username=%@&password=%@", userName, password];
     NSData *requestBody = [parameters dataUsingEncoding:NSUTF8StringEncoding];
@@ -185,12 +187,6 @@
         else if (self.saveOption == kSaveAllLecturesOption)
             [self saveAllLecturesToRealm];
     }
-    else
-    {
-        /*UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Can't connect to server" delegate:nil cancelButtonTitle:@"Exit" otherButtonTitles:nil, nil ];
-        [alertView show];*/
-    }
-    
 
 }
 

@@ -32,7 +32,6 @@
     self.hintLabel.text = self.question.hint;
     self.answers = self.question.possibleAnswers;
     self.cellsArray = [[NSMutableArray alloc] init];
-    //[self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 
 #pragma mark - Table view data source
@@ -60,7 +59,6 @@
     Answer *answer = [self.answers objectAtIndex:indexPath.row];
     cell.textLabel.text = answer.content;
     cell.tag = answer.answerId;
-    //cell.layer.cornerRadius = 10;
     cell.layer.masksToBounds = YES;
     
     [self.cellsArray addObject:cell];

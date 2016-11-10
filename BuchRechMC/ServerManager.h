@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <Realm/Realm.h>
+#import "Global.h"
 
 typedef NS_ENUM(NSInteger, RealmDataSaveOption)
 {

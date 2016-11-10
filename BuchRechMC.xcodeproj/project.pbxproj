@@ -120,6 +120,7 @@
 		EFD042D71CCF75AA0073BED6 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		EFE66A961D6B6D2D00EA8E8E /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
 		EFE66A971D6B6D2D00EA8E8E /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		EFFF159A1DD45E8700093AA1 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Global.h; path = BuchRechMC/Global.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				EF0B4BF71CB587DA0012E030 /* Realm.framework */,
+				EFFF159A1DD45E8700093AA1 /* Global.h */,
 				EF0658D81CB2D05200D7AEC7 /* BuchRechMC */,
 				EF0658F21CB2D05200D7AEC7 /* BuchRechMCTests */,
 				EF0658FD1CB2D05200D7AEC7 /* BuchRechMCUITests */,
@@ -174,7 +176,7 @@
 			children = (
 				EF9935C31D63118B00167079 /* Server Conection */,
 				EF9935C21D63117400167079 /* RealmModels */,
-				EF06590C1CB2D25B00D7AEC7 /* UI */,
+				EF06590C1CB2D25B00D7AEC7 /* Controllers */,
 				EF0658D91CB2D05200D7AEC7 /* Supporting Files */,
 			);
 			path = BuchRechMC;
@@ -213,14 +215,14 @@
 			path = BuchRechMCUITests;
 			sourceTree = "<group>";
 		};
-		EF06590C1CB2D25B00D7AEC7 /* UI */ = {
+		EF06590C1CB2D25B00D7AEC7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				EF6B0E291DAE7E750098E142 /* CustomCells */,
 				EF6B0E281DAE7E420098E142 /* ViewControllers */,
 				EF0658E21CB2D05200D7AEC7 /* Main.storyboard */,
 			);
-			name = UI;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		EF266F7F1CB3BD8800ADD7C8 /* SlideOutMenuFiles */ = {
@@ -452,7 +454,7 @@
 		EF0658CE1CB2D05200D7AEC7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Vitaliy Yarkun";
 				TargetAttributes = {
 					EF0658D51CB2D05200D7AEC7 = {
@@ -630,8 +632,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -675,8 +679,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
