@@ -95,8 +95,10 @@
     [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
     self.stringURL = [NSString stringWithFormat:@"%@/login", kBuchRechMCBaseURLAbsoluteString];
     NSURL *url = [NSURL URLWithString:self.stringURL];
-    NSString *parameters = @"username=mykola.odnoshyvkin@tum.de&password=Kon4ever";
-    //NSString *parameters = [NSString stringWithFormat:@"username=%@&password=%@", userName, password];
+    //NSString *parameters = @"username=mykola.odnoshyvkin@tum.de&password=Kon4ever";
+    NSString *parameters = [NSString stringWithFormat:@"username=%@&password=%@", userName, password];
+    self.name = userName;
+    self.password = password;
     NSData *requestBody = [parameters dataUsingEncoding:NSUTF8StringEncoding];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: url];
@@ -115,14 +117,23 @@
     }
     
 }
+- (BOOL) connectedToInternet
+{
+    NSString *URLString = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://www.google.com"]];
+    return ( URLString != NULL ) ? YES : NO;
+}
+
 
 #pragma mark - PARSE and SAVE to Realm
 
 -(void) saveAllQuestionsToRealm
 {
-    [self.realm beginWriteTransaction];
-    [self.realm deleteAllObjects];
-    [self.realm commitWriteTransaction];
+    if ([self connectedToInternet]) {
+        [self.realm beginWriteTransaction];
+        [self.realm deleteAllObjects];
+        [self.realm commitWriteTransaction];
+    }
+    
     
     for(NSDictionary *questionDict in self.receivedData)
     {

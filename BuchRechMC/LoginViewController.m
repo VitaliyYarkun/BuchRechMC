@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "ServerManager.h"
 #import "Question.h"                // Used to check if server connection is successful
+#import "User.h"
 
 @interface LoginViewController ()
 
@@ -34,6 +35,11 @@
     [self.view addGestureRecognizer:tap];
     
 }
+- (BOOL) connectedToInternet
+{
+    NSString *URLString = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://www.google.com"]];
+    return ( URLString != NULL ) ? YES : NO;
+}
 
 - (IBAction)loginButtonAction:(UIButton *)sender
 {
@@ -49,10 +55,38 @@
     [self.serverManager getAllQuestions];
     [self.serverManager getAllLectures];
     
-    if ([Question allObjects].count > 0)        // Used to check if server connection is successful
-        self.access = true;                     // Used to check if server connection is successful
-    else                                        // Used to check if server connection is successful
-        self.access = false;                    // Used to check if server connection is successful
+    if ([self connectedToInternet]) {
+        if ([Question allObjects].count > 0) {       // Used to check if server connection is successful
+            self.access = true;
+            RLMResults<User *> *users = [User allObjects];
+            for(User *user in users)
+            {
+                [self.serverManager.realm deleteObject:user];
+            }
+            User *user = [[User alloc] init];
+            user.name = self.serverManager.name;
+            user.password = self.serverManager.password;
+            [self.serverManager.realm beginWriteTransaction];
+            [self.serverManager.realm addObject:user];
+            [self.serverManager.realm commitWriteTransaction];
+        }
+    }
+    else {
+        RLMResults<User *> *users = [User allObjects];
+        User *user = [users firstObject];
+        if ([self.serverManager.name isEqualToString:user.name] && [self.serverManager.password isEqualToString:user.password])
+        {
+            if ([Question allObjects].count > 0) {       // Used to check if server connection is successful
+                self.access = true;
+            }                                           // Used to check if server connection is successful
+            else                                        // Used to check if server connection is successful
+                self.access = false;                    // Used to check if server connection is successful
+        }
+        else{
+            self.access = false;
+        }
+        
+    }
     
     if (self.access == true)
         [self performSegueWithIdentifier:@"loginSegue" sender:sender];

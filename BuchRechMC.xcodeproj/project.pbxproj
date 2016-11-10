@@ -37,6 +37,7 @@
 		EFA9E6841DBA1AA700A5BDBA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA9E6831DBA1AA700A5BDBA /* LoginViewController.m */; };
 		EFD042D81CCF75AA0073BED6 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD042D71CCF75AA0073BED6 /* Question.m */; };
 		EFE66A981D6B6D2D00EA8E8E /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE66A971D6B6D2D00EA8E8E /* QuestionViewController.m */; };
+		EFFF15A01DD5293D00093AA1 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFF159F1DD5293D00093AA1 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,8 @@
 		EFE66A961D6B6D2D00EA8E8E /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
 		EFE66A971D6B6D2D00EA8E8E /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
 		EFFF159A1DD45E8700093AA1 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Global.h; path = BuchRechMC/Global.h; sourceTree = "<group>"; };
+		EFFF159E1DD5293D00093AA1 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		EFFF159F1DD5293D00093AA1 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,6 +368,7 @@
 		EF9935C21D63117400167079 /* RealmModels */ = {
 			isa = PBXGroup;
 			children = (
+				EFFF159D1DD5291200093AA1 /* User */,
 				EF6B0E211DAE7CD50098E142 /* Answer */,
 				EF6B0E221DAE7CED0098E142 /* Lecture */,
 				EF6B0E201DAE7CBC0098E142 /* Question */,
@@ -388,6 +392,15 @@
 				EFA9E6831DBA1AA700A5BDBA /* LoginViewController.m */,
 			);
 			name = LoginViewController;
+			sourceTree = "<group>";
+		};
+		EFFF159D1DD5291200093AA1 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				EFFF159E1DD5293D00093AA1 /* User.h */,
+				EFFF159F1DD5293D00093AA1 /* User.m */,
+			);
+			name = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -555,6 +568,7 @@
 				EF06590F1CB2D2E800D7AEC7 /* QuestionsController.m in Sources */,
 				EFE66A981D6B6D2D00EA8E8E /* QuestionViewController.m in Sources */,
 				EFA9E6841DBA1AA700A5BDBA /* LoginViewController.m in Sources */,
+				EFFF15A01DD5293D00093AA1 /* User.m in Sources */,
 				EF0658DE1CB2D05200D7AEC7 /* AppDelegate.m in Sources */,
 				EF266F851CB3F87700ADD7C8 /* MenuController.m in Sources */,
 				EF266F821CB3BD8800ADD7C8 /* SWRevealViewController.m in Sources */,

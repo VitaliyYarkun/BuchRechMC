@@ -20,6 +20,9 @@ typedef NS_ENUM(NSInteger, RealmDataSaveOption)
 @interface ServerManager : NSObject
 
 @property (strong, nonatomic) RLMRealm *realm;
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *password;
+
 
 -(void) httpRequestWithUrl:(NSURL *) requestUrl
             withHTTPMethod:(NSString *) requestMethod;
