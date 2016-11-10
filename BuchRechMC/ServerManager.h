@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <Realm/Realm.h>
+#import "Global.h"
 
 typedef NS_ENUM(NSInteger, RealmDataSaveOption)
 {
@@ -19,6 +20,9 @@ typedef NS_ENUM(NSInteger, RealmDataSaveOption)
 @interface ServerManager : NSObject
 
 @property (strong, nonatomic) RLMRealm *realm;
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *password;
+
 
 -(void) httpRequestWithUrl:(NSURL *) requestUrl
             withHTTPMethod:(NSString *) requestMethod;
@@ -28,7 +32,7 @@ typedef NS_ENUM(NSInteger, RealmDataSaveOption)
 -(void) getAllQuestions;
 -(void) getAllLectures;
 -(void) getAllTopics;
--(void) getAllUsers;
+-(void) getUserByFirstName:(NSString *) firstName andLastName:(NSString *) lastName;
 
 +(instancetype) sharedManager;
 

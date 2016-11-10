@@ -34,8 +34,6 @@
     [self.tableView reloadData];
     self.allQuestions = [Question allObjects];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    
-    
 }
 
 
@@ -81,18 +79,6 @@
         self.questionController.allQuestions = self.allQuestions;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @end
